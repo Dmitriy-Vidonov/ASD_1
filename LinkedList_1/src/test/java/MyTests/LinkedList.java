@@ -51,5 +51,37 @@ public class LinkedList {
         return null;
     }
 
-    // 1. Добавьте в класс LinkedList метод удаления одного узла по его значению.
+    // 1. Добавьте в класс LinkedList метод удаления одного узла по его значению. ОК
+    public boolean Remove(int _value)
+    {
+        Node node = this.head;
+        Node preNode = node;
+        // что если искомое значение в head?
+        if (this.head.value == _value)
+        {
+            this.head = this.head.next;
+            return true;
+        }
+        else
+        {
+            while(node != null)
+            {
+                if(node.value != _value)
+                {
+                    preNode = node;
+                    node = node.next;
+                }
+                else
+                {
+                    preNode.next = node.next;
+                    node = null;
+                    return true;
+                }
+            }
+        }
+        // здесь будет ваш код удаления одного узла по заданному значению
+        return false; // если узел был удалён
+    }
+
+    // 2. Добавьте в класс LinkedList метод удаления всех узлов по конкретному значению.
 }
