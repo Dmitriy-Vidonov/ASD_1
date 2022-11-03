@@ -56,17 +56,19 @@ public class LinkedList {
     {
         Node node = this.head;
         Node preNode = node;
-        // что если искомое значение в head?
-        if (this.head.value == _value)
+        // Что если список пустой?
+        if(this.head == null)
         {
-            this.head = this.head.next;
-            return true;
+            return false;
         }
         else
         {
             while(node != null)
             {
-                if(node.value != _value)
+                if (this.head.value == _value)
+                    this.head = this.head.next;
+
+                else if(node.value != _value)
                 {
                     preNode = node;
                     node = node.next;
@@ -74,14 +76,25 @@ public class LinkedList {
                 else
                 {
                     preNode.next = node.next;
-                    node = null;
-                    return true;
+                    node = preNode.next;
                 }
             }
         }
-        // здесь будет ваш код удаления одного узла по заданному значению
         return false; // если узел был удалён
     }
 
-    // 2. Добавьте в класс LinkedList метод удаления всех узлов по конкретному значению.
+    // 3. Добавьте в класс LinkedList метод очистки всего содержимого (создание пустого списка).
+    public void clear()
+    {
+        Node preNode = this.head;
+
+        while (this.head != null) {
+            preNode = this.head;
+            this.head = head.next;
+            preNode = null;
+        }
+    }
+
+    // 4. Добавьте в класс LinkedList метод поиска всех узлов по конкретному значению
+    // (возвращается список/массив найденных узлов).
 }
