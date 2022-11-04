@@ -43,7 +43,7 @@ public class LinkedList
         return nodes;
     }
 
-    public boolean Remove(int _value)
+    public boolean remove(int _value)
     {
         Node node = this.head;
         Node preNode = node;

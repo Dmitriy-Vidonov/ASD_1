@@ -1,8 +1,6 @@
 
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
-O
-src/test/java/MyTests/Node.java,0/d/0d5a2eb60a029aba07e5e8b71f88ff438b72b9ab
 ^
 .src/test/java/Additional_Tests/LinkedList.java,a/5/a5658e29ce8120abaeb6ee3ae2d030fda9767b06
 b
@@ -11,3 +9,17 @@ j
 :src/test/java/LInkedList_Implementation_Examples/Node.java,0/c/0c546e392a92ee7bb1f5ccdcbe0f2b589c32c77e
 l
 <src/test/java/LInkedList_Implementation_Examples/Runner.java,b/d/bd031be231d39ac5ffe1b7a05542a4abe80231e4
+p
+@src/test/java/LInkedList_Implementation_Examples/LinkedList.java,a/5/a51c4be0b33ad72f22e968ab9b0e03d9c21d067d
+g
+7src/test/java/MethodsForTestingWithAdditionalCodes.java,e/3/e3ddea0b8cafcc79f672ec35d29a4bea4917bb4e
+V
+&src/test/java/mytests/TestIngList.java,f/3/f3ca77fd00f2d9a765959426ba46b55bc461aaed
+U
+%src/test/java/mytests/LinkedList.java,3/1/3121b84ff17638cd69e65250e30a9649c4a3aa16
+O
+src/test/java/mytests/Node.java,1/e/1eb413970c3593a79759214d3b5263823ca935dc
+T
+$src/test/java/ex8_with_comments.java,a/5/a5486c7c23e79e1a02260a4da0229dacba856d3b
+F
+src/test/java/ex8.java,3/e/3ee5db1105ee2c4ee83e46b55015030bc284b1a2
