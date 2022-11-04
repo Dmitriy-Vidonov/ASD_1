@@ -14,6 +14,7 @@ class LinkedListTest {
     LinkedList empty_list = new LinkedList();
     LinkedList one_elem_list = new LinkedList();
     LinkedList bigRandomList = new LinkedList();
+    java.util.LinkedList<Integer> LLcopyOfBigRandList = new java.util.LinkedList<>();
     int randValue;
 
     @org.junit.jupiter.api.BeforeEach
@@ -40,6 +41,7 @@ class LinkedListTest {
 
         // LinkedList with length = 10_000 and values from 10 to 200
         bigRandomList = MethodsForTesting.LLGenerate(10, 200, 100000);
+        LLcopyOfBigRandList = MethodsForTesting.LinkedListCopy(bigRandomList);
 
         // Random value
         randValue = (int)(Math.random() * (150 - 15) + 15);
@@ -140,6 +142,25 @@ class LinkedListTest {
     void findAll() throws Exception
     {
         Assertions.assertEquals(true, MethodsForTesting.listsComparison(s_list, testLL, 15));
+    }
+
+    // Testing findAll() with huge lists
+    @org.junit.jupiter.api.Test
+    @DisplayName("Test findAll() method on huge list")
+    void findAllHugeList() throws Exception
+    {
+        Assertions.assertEquals(true, MethodsForTesting
+                .listsComparison(bigRandomList, LLcopyOfBigRandList, 15));
+    }
+
+    // Testing findAll() multiple times
+    @RepeatedTest(10000)
+    @DisplayName("Test findAll() with rand lists multiple times")
+    void findAllMultipleTimes() throws Exception
+    {
+        LinkedList test_LL = MethodsForTesting.LLGenerate(10, 100, 1000);
+        java.util.LinkedList<Integer> java_LL = MethodsForTesting.LinkedListCopy(test_LL);
+        Assertions.assertEquals(true, MethodsForTesting.listsComparison(test_LL, java_LL, 15));
     }
 
     @org.junit.jupiter.api.Test
