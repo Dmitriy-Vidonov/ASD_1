@@ -72,9 +72,37 @@ class LinkedListTest {
         Assertions.assertEquals(true, testList.Remove(randValue));
     }
 
-    // Removing of all nodes by value. Regression test.
+    // Removing of all nodes with given value. Regression test.
     @org.junit.jupiter.api.Test
-    void removeAll() {
+    @DisplayName("Remove all nodes with given value. Regression test")
+    public void removeAllRegression() throws Exception
+    {
+        s_list.removeAll(50);
+        Assertions.assertEquals(true, s_list.find(50) == null);
+        empty_list.removeAll(15);
+        Assertions.assertEquals(true, empty_list.head == null);
+        one_elem_list.removeAll(10);
+        Assertions.assertEquals(true, one_elem_list.head == null);
+    }
+
+    // Delete all nodes with given value from huge random LinkedList
+    @org.junit.jupiter.api.Test
+    @DisplayName("Remove all nodes with given value from huge list")
+    public void removeAllFromHugeList() throws Exception
+    {
+        bigRandomList.removeAll(150);
+        Assertions.assertEquals(true, bigRandomList.find(150) == null);
+    }
+
+    // Multiple deletions of all nodes with random value from random linkedlist
+    @RepeatedTest(10000)
+    @DisplayName("Remove all nodes with random value from random list 10000 times")
+    public void removeAllWithRandValue() throws Exception
+    {
+        int rand = randValue;
+        LinkedList testList = MethodsForTesting.LLGenerate(100, 200, 1000);
+        testList.removeAll(rand);
+        Assertions.assertEquals(true, testList.find(rand) == null);
     }
 
     @org.junit.jupiter.api.Test

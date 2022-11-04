@@ -12,9 +12,8 @@ public class MethodsForTesting {
     }
 
     public static void main(String[] args) {
-        // Проверочный вывод списка
-        LinkedList testLL = LLGenerate(10, 200, 10000);
-        System.out.println();
-        System.out.println("удалить данные из списка - " + testLL.Remove(150));
+        LinkedList empty_list = new LinkedList();
+        empty_list.removeAll(15);
+        empty_list.checkAll();
     }
 }
