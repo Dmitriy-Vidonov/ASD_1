@@ -19,11 +19,13 @@ class LinkedListTest {
     @org.junit.jupiter.api.BeforeEach
     void setUp() throws IOException {
         // LinkedList from java.util library
+        testLL.add(50);
         testLL.add(15);
+        testLL.add(50);
         testLL.add(25);
         testLL.add(50);
         
-        // usual LinkedList
+        // LinkedList from default package
         s_list.addInTail(new Node(50));
         s_list.addInTail(new Node(15));
         s_list.addInTail(new Node(50));
@@ -132,8 +134,12 @@ class LinkedListTest {
         Assertions.assertEquals(true, testList.head == null);
     }
 
+    // Testing findAll() method. Regression test.
     @org.junit.jupiter.api.Test
-    void findAll() {
+    @DisplayName("Regression test for findAll() method")
+    void findAll() throws Exception
+    {
+        Assertions.assertEquals(true, MethodsForTesting.listsComparison(s_list, testLL, 15));
     }
 
     @org.junit.jupiter.api.Test
