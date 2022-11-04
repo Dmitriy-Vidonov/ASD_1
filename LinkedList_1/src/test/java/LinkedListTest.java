@@ -163,8 +163,24 @@ class LinkedListTest {
         Assertions.assertEquals(true, MethodsForTesting.listsComparison(test_LL, java_LL, 15));
     }
 
+    // Testing count(). Regression test
     @org.junit.jupiter.api.Test
-    void count() {
+    @DisplayName("Regression test for count()")
+    void countRegression() throws Exception
+    {
+        Assertions.assertEquals(true, s_list.count() == 5);
+        Assertions.assertEquals(true, bigRandomList.count() == 100000);
+    }
+
+    // Testing count() with random length lists
+    @RepeatedTest(10000)
+    @DisplayName("count() with rand lengths")
+    void countRandLenLists() throws Exception
+    {
+        LinkedList testLL = MethodsForTesting.LLGenerate(10, 100,
+                ((int) (Math.random() * (5000 - 1000)) + 1000));
+        Assertions.assertEquals(true,
+                testLL.count() == MethodsForTesting.LinkedListCopy(testLL).size());
     }
 
     @org.junit.jupiter.api.Test
