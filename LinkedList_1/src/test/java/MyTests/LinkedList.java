@@ -97,4 +97,62 @@ public class LinkedList {
 
     // 4. Добавьте в класс LinkedList метод поиска всех узлов по конкретному значению
     // (возвращается список/массив найденных узлов).
+    public ArrayList<Node> findAll(int _value) {
+        ArrayList<Node> nodes = new ArrayList<Node>();
+        Node node = this.head; // Установили ноду в начало
+        while(node != null) // проход всех элементов списка
+        {
+            if(node.value == _value)
+            {
+                nodes.add(node);
+            }
+            node = node.next;
+        }
+        return nodes;
+    }
+
+    //5. Добавьте в класс LinkedList метод вычисления длины списка.
+    public int count()
+    {
+        Node node = this.head; // устанавливаем узел в начало списка
+        int count = 0;
+        if(this.head == null) // если список пустой
+        {
+            return 0;
+        }
+        else
+        {
+            while(node != null)
+            {
+                count++;
+                node = node.next;
+            }
+        }
+        return count;
+    }
+
+    /*
+    6. Добавьте в класс LinkedList метод вставки нового узла после заданного узла.
+    Например, имеется список (a1,a2,a3,a4,a5) и новый узел a7;
+    вставляя узел a7 после узла a3, получаем список (a1,a2,a3,a7,a4,a5).
+    */
+    public void insertAfter(Node _nodeAfter, Node _nodeToInsert)
+    {
+     Node node = this.head;
+     // Если изначально список пустой
+        if (this.head == null)
+        {
+            this.head = _nodeToInsert;
+            _nodeToInsert.next = null;
+        }
+        else
+        {
+            _nodeToInsert.next = _nodeAfter.next;
+            _nodeAfter.next = _nodeToInsert;
+        }
+        // здесь будет ваш код вставки узла после заданного
+
+        // если _nodeAfter = null ,
+        // добавьте новый элемент первым в списке
+    }
 }
