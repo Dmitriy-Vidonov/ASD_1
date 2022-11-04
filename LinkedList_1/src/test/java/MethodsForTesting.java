@@ -11,6 +11,19 @@ public class MethodsForTesting {
         return genLL;
     }
 
+    // make copy from default package LinkedList into java LinkedList
+    public static java.util.LinkedList LinkedListCopy(LinkedList LL)
+    {
+        java.util.LinkedList<Integer> java_LL = new java.util.LinkedList<>();
+        Node node = LL.head;
+        while (node != null)
+        {
+            java_LL.add(node.value);
+            node = node.next;
+        }
+        return java_LL;
+    }
+
     // get values from our list after findAll method into ArrayList
     public static ArrayList myListOfValues(LinkedList LL, int val)
     { // сравнить потом длины и значения в полученном массиве из нашего списка и из стандартного списка
@@ -51,6 +64,10 @@ public class MethodsForTesting {
         empty_list.addInTail(new Node(55));
 
         System.out.println("Список после добавления элементов: "); empty_list.checkAll(); System.out.println();
+        java.util.LinkedList<Integer> java_List = new java.util.LinkedList<>();
+        java_List = LinkedListCopy(empty_list); // copy of default package list
+        System.out.println("копия списка в java.util.LinkedList: ");
+        for(int val : java_List) System.out.print(val + " "); System.out.println();
 
         // our linked list
         LinkedList my_LL = new LinkedList();
