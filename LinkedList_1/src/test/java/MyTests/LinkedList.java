@@ -52,35 +52,33 @@ public class LinkedList {
     }
 
     // 1. Добавьте в класс LinkedList метод удаления одного узла по его значению. ОК
-    public boolean Remove(int _value)
+    public void removeAll(int _value)
     {
         Node node = this.head;
         Node preNode = node;
-        // Что если список пустой?
-        if(this.head == null)
-        {
-            return false;
-        }
-        else
-        {
-            while(node != null)
-            {
-                if (this.head.value == _value)
-                    this.head = this.head.next;
 
-                else if(node.value != _value)
-                {
-                    preNode = node;
-                    node = node.next;
-                }
-                else
-                {
-                    preNode.next = node.next;
-                    node = preNode.next;
-                }
+        while(node != null)
+        {
+            if (this.head.value == _value && this.head.next != null)
+                this.head = this.head.next;
+
+            else if(node.value == _value && this.head.next == null)
+            {
+                this.head = null;
+                break;
+            }
+
+            else if(node.value != _value)
+            {
+                preNode = node;
+                node = node.next;
+            }
+            else
+            {
+                preNode.next = node.next;
+                node = preNode.next;
             }
         }
-        return false; // если узел был удалён
     }
 
     // 3. Добавьте в класс LinkedList метод очистки всего содержимого (создание пустого списка).

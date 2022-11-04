@@ -35,34 +35,30 @@
     }
 
 ***этот метод удалит несколько элементов***
-   public boolean Remove(int _value)
+   public void removeAll(int _value)
     {
         Node node = this.head;
         Node preNode = node;
-        // Что если список пустой?
-        if(this.head == null)
+        while(node != null)
         {
-            return false;
-        }
-        else
-        {
-            while(node != null)
+            if (this.head.value == _value && this.head.next != null)
+                this.head = this.head.next;
+            else if(node.value == _value && this.head.next == null)
             {
-                if (this.head.value == _value)
-                    this.head = this.head.next;
-                else if(node.value != _value)
-                {
-                    preNode = node;
-                    node = node.next;
-                }
-                else
-                {
-                    preNode.next = node.next;
-                    node = preNode.next;
-                }
+                this.head = null;
+                break;
+            }
+            else if(node.value != _value)
+            {
+                preNode = node;
+                node = node.next;
+            }
+            else
+            {
+                preNode.next = node.next;
+                node = preNode.next;
             }
         }
-        return false; // если узел был удалён
     }
 
 ***метод очистки списка***

@@ -11,6 +11,7 @@ public class TestIngList {
         Node n4 = new Node(128);
         Node n5 = new Node(129);
         Node n6 = new Node(129);
+        Node n7 = new Node(12);
         Node _nodeToInsert = new Node(15);
 
         LinkedList s_list = new LinkedList(); // инициализировали новый список
@@ -20,6 +21,7 @@ public class TestIngList {
         s_list.add_in_tail(n4);
         s_list.add_in_tail(n5);
         s_list.add_in_tail(n6);
+        s_list.add_in_tail(n7);
 
         // перебрать все элементы списка и вывести их на экран - все это в методе checkAll класса LinkedList
         s_list.checkAll(); // вывод на экран всех элементов списка
@@ -35,8 +37,13 @@ public class TestIngList {
         //s_list.clear();
         //s_list.checkAll();
 
+        // Тест removeAll
+        s_list.removeAll(12);
+        s_list.checkAll();
+        System.out.println();
+
         // проверяем заполнение arraylist найденными нодами
-        ArrayList<Node> nodes = s_list.findAll(12);
+        ArrayList<Node> nodes = s_list.findAll(128);
         System.out.println("Список найденных значений: ");
         for(Node node : nodes) System.out.print(node.value + " "); System.out.println();
 
