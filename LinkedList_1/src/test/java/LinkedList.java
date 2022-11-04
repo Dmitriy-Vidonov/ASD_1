@@ -139,6 +139,10 @@ public class LinkedList
     public void insertAfter(Node _nodeAfter, Node _nodeToInsert)
     {
         Node node = this.head;
+        if (_nodeAfter == this.tail)
+        {
+            this.tail = _nodeToInsert;
+        }
         if (this.head == null)
         {
             this.head = _nodeToInsert;
@@ -150,15 +154,6 @@ public class LinkedList
             _nodeAfter.next = _nodeToInsert;
         }
     }
-
-    public void checkAll() {
-        Node node = head; // создали некий узел, в который поместили head-овый элемент нашего списка
-        while (node != null) { // до тех пор, пока наш узел не станет null - проходим по списку
-            System.out.print(node.value + " ");
-            node = node.next;
-        }
-    }
-
 }
 
 class Node

@@ -183,7 +183,14 @@ class LinkedListTest {
                 testLL.count() == MethodsForTesting.LinkedListCopy(testLL).size());
     }
 
+    // Regression test for insertAfter() method
     @org.junit.jupiter.api.Test
-    void insertAfter() {
+    @DisplayName("Regression test for insertAfter()")
+    void insertAfterRegression() throws Exception
+    {
+        empty_list.insertAfter(null, new Node(15));
+        Assertions.assertEquals(true, empty_list.head.value == 15);
+        s_list.insertAfter(s_list.tail, new Node(25));
+        Assertions.assertEquals(true, s_list.tail.value == 25);
     }
 }

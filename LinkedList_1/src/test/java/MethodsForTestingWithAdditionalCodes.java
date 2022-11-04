@@ -1,6 +1,6 @@
-import java.util.*;
+import java.util.ArrayList;
 
-public class MethodsForTesting {
+public class MethodsForTestingWithAdditionalCodes {
 
     // random LinkedList generation in given range of numbers
     public static LinkedList LLGenerate(int min, int max, int listLength) {
@@ -26,7 +26,7 @@ public class MethodsForTesting {
 
     // get values from our list after findAll method into ArrayList
     public static ArrayList myListOfValues(LinkedList LL, int val)
-    {
+    { // сравнить потом длины и значения в полученном массиве из нашего списка и из стандартного списка
         ArrayList<Integer> arrList = new ArrayList<>();
         int size = LL.findAll(val).size();
 
@@ -53,5 +53,38 @@ public class MethodsForTesting {
     public static boolean listsComparison(LinkedList my_LL, java.util.LinkedList java_LL, int val)
     {
         return ((myListOfValues(my_LL, val).size() == notMyListOfValues(java_LL, val).size()));
+    }
+
+    public static void main(String[] args) {
+        LinkedList empty_list = new LinkedList();
+        empty_list.addInTail(new Node(15));
+        empty_list.addInTail(new Node(18));
+        empty_list.addInTail(new Node(20));
+        empty_list.addInTail(new Node(18));
+        empty_list.addInTail(new Node(55));
+
+       //System.out.println("Список после добавления элементов: "); empty_list.checkAll(); System.out.println();
+        java.util.LinkedList<Integer> java_List = new java.util.LinkedList<>();
+        java_List = LinkedListCopy(empty_list); // copy of default package list
+        System.out.println("копия списка в java.util.LinkedList: ");
+        for(int val : java_List) System.out.print(val + " "); System.out.println();
+
+        // our linked list
+        LinkedList my_LL = new LinkedList();
+        my_LL.addInTail(new Node(10));
+        my_LL.addInTail(new Node(15));
+        my_LL.addInTail(new Node(55));
+        my_LL.addInTail(new Node(15));
+
+        // java Linked List
+        java.util.LinkedList<Integer> java_LL = new java.util.LinkedList<>();
+        java_LL.add(10);
+        java_LL.add(15);
+        java_LL.add(55);
+        java_LL.add(15);
+
+        int val = 15;
+
+        System.out.println(listsComparison(my_LL, java_LL, val));
     }
 }
