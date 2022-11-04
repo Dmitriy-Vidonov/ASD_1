@@ -1,5 +1,4 @@
-package MyTests;
-import java.util.*;
+package mytests;
 
 public class Node {
     public int value; // Данное

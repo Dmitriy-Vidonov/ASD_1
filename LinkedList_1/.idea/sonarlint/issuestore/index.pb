@@ -11,5 +11,3 @@ j
 :src/test/java/LInkedList_Implementation_Examples/Node.java,0/c/0c546e392a92ee7bb1f5ccdcbe0f2b589c32c77e
 l
 <src/test/java/LInkedList_Implementation_Examples/Runner.java,b/d/bd031be231d39ac5ffe1b7a05542a4abe80231e4
-p
-@src/test/java/LInkedList_Implementation_Examples/LinkedList.java,a/5/a51c4be0b33ad72f22e968ab9b0e03d9c21d067d
