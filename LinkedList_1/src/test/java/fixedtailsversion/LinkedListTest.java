@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -18,6 +19,7 @@ class LinkedListTest {
     LinkedList allSameButLast = new LinkedList();
     LinkedList fewSameAtEnd = new LinkedList();
     LinkedList begin_center_end = new LinkedList();
+    ArrayList<Node> testValuesArrList = new ArrayList<>();
 
     @org.junit.jupiter.api.BeforeEach
     void setUp() throws IOException {
@@ -54,6 +56,9 @@ class LinkedListTest {
 
         for(int i=0; i<5; i++)
             begin_center_end.addInTail(new Node(fewSameVal));
+
+        for(int i=0; i<15; i++)
+            testValuesArrList.add(new Node(fewSameVal));
     }
 
     // List is empty
@@ -175,4 +180,14 @@ class LinkedListTest {
         Assertions.assertEquals(true, begin_center_end.tail.value == 289);
     }
 
+    // Find nodes with the same values from various places in the list. findAll() test
+    @org.junit.jupiter.api.Test
+    @DisplayName("9) findAll() for nodes in various places")
+    void findAllFromVariousPlaces() throws Exception
+    {
+        ArrayList<Node> primeArrList = begin_center_end.findAll(fewSameVal);
+
+        Assertions.assertEquals(true, MethodsForTests
+                .twoArrListsValuesCompare(primeArrList,testValuesArrList));
+    }
 }

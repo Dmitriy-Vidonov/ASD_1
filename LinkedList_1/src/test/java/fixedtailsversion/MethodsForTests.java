@@ -1,5 +1,7 @@
 package fixedtailsversion;
 
+import java.util.ArrayList;
+
 public class MethodsForTests {
     // make copy from default package LinkedList into java LinkedList
     public static java.util.LinkedList LinkedListCopy(LinkedList LL)
@@ -19,16 +21,21 @@ public class MethodsForTests {
             return (LinkedListCopy(list_1).equals(LinkedListCopy(list_2)));
     }
 
- /*   public static void main(String[] args) {
-        LinkedList list1 = new LinkedList();
-        LinkedList list2 = new LinkedList();
+   // Compare values of two ArrayList<Node>
+    public static boolean twoArrListsValuesCompare(ArrayList<Node> arrList1, ArrayList<Node> arrList2) {
+        boolean res = true;
 
-        for(int i=0; i<10; i++) {
-            list1.addInTail(new Node(10));
-            list2.addInTail(new Node(10));
+        if(arrList1.size() == arrList2.size()) {
+            for (int i=0; i<arrList1.size(); i++)
+            {
+                if(arrList1.get(i).value != arrList2.get(i).value)
+                    res = false;
+                    break;
+            }
         }
-       // list1.addInTail(new Node(4));
+        else
+            res = false;
 
-        System.out.println("равны ли списки - " + CompareTwoLL(list1, list2));
-    }*/
+        return res;
+    }
 }

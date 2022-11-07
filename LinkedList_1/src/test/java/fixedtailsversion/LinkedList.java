@@ -31,6 +31,7 @@ public class LinkedList
         return null;
     }
 
+    // findAll is OK
     public ArrayList<Node> findAll(int _value) {
         ArrayList<Node> nodes = new ArrayList<Node>();
         Node node = this.head;
@@ -145,6 +146,7 @@ public class LinkedList
             this.head = head.next;
     }
 
+    // count() is OK
     public int count()
     {
         Node node = this.head;
@@ -177,6 +179,7 @@ public class LinkedList
         }
         else System.out.println("null list");
     }
+
     // insert after is ok
     public void insertAfter(Node _nodeAfter, Node _nodeToInsert)
     {
@@ -194,28 +197,6 @@ public class LinkedList
             _nodeToInsert.next = _nodeAfter.next;
             _nodeAfter.next = _nodeToInsert;
         }
-    }
-
-    public static void main(String[] args){
-        LinkedList s_list = new LinkedList ();
-        s_list.addInTail(new Node(2));
-        //  s_list.addInTail(new Node(4));
-        //for (int i=0; i<5; i++)
-        //  s_list.addInTail(new Node(3));
-        //  s_list.addInTail(new Node(4));
-        // s_list.addInTail(new Node(5));
-        //s_list.addInTail(new Node(4));
-
-        showAll(s_list);
-        s_list.removeAll(2);
-        // System.out.println("Remove status = "
-        // + s_list.remove(4));
-        // System.out.println("head = "
-        // + s_list.head.value);
-        //  System.out.println("tail = "
-        //  + s_list.tail.value);
-        //  s_list.clear();
-        showAll(s_list);
     }
 }
 

@@ -8,9 +8,9 @@ public class test {
         // s_list.addInTail(new Node(4));
         //  s_list.addInTail(new Node(4));
        // s_list.addInTail(new Node(4));
-       // s_list.addInTail(new Node(5));
-       //    for (int i=0; i<3; i++)
-       //       s_list.addInTail(new Node(2));
+        s_list.addInTail(new Node(5));
+           for (int i=0; i<3; i++)
+              s_list.addInTail(new Node(2));
 
        //  s_list.addInTail(new Node(5));
        // s_list.addInTail(new Node(1));
@@ -22,9 +22,8 @@ public class test {
        //  System.out.println("Remove status = " + s_list.remove(1));
          showAll(s_list);
 
-       //System.out.println("head = " + s_list.head.value);
+       //  System.out.println("head = " + s_list.head.value);
        //  System.out.println("tail = " + s_list.tail.value);
-        //  s_list.clear();
 
     }
 }
