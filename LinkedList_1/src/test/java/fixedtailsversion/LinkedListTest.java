@@ -95,4 +95,84 @@ class LinkedListTest {
         Assertions.assertEquals(true, fewSameAtBegin.head.value == few2.head.value);
         Assertions.assertEquals(true, fewSameAtBegin.tail.value == few2.tail.value);
     }
+
+    // All nodes in list are the same
+    @org.junit.jupiter.api.Test
+    @DisplayName("4) All nodes in list are the same")
+    void removeAllTheSame() throws Exception
+    {
+        allNodesAreSame.removeAll(fewSameVal);
+
+        Assertions.assertEquals(true, MethodsForTests.LinkedListCopy(empty_list)
+                .equals(MethodsForTests.LinkedListCopy(allNodesAreSame)));
+    }
+
+    // Only the first node is not target
+    @org.junit.jupiter.api.Test
+    @DisplayName("5) Remove all but not first")
+    void removeAllButFirst() throws Exception
+    {
+        allSameButFirst.removeAll(fewSameVal);
+        java.util.LinkedList<Integer> testList = new java.util.LinkedList<>();
+        testList.add(100);
+
+        Assertions.assertEquals(true, testList
+                .equals(MethodsForTests.LinkedListCopy(allSameButFirst)));
+        Assertions.assertEquals(true, allSameButFirst.head.value == 100);
+        Assertions.assertEquals(true, allSameButFirst.tail.value == 100);
+    }
+
+    // Only the last node is not target
+    @org.junit.jupiter.api.Test
+    @DisplayName("6) Remove all but not last")
+    void removeAllButLast() throws Exception
+    {
+        allSameButLast.removeAll(fewSameVal);
+
+        java.util.LinkedList<Integer> testList = new java.util.LinkedList<>();
+        testList.add(150);
+
+        Assertions.assertEquals(true, testList
+                .equals(MethodsForTests.LinkedListCopy(allSameButLast)));
+        Assertions.assertEquals(true, allSameButLast.head.value == 150);
+        Assertions.assertEquals(true, allSameButLast.tail.value == 150);
+    }
+
+    // List with the same nodes at the end of list
+    @org.junit.jupiter.api.Test
+    @DisplayName("7) Remove all nodes at the end")
+    void removeAllAtTheEnd() throws Exception
+    {
+        fewSameAtEnd.removeAll(fewSameVal);
+
+        java.util.LinkedList<Integer> testList = new java.util.LinkedList<>();
+        testList.add(500);
+        testList.add(600);
+        testList.add(530);
+
+        Assertions.assertEquals(true, testList
+                .equals(MethodsForTests.LinkedListCopy(fewSameAtEnd)));
+        Assertions.assertEquals(true, fewSameAtEnd.head.value == 500);
+        Assertions.assertEquals(true, fewSameAtEnd.tail.value == 530);
+    }
+
+    // Target nodes are at the beginning, at the center and at the end of list
+    @org.junit.jupiter.api.Test
+    @DisplayName("8) Remove nodes at start, center, end")
+    void removeFromStartCenterEnd() throws Exception
+    {
+        begin_center_end.removeAll(fewSameVal);
+
+        java.util.LinkedList<Integer> testList = new java.util.LinkedList<>();
+        testList.add(78);
+        testList.add(89);
+        testList.add(178);
+        testList.add(289);
+
+        Assertions.assertEquals(true, testList
+                .equals(MethodsForTests.LinkedListCopy(begin_center_end)));
+        Assertions.assertEquals(true, begin_center_end.head.value == 78);
+        Assertions.assertEquals(true, begin_center_end.tail.value == 289);
+    }
+
 }

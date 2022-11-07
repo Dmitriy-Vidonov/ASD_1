@@ -96,51 +96,17 @@ public class LinkedList
     }
 
     // removeAll is OK
-   /* public void removeAll(int _value)
-    {
-        Node node = this.head;
-        Node preNode = node;
-
-        while(node != null)
-        {
-            if (this.head.value == _value && this.head.next != null) {
-                this.head = this.head.next;
-                node = this.head;
-            }
-
-            else if(node.value == _value && this.head.next == null)
-            {
-                this.head = null;
-                this.tail = null;
-                break;
-            }
-
-            else if (node.value == _value && node.next != null) {
-                node = node.next;
-            }
-
-            else
-            {
-                preNode.next = node.next;
-                node = preNode.next;
-               // tail = preNode;
-            }
-        }
-    } */
     public void removeAll(int _value)
     {
-
-    }
-
-    public void remove2(int _value) {
         Node pre = null;
-        // частный случай, когда список пустой
+        // if list is empty
         if (this.head == null) {
             return;
         }
-        // частный случай когда всего 1 узел в списке
+        // if list has only one node with target value
         else if(this.head.value == _value && head.next == null) {
             this.head = null;
+            return;
         }
 
         else
@@ -149,9 +115,9 @@ public class LinkedList
             while (pre.next != null)
             {
                 if(this.head.value == _value)
-                { // если значение попалось в начале, сдвигаем head
-                        this.head = this.head.next;
-                        pre = this.head;
+                { // if target value at the beginning of list - shift head
+                    this.head = this.head.next;
+                    pre = this.head;
                 }
 
                 else if(pre.next.value == _value) {
