@@ -13,7 +13,7 @@ public class test {
               s_list.addInTail(new Node(2));
 
        //  s_list.addInTail(new Node(5));
-        s_list.addInTail(new Node(1));
+       // s_list.addInTail(new Node(1));
 
          showAll(s_list);
          s_list.remove2(2);
@@ -21,8 +21,8 @@ public class test {
        //  System.out.println("Remove status = " + s_list.remove(1));
          showAll(s_list);
 
-       System.out.println("head = " + s_list.head.value);
-         System.out.println("tail = " + s_list.tail.value);
+       //System.out.println("head = " + s_list.head.value);
+       //  System.out.println("tail = " + s_list.tail.value);
         //  s_list.clear();
 
     }

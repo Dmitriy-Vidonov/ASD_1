@@ -165,6 +165,11 @@ public class LinkedList
                 tail = pre;
             }
         }
+        if(this.head.value == _value) {
+            this.head = null;
+            this.tail = null;
+            pre = null;
+        }
     }
 
     // clear() is OK
