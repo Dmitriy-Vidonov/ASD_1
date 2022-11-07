@@ -23,3 +23,11 @@ T
 $src/test/java/ex8_with_comments.java,a/5/a5486c7c23e79e1a02260a4da0229dacba856d3b
 F
 src/test/java/ex8.java,3/e/3ee5db1105ee2c4ee83e46b55015030bc284b1a2
+M
+src/test/java/LinkedList.java,0/0/0033e765c38b8d7b6d6e57b085305e7099c5638a
+Q
+!src/test/java/LinkedListTest.java,9/0/9029cc40e2f26470421259ec1509e1546b29390f
+T
+$src/test/java/MethodsForTesting.java,3/f/3f1280882cac30aa7f147dacd98374888d1cb64f
+d
+4src/test/java/fixedtailsversion/MethodsForTests.java,f/0/f0242bccd88c6cc69519412db34058d107d1c04b

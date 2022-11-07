@@ -1,3 +1,5 @@
+package fixedtailsversion;
+
 import java.util.*;
 
 public class LinkedList
@@ -43,6 +45,7 @@ public class LinkedList
         return nodes;
     }
 
+    // remove method is OK
     public boolean remove(int _value)
     {
         if(this.head == null){
@@ -52,12 +55,14 @@ public class LinkedList
         Node node = this.head;
         Node preNode = node;
 
-        if (this.head.value == _value && this.head.next != null)
+        if (this.head.value == _value
+                && this.head.next != null)
         {
             this.head = this.head.next;
             return true;
         }
-        else if (this.head.value == _value && this.head.next == null)
+        else if (this.head.value == _value
+                && this.head.next == null)
         {
             this.head = null;
             this.tail = null;
@@ -90,44 +95,83 @@ public class LinkedList
         return false;
     }
 
-    public void removeAll(int _value)
+    // removeAll is OK
+   /* public void removeAll(int _value)
     {
         Node node = this.head;
         Node preNode = node;
 
         while(node != null)
         {
-            if (this.head.value == _value && this.head.next != null)
+            if (this.head.value == _value && this.head.next != null) {
                 this.head = this.head.next;
+                node = this.head;
+            }
 
             else if(node.value == _value && this.head.next == null)
             {
                 this.head = null;
+                this.tail = null;
                 break;
             }
 
-            else if(node.value != _value)
-            {
-                preNode = node;
+            else if (node.value == _value && node.next != null) {
                 node = node.next;
             }
+
             else
             {
                 preNode.next = node.next;
                 node = preNode.next;
+               // tail = preNode;
+            }
+        }
+    } */
+    public void removeAll(int _value)
+    {
+
+    }
+
+    public void remove2(int _value) {
+        Node pre = null;
+        // частный случай, когда список пустой
+        if (this.head == null) {
+            return;
+        }
+        // частный случай когда всего 1 узел в списке
+        else if(this.head.value == _value && head.next == null) {
+            this.head = null;
+        }
+
+        else
+        {
+            pre = this.head;
+            while (pre.next != null)
+            {
+                if(this.head.value == _value)
+                { // если значение попалось в начале, сдвигаем head
+                        this.head = this.head.next;
+                        pre = this.head;
+                }
+
+                else if(pre.next.value == _value) {
+                    Node del = pre.next;
+                    Node aft = del.next;
+                    pre.next = aft;
+                }
+                else {
+                    pre = pre.next;
+                }
+                tail = pre;
             }
         }
     }
 
+    // clear() is OK
     public void clear()
     {
-        Node preNode = this.head;
-
-        while (this.head != null) {
-            preNode = this.head;
+        while (this.head != null)
             this.head = head.next;
-            preNode = null;
-        }
     }
 
     public int count()
@@ -149,9 +193,22 @@ public class LinkedList
         return count;
     }
 
+    // show all nodes from list
+    public static void showAll(LinkedList LL){
+        if (LL.head != null)
+        {
+            Node node = LL.head;
+            while(node != null){
+                System.out.print(node.value + " ");
+                node = node.next;
+            }
+            System.out.println();
+        }
+        else System.out.println("null list");
+    }
+    // insert after is ok
     public void insertAfter(Node _nodeAfter, Node _nodeToInsert)
     {
-        Node node = this.head;
         if (_nodeAfter == this.tail)
         {
             this.tail = _nodeToInsert;
@@ -166,6 +223,28 @@ public class LinkedList
             _nodeToInsert.next = _nodeAfter.next;
             _nodeAfter.next = _nodeToInsert;
         }
+    }
+
+    public static void main(String[] args){
+        LinkedList s_list = new LinkedList ();
+        s_list.addInTail(new Node(2));
+        //  s_list.addInTail(new Node(4));
+        //for (int i=0; i<5; i++)
+        //  s_list.addInTail(new Node(3));
+        //  s_list.addInTail(new Node(4));
+        // s_list.addInTail(new Node(5));
+        //s_list.addInTail(new Node(4));
+
+        showAll(s_list);
+        s_list.removeAll(2);
+        // System.out.println("Remove status = "
+        // + s_list.remove(4));
+        // System.out.println("head = "
+        // + s_list.head.value);
+        //  System.out.println("tail = "
+        //  + s_list.tail.value);
+        //  s_list.clear();
+        showAll(s_list);
     }
 }
 
