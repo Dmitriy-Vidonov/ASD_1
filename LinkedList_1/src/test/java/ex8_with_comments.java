@@ -25,20 +25,26 @@ public class ex8_with_comments {
         LinkedList list_2 = new LinkedList();
 
         list_1.addInTail(new Node(15));
-        list_1.addInTail(new Node(20));
-        list_1.addInTail(new Node(50));
+      //  list_1.addInTail(new Node(20));
+     //   list_1.addInTail(new Node(50));
 
         list_2.addInTail(new Node(115));
-        list_2.addInTail(new Node(120));
-        list_2.addInTail(new Node(150));
+      //  list_2.addInTail(new Node(120));
+      //  list_2.addInTail(new Node(150));
 
-        LinkedList result_list = ListsMerge(list_1, list_2);
 
-        Node node = result_list.head; // создали некий узел, в который поместили head-овый элемент нашего списка
-        while (node != null) { // до тех пор, пока наш узел не станет null - проходим по списку
-            System.out.print(node.value + " ");
-            node = node.next;
+        LinkedList result_list = ex8.ListsMerge(list_1, list_2);
+       // if(result_list.head == null) System.out.println("nullll");
+        Node node;
+        if(result_list.head != null) {
+            node = result_list.head;
+
+            while (node != null) {
+                System.out.print(node.value + " ");
+                node = node.next;
+            }
         }
-
+        else
+            System.out.println("null list");
     }
 }

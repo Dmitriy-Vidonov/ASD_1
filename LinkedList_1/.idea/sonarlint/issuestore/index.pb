@@ -1,10 +1,6 @@
 
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
-^
-.src/test/java/Additional_Tests/LinkedList.java,a/5/a5658e29ce8120abaeb6ee3ae2d030fda9767b06
-b
-2src/test/java/Additional_Tests/LinkedListDemo.java,8/2/823bf712924d03caaa5c2ea23a9fff523bd352c6
 j
 :src/test/java/LInkedList_Implementation_Examples/Node.java,0/c/0c546e392a92ee7bb1f5ccdcbe0f2b589c32c77e
 l
@@ -15,8 +11,6 @@ g
 7src/test/java/MethodsForTestingWithAdditionalCodes.java,e/3/e3ddea0b8cafcc79f672ec35d29a4bea4917bb4e
 V
 &src/test/java/mytests/TestIngList.java,f/3/f3ca77fd00f2d9a765959426ba46b55bc461aaed
-U
-%src/test/java/mytests/LinkedList.java,3/1/3121b84ff17638cd69e65250e30a9649c4a3aa16
 O
 src/test/java/mytests/Node.java,1/e/1eb413970c3593a79759214d3b5263823ca935dc
 Y
@@ -25,15 +19,5 @@ d
 4src/test/java/fixedtailsversion/MethodsForTests.java,f/0/f0242bccd88c6cc69519412db34058d107d1c04b
 c
 3src/test/java/fixedtailsversion/LinkedListTest.java,5/7/57470e7765402a26aeddde9058f4849c074f7434
-T
-$src/test/java/MethodsForTesting.java,3/f/3f1280882cac30aa7f147dacd98374888d1cb64f
 _
 /src/test/java/fixedtailsversion/LinkedList.java,5/9/59586a8f0c8c50a312ed631baa2602d3fdcd5bf0
-Q
-!src/test/java/LinkedListTest.java,9/0/9029cc40e2f26470421259ec1509e1546b29390f
-M
-src/test/java/LinkedList.java,0/0/0033e765c38b8d7b6d6e57b085305e7099c5638a
-T
-$src/test/java/ex8_with_comments.java,a/5/a5486c7c23e79e1a02260a4da0229dacba856d3b
-F
-src/test/java/ex8.java,3/e/3ee5db1105ee2c4ee83e46b55015030bc284b1a2
