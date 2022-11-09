@@ -179,6 +179,11 @@ public class LinkedList
             this.head = _nodeToInsert;
             _nodeToInsert.next = null;
         }
+        if (_nodeAfter == null)
+        {
+            _nodeToInsert.next = head;
+            head = _nodeToInsert;
+        }
         else
         {
             _nodeToInsert.next = _nodeAfter.next;

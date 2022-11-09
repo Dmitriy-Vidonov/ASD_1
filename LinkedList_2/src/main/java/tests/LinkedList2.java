@@ -140,12 +140,29 @@ public class LinkedList2 {
         }
         return count;
     }
-
+    // insertAfter is OK
     public void insertAfter(Node _nodeAfter, Node _nodeToInsert) {
-        // здесь будет ваш код вставки узла после заданного узла
-
-        // если _nodeAfter = null
-        // добавьте элемент первым в списке
+        if (_nodeAfter == this.tail)
+        {
+            this.tail = _nodeToInsert;
+        }
+        if (this.head == null)
+        {
+            this.head = _nodeToInsert;
+            _nodeToInsert.next = null;
+        }
+        if (_nodeAfter == null)
+        {
+            _nodeToInsert.next = head;
+            head.prev = _nodeToInsert;
+            _nodeToInsert.prev = null;
+            head = _nodeToInsert;
+        }
+        else
+        {
+            _nodeToInsert.next = _nodeAfter.next;
+            _nodeAfter.next = _nodeToInsert;
+        }
     }
 
     // show all nodes from list
