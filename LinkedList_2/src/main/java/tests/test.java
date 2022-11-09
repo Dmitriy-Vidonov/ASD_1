@@ -13,7 +13,8 @@ public class test {
 
         //System.out.println("статус удаления - " + s_list2.remove(4));
         //s_list2.removeAll(3);
-        s_list2.clear();
+        //s_list2.clear();
+        System.out.println(s_list2.count());
 
         s_list2.showAll(s_list2);
         // System.out.println("head = " + s_list2.head.value);
