@@ -88,9 +88,34 @@ public class LinkedList2 {
         }
         return false; // если узел не был удален
     }
-
+    // removeAll is OK
     public void removeAll(int _value) {
-        // здесь будет ваш код удаления всех узлов по заданному значению
+        Node node = this.head;
+        while (node.next != null) {
+            // Если значение оказалось в head
+            if (this.head.value == _value) {
+                this.head.next.prev = null;
+                this.head = this.head.next;
+            }
+            // Если знечения лежат не в head и не в tail
+            else if (node.value == _value) {
+                node.prev.next = node.next;
+                node.next.prev = node.prev;
+            }
+            node = node.next;
+        }
+        // Если значение оказалось в tail и до этого список уже пуст
+        if (node.value == _value && node.prev == null) {
+            head = null;
+            tail = null;
+            node = null;
+        }
+        // если значение оказалось в tail и перед ним есть элементы
+        else {
+            tail = node.prev;
+            tail.next = null;
+            node.prev = null;
+        }
     }
 
     public void clear() {
