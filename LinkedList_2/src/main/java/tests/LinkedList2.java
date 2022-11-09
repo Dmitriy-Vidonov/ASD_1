@@ -24,8 +24,15 @@ public class LinkedList2 {
         this.tail = _item;
     }
 
+    // метод поиска первого узла по его значению
     public Node find(int _value) {
         // здесь будет ваш код поиска
+        Node node = this.head;
+        while (node != null) {
+            if (node.value == _value)
+                return node;
+            node = node.next;
+        }
         return null;
     }
 
