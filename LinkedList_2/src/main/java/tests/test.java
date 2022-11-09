@@ -12,10 +12,11 @@ public class test {
         s_list2.showAll(s_list2);
 
         //System.out.println("статус удаления - " + s_list2.remove(4));
-        s_list2.removeAll(3);
+        //s_list2.removeAll(3);
+        s_list2.clear();
 
         s_list2.showAll(s_list2);
-         System.out.println("head = " + s_list2.head.value);
-         System.out.println("tail = " + s_list2.tail.value);
+        // System.out.println("head = " + s_list2.head.value);
+        // System.out.println("tail = " + s_list2.tail.value);
     }
 }

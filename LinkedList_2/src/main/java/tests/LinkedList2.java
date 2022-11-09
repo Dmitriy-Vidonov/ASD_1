@@ -117,12 +117,14 @@ public class LinkedList2 {
             node.prev = null;
         }
     }
-
+    // clear is OK
     public void clear() {
-        // здесь будет ваш код очистки всего списка
+        while (this.head != null)
+            this.head = head.next;
     }
 
     public int count() {
+        
         return  0; // здесь будет ваш код подсчета всех элементов в списке
     }
 
