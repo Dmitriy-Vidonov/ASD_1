@@ -20,25 +20,36 @@ public class LinkedList
     }
 
     public Node find(int value) {
-        Node node = this.head;
-        while (node != null) {
-            if (node.value == value)
-                return node;
-            node = node.next;
+        if(this.head == null){
+            return null;
+        }
+        else {
+            Node node = this.head;
+            while (node != null) {
+                if (node.value == value)
+                    return node;
+                node = node.next;
+            }
         }
         return null;
     }
 
     public ArrayList<Node> findAll(int _value) {
         ArrayList<Node> nodes = new ArrayList<Node>();
-        Node node = this.head;
-        while(node != null)
-        {
-            if(node.value == _value)
+
+        if(this.head == null){
+            return null;
+        }
+        else {
+            Node node = this.head;
+            while(node != null)
             {
-                nodes.add(node);
+                if(node.value == _value)
+                {
+                    nodes.add(node);
+                }
+                node = node.next;
             }
-            node = node.next;
         }
         return nodes;
     }

@@ -24,10 +24,8 @@ public class LinkedList2 {
         this.tail = _item;
     }
 
-    // метод поиска первого узла по его значению
     // find is OK
     public Node find(int _value) {
-        // здесь будет ваш код поиска
         if(this.head == null){
             return null;
         }
@@ -42,15 +40,53 @@ public class LinkedList2 {
         return null;
     }
 
+    // findAll is OK
     public ArrayList<Node> findAll(int _value) {
         ArrayList<Node> nodes = new ArrayList<Node>();
-        // здесь будет ваш код поиска всех узлов по заданному значению
+
+        if(this.head == null){
+            return null;
+        }
+        else {
+            Node node = this.head;
+            while(node != null)
+            {
+                if(node.value == _value)
+                {
+                    nodes.add(node);
+                }
+                node = node.next;
+            }
+        }
         return nodes;
     }
 
+    // remove is OK
     public boolean remove(int _value) {
-        // здесь будет ваш код удаления одного узла по заданному значению
-        return true; // если узел был удален
+        // Если значение оказалось в head
+        if (this.head.value == _value) {
+            this.head.next.prev = null;
+            this.head = this.head.next;
+            return true;
+        }
+        // Если знечение оказалось не в head и не в tail
+        Node node = this.head;
+        while (node.next != null) {
+            if (node.value == _value) {
+                node.prev.next = node.next;
+                node.next.prev = node.prev;
+                return true;
+            }
+            node = node.next;
+        }
+        // Если значение оказалось в tail
+        if (node.value == _value) {
+            tail = node.prev;
+            tail.next = null;
+            node.prev = null;
+            return true;
+        }
+        return false; // если узел не был удален
     }
 
     public void removeAll(int _value) {
@@ -70,6 +106,20 @@ public class LinkedList2 {
 
         // если _nodeAfter = null
         // добавьте элемент первым в списке
+    }
+
+    // show all nodes from list
+    public void showAll(LinkedList2 LL){
+        if (LL.head != null)
+        {
+            Node node = LL.head;
+            while(node != null){
+                System.out.print(node.value + " ");
+                node = node.next;
+            }
+            System.out.println();
+        }
+        else System.out.println("null list");
     }
 }
 
