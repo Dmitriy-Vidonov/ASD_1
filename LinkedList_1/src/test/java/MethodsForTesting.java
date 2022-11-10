@@ -54,4 +54,20 @@ public class MethodsForTesting {
     {
         return ((myListOfValues(my_LL, val).size() == notMyListOfValues(java_LL, val).size()));
     }
+
+    /*
+    // show all nodes from list
+    public static void showAll(LinkedList LL){
+        if (LL.head != null)
+        {
+            Node node = LL.head;
+            while(node != null){
+                System.out.print(node.value + " ");
+                node = node.next;
+            }
+            System.out.println();
+        }
+        else System.out.println("null list");
+    }
+    * */
 }

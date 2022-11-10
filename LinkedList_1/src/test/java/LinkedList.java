@@ -54,50 +54,30 @@ public class LinkedList
         return nodes;
     }
 
-    public boolean remove(int _value)
-    {
-        if(this.head == null){
-            return false;
-        }
-
-        Node node = this.head;
-        Node preNode = node;
-
-        if (this.head.value == _value
-                && this.head.next != null)
-        {
+    public boolean remove(int _value) {
+        if (this.head.value == _value) {
+            Node node = this.head;
             this.head = this.head.next;
+            node = null;
             return true;
         }
-        else if (this.head.value == _value
-                && this.head.next == null)
-        {
-            this.head = null;
-            this.tail = null;
-            return true;
-        }
-        else
-        {
-            while(node != null)
-            {
-                if(node.value != _value)
-                {
-                    preNode = node;
+        else {
+            Node node = this.head.next;
+            Node prev = this.head;
+
+            while (node != null) {
+                if(node.value == _value && node.next != null) {
+                    prev.next = node.next;
                     node = node.next;
+                    return true;
                 }
-                else
-                {
-                    if (node.next != null)
-                    {
-                        preNode.next = node.next;
-                        return true;
-                    }
-                    else {
-                        preNode.next = null;
-                        tail = preNode;
-                        return true;
-                    }
+                else if(node.value == _value && node.next == null) {
+                    tail = prev;
+                    tail.next = null;
+                    return true;
                 }
+                node = node.next;
+                prev = prev.next;
             }
         }
         return false;
@@ -146,23 +126,18 @@ public class LinkedList
     public void clear()
     {
         if(this.head != null) {
-          Node node = this.head;
-      
-        while (node != null)
-          {
-            this.head.next = null;
-            head = node;
-            node = node.next;
-          }
-
-          head = null;
-          tail = null;
-          node = null;
+            Node node = this.head;
+            while (node != null)
+            {
+                this.head.next = null;
+                head = node;
+                node = node.next;
+            }
+            head = null;
+            tail = null;
+            node = null;
         }
-      
-        else 
-          return;
-      
+        else return;
     }
 
     public int count()

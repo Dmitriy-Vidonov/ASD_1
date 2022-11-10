@@ -1,120 +1,207 @@
 package mytests;
 import java.util.*;
 
-public class LinkedList {
+public class LinkedList
+{
     public Node head;
     public Node tail;
 
-    public LinkedList() // Конструктор класса LinkedList
-    {   // Задаем значения по умолчанию
+    public LinkedList()
+    {
         head = null;
         tail = null;
     }
 
-    // Добавим элемент в конец списка
-    public void add_in_tail(Node item) {
-        // через this указываем, что head - это head нашего основного класса - LinkedList
-        if (this.head == null) // поле head принадлежит списку и если элементов нет, то оно пустое
-            this.head = item; // Если список не заполнен, то добавляем в начало узел item
-        else // Если элементы в списке уже были
-            tail.next = item; // В поле next объекта tail (тип Node - узел) - заносим текущий узел
-        // т.е. в указатель на следующий элемент массива помещается текущий узел
-        tail = item; // в поле tail класса LinkedList помещаем текущий элемент - список
-        tail.next = null; // у текущего узла указатель next будет равен null, т.к. узел мы добавили в конец списка
+    public void addInTail(Node item) {
+        if (this.head == null)
+            this.head = item;
+        else
+            this.tail.next = item;
+        this.tail = item;
     }
 
-    // Перебор всех элементов списка
-    public void checkAll() {
-        Node node = head; // создали некий узел, в который поместили head-овый элемент нашего списка
-        while (node != null) { // до тех пор, пока наш узел не станет null - проходим по списку
-            System.out.print(node.value + " ");
-            node = node.next;
+    public Node find(int value) {
+        if(this.head == null){
+            return null;
         }
-    }
-
-    // Найти элемент списка по его индексу - простой вариант, без проверок по длине и ограничения по верхней границе
-    public Node Get(int i) {
-        Node node = head;
-        for (int k = 0; k < i; k++)
-            node = node.next;
-        return node;
-    }
-
-    // Найти нужный узел по заданному value
-    public Node findByValue(int val) {
-        Node node = this.head;
-        while (node != null) {
-            if (node.value == val)
-                return node;
-            node = node.next;
+        else {
+            Node node = this.head;
+            while (node != null) {
+                if (node.value == value)
+                    return node;
+                node = node.next;
+            }
         }
         return null;
     }
 
-    // 1. Добавьте в класс LinkedList метод удаления одного узла по его значению. ОК
-    public void removeAll(int _value)
-    {
-        Node node = this.head;
-        Node preNode = node;
-
-        while(node != null)
-        {
-            if (this.head.value == _value && this.head.next != null)
-                this.head = this.head.next;
-
-            else if(node.value == _value && this.head.next == null)
-            {
-                this.head = null;
-                break;
-            }
-
-            else if(node.value != _value)
-            {
-                preNode = node;
-                node = node.next;
-            }
-            else
-            {
-                preNode.next = node.next;
-                node = preNode.next;
-            }
-        }
-    }
-
-    // 3. Добавьте в класс LinkedList метод очистки всего содержимого (создание пустого списка).
-    public void clear()
-    {
-        Node preNode = this.head;
-
-        while (this.head != null) {
-            preNode = this.head;
-            this.head = head.next;
-            preNode = null;
-        }
-    }
-
-    // 4. Добавьте в класс LinkedList метод поиска всех узлов по конкретному значению
-    // (возвращается список/массив найденных узлов).
     public ArrayList<Node> findAll(int _value) {
         ArrayList<Node> nodes = new ArrayList<Node>();
-        Node node = this.head; // Установили ноду в начало
-        while(node != null) // проход всех элементов списка
-        {
-            if(node.value == _value)
+
+        if(this.head == null){
+            return null;
+        }
+        else {
+            Node node = this.head;
+            while(node != null)
             {
-                nodes.add(node);
+                if(node.value == _value)
+                {
+                    nodes.add(node);
+                }
+                node = node.next;
             }
-            node = node.next;
         }
         return nodes;
     }
 
-    //5. Добавьте в класс LinkedList метод вычисления длины списка.
+    // remove
+    public boolean remove(int _value) {
+        // Если head.value == _value
+        if (this.head.value == _value) {
+            Node node = this.head;
+            this.head = this.head.next;
+            node = null;
+            return true;
+        }
+        else {
+            Node node = this.head.next;
+            Node prev = this.head;
+
+            while (node != null) { // пока не дойдем до последнего узла, который обработаем отдельно
+                if(node.value == _value && node.next != null) { // пока мы не в конце списка (node.next != null)
+                    prev.next = node.next;
+                    node = node.next;
+                    return true;
+                }
+                else if(node.value == _value && node.next == null) { // если tail.value == _value
+                    tail = prev;
+                    tail.next = null;
+                    return true;
+                }
+                node = node.next;
+                prev = prev.next;
+            }
+        }
+        return false;
+    }
+
+  /*  public boolean remove(int _value)
+    {
+        if(this.head == null){
+            return false;
+        }
+
+        Node node = this.head;
+        Node preNode = node;
+
+        if (this.head.value == _value
+                && this.head.next != null)
+        {
+            this.head = this.head.next;
+            return true;
+        }
+        else if (this.head.value == _value
+                && this.head.next == null)
+        {
+            this.head = null;
+            this.tail = null;
+            return true;
+        }
+        else
+        {
+            while(node != null)
+            {
+                if(node.value != _value)
+                {
+                    preNode = node;
+                    node = node.next;
+                }
+                else
+                {
+                    if (node.next != null)
+                    {
+                        preNode.next = node.next;
+                        return true;
+                    }
+                    else {
+                        preNode.next = null;
+                        tail = preNode;
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    } */
+
+    public void removeAll(int _value)
+    {
+        Node pre = null;
+        if (this.head == null) {
+            return;
+        }
+        else if(this.head.value == _value && head.next == null) {
+            this.head = null;
+            return;
+        }
+
+        else
+        {
+            pre = this.head;
+            while (pre.next != null)
+            {
+                if(this.head.value == _value)
+                {
+                    this.head = this.head.next;
+                    pre = this.head;
+                }
+
+                else if(pre.next.value == _value) {
+                    Node del = pre.next;
+                    Node aft = del.next;
+                    pre.next = aft;
+                }
+                else {
+                    pre = pre.next;
+                }
+                tail = pre;
+            }
+        }
+        if(this.head.value == _value) {
+            this.head = null;
+            this.tail = null;
+            pre = null;
+        }
+    }
+
+    public void clear()
+    {
+        if(this.head != null) {
+            Node node = this.head;
+
+            while (node != null)
+            {
+                this.head.next = null;
+                head = node;
+                node = node.next;
+            }
+
+            head = null;
+            tail = null;
+            node = null;
+        }
+
+        else
+            return;
+
+    }
+
     public int count()
     {
-        Node node = this.head; // устанавливаем узел в начало списка
+        Node node = this.head;
         int count = 0;
-        if(this.head == null) // если список пустой
+        if(this.head == null)
         {
             return 0;
         }
@@ -129,28 +216,51 @@ public class LinkedList {
         return count;
     }
 
-    /*
-    6. Добавьте в класс LinkedList метод вставки нового узла после заданного узла.
-    Например, имеется список (a1,a2,a3,a4,a5) и новый узел a7;
-    вставляя узел a7 после узла a3, получаем список (a1,a2,a3,a7,a4,a5).
-    */
     public void insertAfter(Node _nodeAfter, Node _nodeToInsert)
     {
-     Node node = this.head;
-     // Если изначально список пустой
+        if (_nodeAfter == this.tail)
+        {
+            this.tail = _nodeToInsert;
+        }
         if (this.head == null)
         {
             this.head = _nodeToInsert;
             _nodeToInsert.next = null;
+        }
+        if (_nodeAfter == null)
+        {
+            _nodeToInsert.next = head;
+            head = _nodeToInsert;
         }
         else
         {
             _nodeToInsert.next = _nodeAfter.next;
             _nodeAfter.next = _nodeToInsert;
         }
-        // здесь будет ваш код вставки узла после заданного
+    }
 
-        // если _nodeAfter = null ,
-        // добавьте новый элемент первым в списке
+    // show all nodes from list
+    public void showAll(){
+        if (this.head != null)
+        {
+            Node node = this.head;
+            while(node != null){
+                System.out.print(node.value + " ");
+                node = node.next;
+            }
+            System.out.println();
+        }
+        else System.out.println("null list");
+    }
+}
+
+class Node
+{
+    public int value;
+    public Node next;
+    public Node(int _value)
+    {
+        value = _value;
+        next = null;
     }
 }
