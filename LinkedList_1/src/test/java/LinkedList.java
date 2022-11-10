@@ -145,8 +145,24 @@ public class LinkedList
 
     public void clear()
     {
-        while (this.head != null)
-            this.head = head.next;
+        if(this.head != null) {
+          Node node = this.head;
+      
+        while (node != null)
+          {
+            this.head.next = null;
+            head = node;
+            node = node.next;
+          }
+
+          head = null;
+          tail = null;
+          node = null;
+        }
+      
+        else 
+          return;
+      
     }
 
     public int count()
