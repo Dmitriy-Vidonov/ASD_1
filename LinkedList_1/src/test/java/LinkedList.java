@@ -85,7 +85,6 @@ public class LinkedList
 
     public void removeAll(int _value)
     {
-        Node pre = null;
         if (this.head == null) {
             return;
         }
@@ -96,7 +95,7 @@ public class LinkedList
 
         else
         {
-            pre = this.head;
+            Node pre = this.head;
             while (pre.next != null)
             {
                 if(this.head.value == _value)
@@ -119,7 +118,6 @@ public class LinkedList
         if(this.head.value == _value) {
             this.head = null;
             this.tail = null;
-            pre = null;
         }
     }
 

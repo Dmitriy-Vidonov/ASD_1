@@ -86,58 +86,9 @@ public class LinkedList
         return false;
     }
 
-  /*  public boolean remove(int _value)
-    {
-        if(this.head == null){
-            return false;
-        }
-
-        Node node = this.head;
-        Node preNode = node;
-
-        if (this.head.value == _value
-                && this.head.next != null)
-        {
-            this.head = this.head.next;
-            return true;
-        }
-        else if (this.head.value == _value
-                && this.head.next == null)
-        {
-            this.head = null;
-            this.tail = null;
-            return true;
-        }
-        else
-        {
-            while(node != null)
-            {
-                if(node.value != _value)
-                {
-                    preNode = node;
-                    node = node.next;
-                }
-                else
-                {
-                    if (node.next != null)
-                    {
-                        preNode.next = node.next;
-                        return true;
-                    }
-                    else {
-                        preNode.next = null;
-                        tail = preNode;
-                        return true;
-                    }
-                }
-            }
-        }
-        return false;
-    } */
-
     public void removeAll(int _value)
     {
-        Node pre = null;
+       // Node pre = null;
         if (this.head == null) {
             return;
         }
@@ -148,7 +99,7 @@ public class LinkedList
 
         else
         {
-            pre = this.head;
+            Node pre = this.head;
             while (pre.next != null)
             {
                 if(this.head.value == _value)
@@ -171,7 +122,7 @@ public class LinkedList
         if(this.head.value == _value) {
             this.head = null;
             this.tail = null;
-            pre = null;
+            //pre = null;
         }
     }
 

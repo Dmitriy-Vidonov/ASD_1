@@ -20,11 +20,12 @@ public class TestIngList {
         s_list.addInTail(n3);
         s_list.addInTail(n4);
         s_list.addInTail(n5);
-      //  s_list.addInTail(n6);
+       // s_list.addInTail(n6);
       //  s_list.addInTail(n7);
 
         s_list.showAll();
-        System.out.println("remove status = " + s_list.remove(1));
+        //System.out.println("remove status = " + s_list.remove(1));
+        s_list.removeAll(1);
         s_list.showAll();
 
         System.out.println("head = " + s_list.head.value);
