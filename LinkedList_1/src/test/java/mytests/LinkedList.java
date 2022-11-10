@@ -57,11 +57,24 @@ public class LinkedList
 
     // remove
     public boolean remove(int _value) {
+        // Если список изначально пустой
+        if (this.head == null)
+            return false;
+
         // Если head.value == _value
-        if (this.head.value == _value) {
+        if (this.head.value == _value
+                && this.head.next != null)
+        { // Если узел на удаление в начале, но список не из 1 узла
             Node node = this.head;
             this.head = this.head.next;
             node = null;
+            return true;
+        }
+        if (this.head.value == _value
+                && this.head.next == null) // Если узел на удаление в начале и список из 1 узла
+        {
+            head = null;
+            tail = null;
             return true;
         }
         else {
@@ -88,7 +101,6 @@ public class LinkedList
 
     public void removeAll(int _value)
     {
-       // Node pre = null;
         if (this.head == null) {
             return;
         }
@@ -122,7 +134,6 @@ public class LinkedList
         if(this.head.value == _value) {
             this.head = null;
             this.tail = null;
-            //pre = null;
         }
     }
 
