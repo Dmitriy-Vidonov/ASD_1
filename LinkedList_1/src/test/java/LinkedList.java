@@ -55,10 +55,22 @@ public class LinkedList
     }
 
     public boolean remove(int _value) {
-        if (this.head.value == _value) {
+        if (this.head == null)
+            return false;
+
+        if (this.head.value == _value
+                && this.head.next != null)
+        {
             Node node = this.head;
             this.head = this.head.next;
             node = null;
+            return true;
+        }
+        if (this.head.value == _value
+                && this.head.next == null)
+        {
+            head = null;
+            tail = null;
             return true;
         }
         else {
