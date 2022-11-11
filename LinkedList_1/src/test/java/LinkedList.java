@@ -20,16 +20,11 @@ public class LinkedList
     }
 
     public Node find(int value) {
-        if(this.head == null){
-            return null;
-        }
-        else {
-            Node node = this.head;
-            while (node != null) {
-                if (node.value == value)
-                    return node;
-                node = node.next;
-            }
+        Node node = this.head;
+        while (node != null) {
+            if (node.value == value)
+                return node;
+            node = node.next;
         }
         return null;
     }
@@ -38,8 +33,9 @@ public class LinkedList
         ArrayList<Node> nodes = new ArrayList<Node>();
 
         if(this.head == null){
-            return null;
+            return nodes;
         }
+
         else {
             Node node = this.head;
             while(node != null)
@@ -54,14 +50,14 @@ public class LinkedList
         return nodes;
     }
 
-    public boolean remove(int _value) {
-   
+    public boolean remove(int _value)
+    {
         if (this.head == null)
             return false;
 
         if (this.head.value == _value
                 && this.head.next != null)
-        { 
+        {
             this.head = this.head.next;
             return true;
         }
@@ -146,7 +142,7 @@ public class LinkedList
             tail = null;
         }
     }
-   
+
     public int count()
     {
         Node node = this.head;
@@ -168,19 +164,22 @@ public class LinkedList
 
     public void insertAfter(Node _nodeAfter, Node _nodeToInsert)
     {
-        if (_nodeAfter == this.tail)
-        {
-            this.tail = _nodeToInsert;
-        }
         if (this.head == null)
         {
             this.head = _nodeToInsert;
-            _nodeToInsert.next = null;
+            this.tail = _nodeToInsert;
+            return;
         }
         if (_nodeAfter == null)
         {
-            _nodeToInsert.next = head;
-            head = _nodeToInsert;
+            _nodeToInsert.next = this.head;
+            this.head = _nodeToInsert;
+            return;
+        }
+        if (_nodeAfter == this.tail)
+        {
+            _nodeAfter.next = _nodeToInsert;
+            this.tail = _nodeToInsert;
         }
         else
         {

@@ -94,7 +94,7 @@ class LinkedListTest_remove {
     }
 
     @Test
-    @DisplayName("3) Один элемент не в начале, не в конце")
+    @DisplayName("3) Один элемент в середине")
     void remove1NodeInMiddle() throws Exception
     {
         s_list.addInTail(new Node(2));
@@ -111,7 +111,7 @@ class LinkedListTest_remove {
     }
 
     @Test
-    @DisplayName("4) Два элемента не в начале, не в конце")
+    @DisplayName("4) Два элемента в середине")
     void remove2NodesInMiddle() throws Exception
     {
         s_list.addInTail(new Node(2));
@@ -190,6 +190,7 @@ class LinkedListTest_remove {
 
         Assertions.assertEquals(true, MethodsForTests.LinkedListCopy(s_list)
                 .equals(MethodsForTests.LinkedListCopy(empty_list)));
+        Assertions.assertEquals(true, MethodsForTests.isListNull(s_list));
     }
 
     @Test
@@ -202,6 +203,7 @@ class LinkedListTest_remove {
 
         Assertions.assertEquals(true, MethodsForTests.LinkedListCopy(s_list)
                 .equals(MethodsForTests.LinkedListCopy(empty_list)));
+        Assertions.assertEquals(true, MethodsForTests.isListNull(s_list));
     }
 
     @Test

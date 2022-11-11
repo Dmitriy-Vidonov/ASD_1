@@ -36,7 +36,7 @@ public class LinkedList
     }
 
     public ArrayList<Node> findAll(int _value) {
-        ArrayList<Node> nodes = new ArrayList<Node>();
+        ArrayList<Node> nodes = new ArrayList<>();
 
         if(this.head == null){
             return nodes;
@@ -55,21 +55,17 @@ public class LinkedList
         return nodes;
     }
 
-    // remove
     public boolean remove(int _value) {
-        // Если список изначально пустой
         if (this.head == null)
             return false;
 
-        // Если head.value == _value
         if (this.head.value == _value
                 && this.head.next != null)
-        { // Если узел на удаление в начале, но список не из 1 узла
+        {
             this.head = this.head.next;
             return true;
         }
-        if (this.head.value == _value
-                && this.head.next == null) // Если узел на удаление в начале и список из 1 узла
+        if (this.head.value == _value && this.head.next == null)
         {
             head = null;
             tail = null;
@@ -79,12 +75,12 @@ public class LinkedList
             Node node = this.head.next;
             Node prev = this.head;
 
-            while (node != null) { // пока не дойдем до последнего узла, который обработаем отдельно
-                if(node.value == _value && node.next != null) { // пока мы не в конце списка (node.next != null)
+            while (node != null) {
+                if(node.value == _value && node.next != null) {
                     prev.next = node.next;
                     return true;
                 }
-                else if(node.value == _value && node.next == null) { // если tail.value == _value
+                else if(node.value == _value && node.next == null) {
                     tail = prev;
                     tail.next = null;
                     return true;
@@ -172,19 +168,22 @@ public class LinkedList
 
     public void insertAfter(Node _nodeAfter, Node _nodeToInsert)
     {
-        if (_nodeAfter == this.tail)
-        {
-            this.tail = _nodeToInsert;
-        }
         if (this.head == null)
         {
             this.head = _nodeToInsert;
-            _nodeToInsert.next = null;
+            this.tail = _nodeToInsert;
+            return;
         }
         if (_nodeAfter == null)
         {
-            _nodeToInsert.next = head;
-            head = _nodeToInsert;
+            _nodeToInsert.next = this.head;
+            this.head = _nodeToInsert;
+            return;
+        }
+        if (_nodeAfter == this.tail)
+        {
+            _nodeAfter.next = _nodeToInsert;
+            this.tail = _nodeToInsert;
         }
         else
         {
@@ -192,28 +191,6 @@ public class LinkedList
             _nodeAfter.next = _nodeToInsert;
         }
     }
-
-    // show all nodes from list
-    public void showAll(){
-        if (this.head != null)
-        {
-            Node node = this.head;
-            while(node != null){
-                System.out.print(node.value + " ");
-                node = node.next;
-            }
-            System.out.println();
-        }
-        else if (this.head == null && this.tail == null)
-            System.out.println("null list");
-        else {
-            System.out.println("something wrong:");
-            System.out.println("head of null list: " + this.head);
-            System.out.println("tail of null list: " + this.tail);
-        }
-
-    }
-
 }
 
 class Node

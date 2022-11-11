@@ -160,6 +160,7 @@ class LinkedListTest_removeAll {
 
         Assertions.assertEquals(true, MethodsForTests.LinkedListCopy(s_list)
                 .equals(MethodsForTests.LinkedListCopy(empty_list)));
+        Assertions.assertEquals(true, MethodsForTests.isListNull(s_list));
     }
 
     @Test
@@ -171,6 +172,7 @@ class LinkedListTest_removeAll {
 
         Assertions.assertEquals(true, MethodsForTests.LinkedListCopy(s_list)
                 .equals(MethodsForTests.LinkedListCopy(empty_list)));
+        Assertions.assertEquals(true, MethodsForTests.isListNull(s_list));
     }
 
     @Test
@@ -185,6 +187,7 @@ class LinkedListTest_removeAll {
 
         Assertions.assertEquals(true, MethodsForTests.LinkedListCopy(s_list)
                 .equals(MethodsForTests.LinkedListCopy(empty_list)));
+        Assertions.assertEquals(true, MethodsForTests.isListNull(s_list));
     }
 
 }
