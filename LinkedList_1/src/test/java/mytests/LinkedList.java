@@ -39,7 +39,7 @@ public class LinkedList
         ArrayList<Node> nodes = new ArrayList<Node>();
 
         if(this.head == null){
-            return null;
+            return nodes;
         }
         else {
             Node node = this.head;
@@ -65,9 +65,7 @@ public class LinkedList
         if (this.head.value == _value
                 && this.head.next != null)
         { // Если узел на удаление в начале, но список не из 1 узла
-            Node node = this.head;
             this.head = this.head.next;
-            node = null;
             return true;
         }
         if (this.head.value == _value
@@ -84,7 +82,6 @@ public class LinkedList
             while (node != null) { // пока не дойдем до последнего узла, который обработаем отдельно
                 if(node.value == _value && node.next != null) { // пока мы не в конце списка (node.next != null)
                     prev.next = node.next;
-                    node = node.next;
                     return true;
                 }
                 else if(node.value == _value && node.next == null) { // если tail.value == _value
@@ -106,6 +103,7 @@ public class LinkedList
         }
         else if(this.head.value == _value && head.next == null) {
             this.head = null;
+            this.tail = null;
             return;
         }
 
@@ -148,15 +146,9 @@ public class LinkedList
                 head = node;
                 node = node.next;
             }
-
             head = null;
             tail = null;
-            node = null;
         }
-
-        else
-            return;
-
     }
 
     public int count()
@@ -212,8 +204,16 @@ public class LinkedList
             }
             System.out.println();
         }
-        else System.out.println("null list");
+        else if (this.head == null && this.tail == null)
+            System.out.println("null list");
+        else {
+            System.out.println("something wrong:");
+            System.out.println("head of null list: " + this.head);
+            System.out.println("tail of null list: " + this.tail);
+        }
+
     }
+
 }
 
 class Node
