@@ -158,6 +158,7 @@ public class LinkedList2
         }
     }
 
+    // count is OK (tested)
     public int count()
     {
         Node node = this.head;
