@@ -1,4 +1,4 @@
-package tests;
+package tests_ver1;
 
 public class test {
     public static void main(String[] args) {

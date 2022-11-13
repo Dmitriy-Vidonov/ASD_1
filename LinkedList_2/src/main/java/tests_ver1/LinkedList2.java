@@ -1,4 +1,4 @@
-package tests;
+package tests_ver1;
 
 import java.util.ArrayList;
 
@@ -45,7 +45,7 @@ public class LinkedList2 {
         ArrayList<Node> nodes = new ArrayList<Node>();
 
         if(this.head == null){
-            return null;
+            return nodes;
         }
         else {
             Node node = this.head;
