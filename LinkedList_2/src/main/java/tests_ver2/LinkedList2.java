@@ -141,10 +141,21 @@ public class LinkedList2
         }
     }
 
-
+    // clear() is OK (tested)
     public void clear()
     {
-        // здесь будет ваш код очистки всего списка
+        if(this.head != null) {
+            Node node = this.head;
+
+            while (node != null)
+            {
+                this.head.next = null;
+                head = node;
+                node = node.next;
+            }
+            head = null;
+            tail = null;
+        }
     }
 
     public int count()
