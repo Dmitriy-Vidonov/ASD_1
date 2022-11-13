@@ -160,7 +160,21 @@ public class LinkedList2
 
     public int count()
     {
-        return 0; // здесь будет ваш код подсчёта количества элементов в списке
+        Node node = this.head;
+        int count = 0;
+        if(this.head == null)
+        {
+            return 0;
+        }
+        else
+        {
+            while(node != null)
+            {
+                count++;
+                node = node.next;
+            }
+        }
+        return count;
     }
 
     public void insertAfter(Node _nodeAfter, Node _nodeToInsert)
