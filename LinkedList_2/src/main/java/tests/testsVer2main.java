@@ -86,26 +86,33 @@ public class testsVer2main {
         System.out.println("*");
 
         // *** ПРОВЕРКА МЕТОДА insertAfter() ***
+        System.out.println("ПРОВЕРКА МЕТОДА insertAfter()");
+
         Node insNode1 = new Node(1);
         Node insNode2 = new Node(2);
         Node insNode3 = new Node(3);
 
+        LinkedList2 emptyList = new LinkedList2();
+
         Node toInsert = new Node(10);
 
         LinkedList2 testInsList = new LinkedList2();
-        testInsList.addInTail(insNode1); testInsList.addInTail(insNode2); testInsList.addInTail(insNode3);
 
+        testInsList.addInTail(insNode1); //testInsList.addInTail(insNode2); testInsList.addInTail(insNode3);
+        emptyList.addInTail(insNode1); emptyList.addInTail(insNode2); emptyList.addInTail(insNode3);
+
+        MethodsForTesting.ShowNodesValues(emptyList);
+
+        emptyList.insertAfter(insNode2, toInsert);
+
+        MethodsForTesting.ShowNodesValues(emptyList);
         MethodsForTesting.ShowNodesValues(testInsList);
 
-        testInsList.insertAfter(insNode1, toInsert);
-
-        MethodsForTesting.ShowNodesValues(testInsList);
-
-        if (testInsList.head != null)
+        if (emptyList.head != null)
         {
-            System.out.println("head = " + testInsList.head.value);
-            System.out.println("tail = " + testInsList.tail.value);
+            System.out.println("head = " + emptyList.head.value);
+            System.out.println("tail = " + emptyList.tail.value);
         }
-        System.out.println(MethodsForTesting.ListsEqualByNodes(testInsList, testList));
+        System.out.println(MethodsForTesting.ListsEqualByNodes(testInsList, emptyList));
     }
 }

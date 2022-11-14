@@ -88,7 +88,7 @@ class Test_insertAfter {
 
     @Test
     @DisplayName("5) Список из ряда узлов, вставка после первого узлом")
-    void insertAfter_InsertAfterFirst() throws Exception
+    void insertAfter_InsertAfterFirst()// throws Exception
     {
         Node n1 = new Node(1);
         Node n2 = new Node(2);

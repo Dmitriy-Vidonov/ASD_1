@@ -191,6 +191,7 @@ public class LinkedList2
         if (_nodeAfter == null && this.head == null)
         {
             this.head = _nodeToInsert;
+            this.tail = _nodeToInsert;
             return;
         }
         // либо список не пуст и вставляем перед ним первым элементом
