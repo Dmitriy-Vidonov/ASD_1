@@ -96,9 +96,6 @@ public class testsVer2main {
 
         Node toInsert = new Node(10);
 
-        LinkedList2 testInsList = new LinkedList2();
-
-        testInsList.addInTail(insNode1); //testInsList.addInTail(insNode2); testInsList.addInTail(insNode3);
         emptyList.addInTail(insNode1); emptyList.addInTail(insNode2); emptyList.addInTail(insNode3);
 
         MethodsForTesting.ShowNodesValues(emptyList);
@@ -106,13 +103,16 @@ public class testsVer2main {
         emptyList.insertAfter(insNode2, toInsert);
 
         MethodsForTesting.ShowNodesValues(emptyList);
-        MethodsForTesting.ShowNodesValues(testInsList);
 
         if (emptyList.head != null)
         {
             System.out.println("head = " + emptyList.head.value);
             System.out.println("tail = " + emptyList.tail.value);
+            System.out.println("head.prev = " + emptyList.head.prev);
+            System.out.println("head.next = " + emptyList.head.next.value);
+            System.out.println("tail.prev = " + emptyList.tail.prev.value);
+            System.out.println("tail.next = " + emptyList.tail.next);
         }
-        System.out.println(MethodsForTesting.ListsEqualByNodes(testInsList, emptyList));
+
     }
 }

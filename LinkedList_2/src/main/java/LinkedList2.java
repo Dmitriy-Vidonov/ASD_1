@@ -1,18 +1,15 @@
 import java.util.*;
 
-public class LinkedList2
-{
+public class LinkedList2 {
     public Node head;
     public Node tail;
 
-    public LinkedList2()
-    {
+    public LinkedList2() {
         head = null;
         tail = null;
     }
 
-    public void addInTail(Node _item)
-    {
+    public void addInTail(Node _item) {
         if (head == null) {
             this.head = _item;
             this.head.next = null;
@@ -24,12 +21,10 @@ public class LinkedList2
         this.tail = _item;
     }
 
-    public Node find(int _value)
-    {
-        if(this.head == null){
+    public Node find(int _value) {
+        if (this.head == null) {
             return null;
-        }
-        else {
+        } else {
             Node node = this.head;
             while (node != null) {
                 if (node.value == _value)
@@ -40,19 +35,15 @@ public class LinkedList2
         return null;
     }
 
-    public ArrayList<Node> findAll(int _value)
-    {
+    public ArrayList<Node> findAll(int _value) {
         ArrayList<Node> nodes = new ArrayList<Node>();
 
-        if(this.head == null){
+        if (this.head == null) {
             return nodes;
-        }
-        else {
+        } else {
             Node node = this.head;
-            while(node != null)
-            {
-                if(node.value == _value)
-                {
+            while (node != null) {
+                if (node.value == _value) {
                     nodes.add(node);
                 }
                 node = node.next;
@@ -61,8 +52,7 @@ public class LinkedList2
         return nodes;
     }
 
-    public boolean remove(int _value)
-    {
+    public boolean remove(int _value) {
         if (this.head == null)
             return false;
 
@@ -71,8 +61,7 @@ public class LinkedList2
             this.head = this.head.next;
             this.head.prev = null;
             return true;
-        }
-        else if (this.head.value == _value && this.head.next == null) {
+        } else if (this.head.value == _value && this.head.next == null) {
             this.head = null;
             this.tail = null;
             return true;
@@ -96,47 +85,36 @@ public class LinkedList2
         return false;
     }
 
-    public void removeAll(int _value)
-    {
-        if (this.head == null)
-        {
+    public void removeAll(int _value) {
+        if (this.head == null) {
             return;
         }
 
         Node node = this.head;
-        while (node.next != null)
-        {
-            if (this.head.value == _value)
-            {
+        while (node.next != null) {
+            if (this.head.value == _value) {
                 this.head.next.prev = null;
                 this.head = this.head.next;
-            }
-            else if (node.value == _value)
-            {
+            } else if (node.value == _value) {
                 node.prev.next = node.next;
                 node.next.prev = node.prev;
             }
             node = node.next;
         }
-        if (this.head.value == _value)
-        {
+        if (this.head.value == _value) {
             this.head = null;
             this.tail = null;
-        }
-        else if (node.value == _value)
-        {
+        } else if (node.value == _value) {
             this.tail = node.prev;
             this.tail.next = null;
         }
     }
 
-    public void clear()
-    {
-        if(this.head != null) {
+    public void clear() {
+        if (this.head != null) {
             Node node = this.head;
 
-            while (node != null)
-            {
+            while (node != null) {
                 this.head.next = null;
                 head = node;
                 node = node.next;
@@ -146,18 +124,13 @@ public class LinkedList2
         }
     }
 
-    public int count()
-    {
+    public int count() {
         Node node = this.head;
         int count = 0;
-        if(this.head == null)
-        {
+        if (this.head == null) {
             return 0;
-        }
-        else
-        {
-            while(node != null)
-            {
+        } else {
+            while (node != null) {
                 count++;
                 node = node.next;
             }
@@ -165,31 +138,36 @@ public class LinkedList2
         return count;
     }
 
-    public void insertAfter(Node _nodeAfter, Node _nodeToInsert)
-    {
+    public void insertAfter(Node _nodeAfter, Node _nodeToInsert) {
+
         if (_nodeAfter == null && this.head == null)
         {
             this.head = _nodeToInsert;
             this.tail = _nodeToInsert;
             return;
         }
+
         if (_nodeAfter == null && this.head != null)
         {
-            this.head.prev = _nodeToInsert;
             _nodeToInsert.next = this.head;
+            this.head.prev = _nodeToInsert;
             this.head = _nodeToInsert;
+            this.head.prev = null;
             return;
         }
 
-        if (_nodeAfter == this.tail)
+        if (_nodeAfter == this.tail && this.tail.prev != null)
         {
-            _nodeAfter.next = _nodeToInsert;
+            this.tail.next = _nodeToInsert;
+            _nodeToInsert.prev = this.tail;
             this.tail = _nodeToInsert;
         }
         else
         {
             _nodeToInsert.next = _nodeAfter.next;
+            _nodeAfter.next.prev = _nodeToInsert;
             _nodeAfter.next = _nodeToInsert;
+            _nodeToInsert.prev = _nodeAfter;
         }
     }
 }
