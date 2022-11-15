@@ -64,6 +64,10 @@ public class MethodsForTesting {
                 }
                 return true;
             }
+            else if (count1 == 0 && count2 == 0)
+            {
+                return true;
+            }
             return false;
         }
 

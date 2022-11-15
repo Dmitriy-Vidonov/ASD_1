@@ -138,7 +138,20 @@ public class LinkedList2 {
         return count;
     }
 
-    public void insertAfter(Node _nodeAfter, Node _nodeToInsert) {
+    public void insertAfter(Node _nodeAfter, Node _nodeToInsert)
+    {
+        boolean flag = false;
+        Node node = this.head;
+        while (node != null)
+        {
+            if (_nodeAfter == node)
+                flag = true;
+
+            node = node.next;
+        }
+
+        if (flag == false)
+            _nodeAfter = null;
 
         if (_nodeAfter == null && this.head == null)
         {
@@ -152,22 +165,21 @@ public class LinkedList2 {
             _nodeToInsert.next = this.head;
             this.head.prev = _nodeToInsert;
             this.head = _nodeToInsert;
-            this.head.prev = null;
             return;
         }
 
-        if (_nodeAfter == this.tail && this.tail.prev != null)
+        if (_nodeAfter.next == null)
         {
-            this.tail.next = _nodeToInsert;
-            _nodeToInsert.prev = this.tail;
+            _nodeAfter.next = _nodeToInsert;
+            _nodeToInsert.prev = _nodeAfter;
             this.tail = _nodeToInsert;
         }
         else
         {
-            _nodeToInsert.next = _nodeAfter.next;
             _nodeAfter.next.prev = _nodeToInsert;
-            _nodeAfter.next = _nodeToInsert;
             _nodeToInsert.prev = _nodeAfter;
+            _nodeToInsert.next = _nodeAfter.next;
+            _nodeAfter.next = _nodeToInsert;
         }
     }
 }

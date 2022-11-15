@@ -178,7 +178,7 @@ public class LinkedList2
         return count;
     }
 
-    public void insertAfter(Node _nodeAfter, Node _nodeToInsert)
+   /* public void insertAfter(Node _nodeAfter, Node _nodeToInsert)
     {
         // либо список пуст и вставляем первый элемент в null
         if (_nodeAfter == null && this.head == null)
@@ -209,6 +209,53 @@ public class LinkedList2
             _nodeAfter.next.prev = _nodeToInsert;
             _nodeAfter.next = _nodeToInsert;
             _nodeToInsert.prev = _nodeAfter;
+        }
+    }*/
+
+    public void insertAfter(Node _nodeAfter, Node _nodeToInsert)
+    {
+        boolean flag = false;
+        Node node = this.head;
+        while (node != null)
+        {
+            if (_nodeAfter == node)
+                flag = true;
+
+            node = node.next;
+        }
+        // Если узла нет в списке, то значит _nodeAfter = null
+        if (flag == false)
+            _nodeAfter = null;
+
+        // Если список пуст
+        if (_nodeAfter == null && this.head == null)
+        {
+            this.head = _nodeToInsert;
+            this.tail = _nodeToInsert;
+            return;
+        }
+        // Если список не пуст, но вставка перед head
+        if (_nodeAfter == null && this.head != null)
+        {
+            _nodeToInsert.next = this.head;
+            this.head.prev = _nodeToInsert;
+            this.head = _nodeToInsert;
+            return;
+        }
+        // Если вставка после хвоста
+        if (_nodeAfter.next == null)
+        {
+            _nodeAfter.next = _nodeToInsert;
+            _nodeToInsert.prev = _nodeAfter;
+            this.tail = _nodeToInsert;
+           // return;
+        }
+        else
+        {
+            _nodeAfter.next.prev = _nodeToInsert;
+            _nodeToInsert.prev = _nodeAfter;
+            _nodeToInsert.next = _nodeAfter.next;
+            _nodeAfter.next = _nodeToInsert;
         }
     }
 }

@@ -110,9 +110,10 @@ public class testsVer2main {
 
         Node toInsert = new Node(10);
 
-        emptyList.addInTail(insNode1); emptyList.addInTail(insNode2); //emptyList.addInTail(insNode3);
+        emptyList.addInTail(insNode1); emptyList.addInTail(insNode2); emptyList.addInTail(insNode3);
 
         MethodsForTesting.ShowNodesValues(emptyList);
+
         emptyList.insertAfter(insNode3, toInsert);
 
         MethodsForTesting.ShowNodesValues(emptyList);
@@ -121,13 +122,9 @@ public class testsVer2main {
         {
             System.out.println("head.prev = " + emptyList.head.prev);
             System.out.println("head = " + emptyList.head.value);
-            System.out.println("head.next = " + emptyList.head.next.value);
+            System.out.println("head.next = " + emptyList.head.next);
 
-           /* System.out.println("_toInsert.prev = " + emptyList.head.next.prev.value);
-            System.out.println("_toInsert = " + emptyList.head.next.value);
-            System.out.println("_toInsert.next = " + emptyList.head.next.next.value);*/
-
-            System.out.println("tail.prev = " + emptyList.tail.prev.value);
+            System.out.println("tail.prev = " + emptyList.tail.prev);
             System.out.println("tail = " + emptyList.tail.value);
             System.out.println("tail.next = " + emptyList.tail.next);
         }
