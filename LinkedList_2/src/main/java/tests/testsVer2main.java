@@ -5,6 +5,20 @@ import java.util.ArrayList;
 public class testsVer2main {
     public static void main(String[] args)
     {
+        // *** СРАВНЕНИЕ 2-Х СПИСКОВ ПО ЗНАЧЕНИЯМ
+        System.out.println("Сравнение 2-х списков по значениям:");
+        LinkedList2 LL1 = new LinkedList2();
+        LinkedList2 LL2 = new LinkedList2();
+
+        LL1.addInTail(new Node(1)); LL1.addInTail(new Node(2)); LL1.addInTail(new Node(3));
+        LL2.addInTail(new Node(1)); LL2.addInTail(new Node(2)); LL2.addInTail(new Node(3));
+
+        System.out.println("счетчик 1-ого списка - " + MethodsForTesting.counter(LL1));
+        System.out.println("счетчик 2-ого списка - " + MethodsForTesting.counter(LL2));
+
+        System.out.println("равны ли списки? " + MethodsForTesting.ListsEqualByNodes(LL1, LL2));
+
+        System.out.println("*");
         // *** СРАВНЕНИЕ 2-х УЗЛОВ ***
         System.out.println("Сравнение 2-х узлов:");
 
@@ -96,21 +110,25 @@ public class testsVer2main {
 
         Node toInsert = new Node(10);
 
-        emptyList.addInTail(insNode1); emptyList.addInTail(insNode2); emptyList.addInTail(insNode3);
+        emptyList.addInTail(insNode1); emptyList.addInTail(insNode2); //emptyList.addInTail(insNode3);
 
         MethodsForTesting.ShowNodesValues(emptyList);
-
-        emptyList.insertAfter(insNode2, toInsert);
+        emptyList.insertAfter(insNode3, toInsert);
 
         MethodsForTesting.ShowNodesValues(emptyList);
 
         if (emptyList.head != null)
         {
-            System.out.println("head = " + emptyList.head.value);
-            System.out.println("tail = " + emptyList.tail.value);
             System.out.println("head.prev = " + emptyList.head.prev);
+            System.out.println("head = " + emptyList.head.value);
             System.out.println("head.next = " + emptyList.head.next.value);
+
+           /* System.out.println("_toInsert.prev = " + emptyList.head.next.prev.value);
+            System.out.println("_toInsert = " + emptyList.head.next.value);
+            System.out.println("_toInsert.next = " + emptyList.head.next.next.value);*/
+
             System.out.println("tail.prev = " + emptyList.tail.prev.value);
+            System.out.println("tail = " + emptyList.tail.value);
             System.out.println("tail.next = " + emptyList.tail.next);
         }
 

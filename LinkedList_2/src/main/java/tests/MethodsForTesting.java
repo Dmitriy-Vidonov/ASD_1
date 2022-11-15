@@ -26,7 +26,7 @@ public class MethodsForTesting {
         System.out.println();
     }
 
-        private static int counter(LinkedList2 LL)
+        public static int counter(LinkedList2 LL)
         {
             int count = 0;
             if(LL.head == null)
@@ -49,14 +49,14 @@ public class MethodsForTesting {
             int count1 = counter(list1);
             int count2 = counter(list2);
 
-            if(!(((count1 == 0) | (count2 == 0)) && count1 != count2))
+            if(!(((count1 == 0) | (count2 == 0)) | count1 != count2))
             {
                 Node node1 = list1.head;
                 Node node2 = list2.head;
 
                 for (int i = 0; i < count1; i++)
                 {
-                    if (node1 != node2)
+                    if (node1.value != node2.value)
                         return false;
 
                     node1 = node1.next;

@@ -185,19 +185,19 @@ public class LinkedList2
         {
             this.head = _nodeToInsert;
             this.tail = _nodeToInsert;
-            return;
+            //return;
         }
         // либо список не пуст и вставляем перед ним первым элементом
-        if (_nodeAfter == null && this.head != null)
+        else if (_nodeAfter == null && this.head != null)
         {
             _nodeToInsert.next = this.head;
             this.head.prev = _nodeToInsert;
             this.head = _nodeToInsert;
             this.head.prev = null;
-            return;
+            //return;
         }
 
-        if (_nodeAfter == this.tail && this.tail.prev != null)
+        else if (_nodeAfter == this.tail && this.tail.prev != null)
         {
             this.tail.next = _nodeToInsert;
             _nodeToInsert.prev = this.tail;

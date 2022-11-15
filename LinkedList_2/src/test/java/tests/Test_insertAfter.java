@@ -95,12 +95,12 @@ class Test_insertAfter {
         Node n3 = new Node(3);
         Node toInsert = new Node(10);
 
-        regressionList.addInTail(n1);
-        regressionList.addInTail(toInsert);
-        regressionList.addInTail(n2);
-        regressionList.addInTail(n3);
+        regressionList.addInTail(new Node(1));
+        regressionList.addInTail(new Node(10));
+        regressionList.addInTail(new Node(2));
+        regressionList.addInTail(new Node(3));
 
-        testList.addInTail(n1);
+      //  testList.addInTail(n1);
         testList.addInTail(n2);
         testList.addInTail(n3);
 
