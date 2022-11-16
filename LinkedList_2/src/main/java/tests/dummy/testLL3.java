@@ -11,12 +11,17 @@ public class testLL3 {
         list3.addInTail(new Node(2));
         list3.addInTail(new Node(3));
 
-        MethodsForTesting.ShowNodesValues(list3);
+        list3.showList();
 
         list3.removeAll(2);
         list3.remove(3);
-        list3.addInTail(new Node(10));
+        list3.remove(1);
+        list3.remove(3);
+        list3.remove(34);
 
-        MethodsForTesting.ShowNodesValues(list3);
+        list3.showList();
+
+
+
     }
 }

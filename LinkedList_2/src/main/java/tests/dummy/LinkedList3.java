@@ -1,8 +1,8 @@
 package tests.dummy;
 
 public class LinkedList3 {
-    public Node head;
-    public Node tail;
+    private static Node head;
+    private static Node tail;
 
     public LinkedList3()
     {
@@ -22,6 +22,17 @@ public class LinkedList3 {
             _item.prev = tail;
         }
         this.tail = _item;
+    }
+
+    public void showList()
+    {
+        Node node = this.head.next;
+        while (node.next != null)
+        {
+            System.out.print(node.value + " ");
+            node = node.next;
+        }
+        System.out.println();
     }
 
     public void addInTail(Node _item)
@@ -60,7 +71,6 @@ public class LinkedList3 {
             node = node.next;
         }
     }
-
 }
 
 class Node
