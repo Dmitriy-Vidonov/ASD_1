@@ -1,0 +1,19 @@
+
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á´Ó™ÿÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı„°üÿÿÿÿ
+—
+java:S1186J"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÛÛ¯ø
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á´Ó™ÿÿÿÿÿ
+N	java:S106	"9Replace this use of System.out or System.err by a logger.(¯¯çÖ
+.
+java:S2178"Correct this "|" to "||".(á²@
+S	java:S106"9Replace this use of System.out or System.err by a logger.(î±ïúÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(îÚÏ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(½óäÇúÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Û€øÍ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ
+c	java:S100/"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÜ¹
+/
+java:S21784"Correct this "|" to "||".(ÀŠ•±
+/
+java:S21784"Correct this "|" to "||".(ÀŠ•±

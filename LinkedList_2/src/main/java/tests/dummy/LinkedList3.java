@@ -32,7 +32,7 @@ public class LinkedList3 {
         tail.prev = _item;
     }
 
-    public void removeByValue(int _value)
+    public void removeAll(int _value)
     {
         Node node = this.head.next;
         while (node.next != null)
@@ -45,6 +45,22 @@ public class LinkedList3 {
             node = node.next;
         }
     }
+
+    public void remove(int _value)
+    {
+        Node node = this.head.next;
+        while (node.next != null)
+        {
+            if (node.value == _value)
+            {
+                node.prev.next = node.next;
+                node.next.prev = node.prev;
+                return;
+            }
+            node = node.next;
+        }
+    }
+
 }
 
 class Node

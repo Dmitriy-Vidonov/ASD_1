@@ -9,12 +9,12 @@ public class testLL3 {
         list3.addInTail(new Node(2));
         list3.addInTail(new Node(3));
         list3.addInTail(new Node(2));
+        list3.addInTail(new Node(3));
 
         MethodsForTesting.ShowNodesValues(list3);
 
-        list3.removeByValue(2);
-        list3.removeByValue(3);
-        list3.removeByValue(1);
+        list3.removeAll(2);
+        list3.remove(3);
         list3.addInTail(new Node(10));
 
         MethodsForTesting.ShowNodesValues(list3);
