@@ -19,3 +19,13 @@ Z
 *src/main/java/tests/MethodsForTesting.java,6/5/6557208a570c63a6ae305b9bb661e4c2ccaecc8e
 N
 src/main/java/LinkedList2.java,9/7/97e863c4b4a2882c4947f718c952721c873e2c7b
+Z
+*src/main/java/tests/dummy/LinkedList3.java,1/3/13f58724fb86c1fd95262fff5482840c9168df16
+`
+0src/main/java/tests/dummy/MethodsForTesting.java,9/6/96bf0ec4c4106cd7c74b56775be4076dd0dc0a40
+V
+&src/main/java/tests/dummy/testLL3.java,d/6/d62f82ba6ab0042ec7857e354ef280832630a4fa
+T
+$src/main/java/tests/LinkedList2.java,9/d/9df03395a7d56532a43a9c0f05eb53d5f3663b44
+V
+&src/main/java/tests/testsVer2main.java,0/5/0585358b0ab68c978e504b44cc0710f64595bb41

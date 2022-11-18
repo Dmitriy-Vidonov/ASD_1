@@ -1,0 +1,34 @@
+
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÅîúÿÿÿÿ
+f	java:S117&"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é•¹Ñ
+f	java:S117."QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§Êñ
+k	java:S117<"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÅğÃıÿÿÿÿ
+f	java:S117R"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿË·Ò
+s
+java:S1104N"QMake value a static final constant or non-public and provide accessors if needed.(‚¯¥ùÿÿÿÿ8¦ô­È0
+r
+java:S1104O"PMake next a static final constant or non-public and provide accessors if needed.(±±èÃøÿÿÿÿ8§ô­È0
+m
+java:S1104P"PMake prev a static final constant or non-public and provide accessors if needed.(üÛ´8§ô­È0
+S
+java:S2696"6Make the enclosing method "static" or remove this set.(ˆ‹Ô”8ŒÄÌÈ0
+R
+java:S2209"5Change this instance-reference to a static reference.(ˆ‹Ô”8İí½È0
+W
+java:S2209"5Change this instance-reference to a static reference.(ƒéÙ‰ÿÿÿÿÿ8Şí½È0
+W
+java:S2209"5Change this instance-reference to a static reference.(«Á¼ıøÿÿÿÿ8ÿ¾È0
+W
+java:S2209"5Change this instance-reference to a static reference.(œï¿ÿÿÿÿÿ8‚‚¾È0
+X
+java:S2696"6Make the enclosing method "static" or remove this set.(ÉÏÈêÿÿÿÿÿ8ú¾È0
+W
+java:S2209"5Change this instance-reference to a static reference.(ÉÏÈêÿÿÿÿÿ8ÄÌÈ0
+R
+java:S2209"5Change this instance-reference to a static reference.(ÅéÜØ8‘ÄÌÈ0
+U	java:S106 "9Replace this use of System.out or System.err by a logger.(Û€øÍ8ğ®È0
+Z	java:S106#"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8½©´È0
+R
+java:S22090"5Change this instance-reference to a static reference.(ÅéÜØ8šÄÌÈ0
+R
+java:S2209>"5Change this instance-reference to a static reference.(ÅéÜØ8ÄÌÈ0
