@@ -24,7 +24,7 @@ public class DynArray <T> // <T> - это то, что класс юзает д�
         *  https://www.tutorialspoint.com/create-integer-array-with-array-newinstance-in-java
         *
         *  java.lang.reflect.Array - статические методы для динамического создания массивов Java
-        * 
+        *
         *  Вот пример создания массива
         * https://www.delftstack.com/ru/howto/java/java-dynamic-array/
         *
