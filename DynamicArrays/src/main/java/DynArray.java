@@ -66,7 +66,7 @@ public class DynArray<T>
             return;
         }
 
-        for (int i=index; array[i] != null || i < array.length-1; i++)
+        for (int i=index; i < array.length; i++)
         {
             T temp = array[i];
             array[i] = itm;
@@ -95,6 +95,7 @@ public class DynArray<T>
 
         int fullPercentage;
         fullPercentage = (int)count * 100 / capacity;
+        System.out.println("elements remain = " + fullPercentage);
 
         if(fullPercentage <= 50)
         {
@@ -104,13 +105,5 @@ public class DynArray<T>
 
             makeArray(newSize);
         }
-    }
-
-    // Тестовый метод, перед проверкой удалить!
-    public void showArr()
-    {
-        for (int i = 0; i<array.length; i++)
-            System.out.print(array[i] + " ");
-        System.out.println();
     }
 }
