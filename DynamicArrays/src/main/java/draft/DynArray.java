@@ -12,7 +12,7 @@ public class DynArray <T> // <T> - это то, что класс юзает д�
         clazz = clz; // нужен для безопасного приведения типов - когда один тип автоматом преобразуется в другой
         // например new DynArray<Integer>(Integer.class);
         count = 0;
-        makeArray(3);
+        makeArray(16);
     }
 
     public void makeArray(int new_capacity)
@@ -31,25 +31,27 @@ public class DynArray <T> // <T> - это то, что класс юзает д�
         *  throws IllegalArgumentException, NegativeArraySizeException
         * */
         array = (T[]) java.lang.reflect.Array.newInstance(this.clazz, new_capacity); // Создание нового массива с емкостью new_cap
+        capacity = new_capacity;
     }
 
     public void append(T itm)
     {
-        if(this.count == capacity) // если число занятых ячеек равно емкости массива
+        // если число занятых ячеек равно емкости массива
+        if(this.count == this.capacity)
         {
-            //increaseArraySize(); // вызов метода для увеличения массива
-        }
-        array[this.count] = itm;
-        count++;
-
-        // пока что тестово смоделируем ситуацию, что нам нужно копировать данные в новый массив при count = 4
-        // на рост массива
-        if(count == 3)
-        {
+            // Рост происходит в 2 раза
             T[] tempArray;
-            tempArray = (T[]) java.lang.reflect.Array.newInstance(this.clazz, 10);
+            tempArray = (T[]) java.lang.reflect.Array.newInstance(this.clazz, capacity * 2);
             System.arraycopy(array, 0, tempArray, 0, array.length);
             array = tempArray;
+            capacity = array.length;
+
+            array[this.count] = itm;
+            count++;
+        } else
+        {
+            array[this.count] = itm;
+            count++;
         }
     }
 
@@ -74,12 +76,44 @@ public class DynArray <T> // <T> - это то, что класс юзает д�
         array[index] = null;
         count--;
 
-        while (array[index+1] != null)
+        while (index < array.length-1 && array[index+1] != null)
         {
             array[index] = array[index+1];
             array[index+1] = null;
             index++;
         }
+
+        // Проверка заполненности массива после удаления элемента
+        int fullPercentage;
+        fullPercentage = (int)count * 100 / capacity;
+        System.out.println("percentage after remove = " + fullPercentage);
+
+        if(fullPercentage <= 50) // Если после удаления % заполненности массива строго меньше 50%
+        { // Уменьшаем массив
+            // Если новый размер массива < 16, то присвоить 16 (мин значение)
+            // для теста сделаем меньше - 10 вместо 16
+            int newSize = (int)(capacity / 1.5);
+            if(newSize < 16)
+                newSize = 16;
+
+            T[] tempArray;
+            tempArray = (T[]) java.lang.reflect.Array.newInstance(this.clazz, newSize);
+            System.arraycopy(array, 0, tempArray, 0, count); // В новый массив - только ячейки с данными
+            array = tempArray;
+            capacity = array.length;
+        }
     }
+
+    // Получение объекта по его индексу
+    // Здесь встроить проверку корректности индекса в рамках границ и генерацию исключений
+    public T getItem(int index)
+    {
+        if(index < 0 || index >= array.length)
+            throw new IndexOutOfBoundsException("Выход за границы массива!");
+
+        return array[index];
+    }
+
+    
 
 }
