@@ -95,7 +95,6 @@ public class DynArray<T>
 
         int fullPercentage;
         fullPercentage = (int)count * 100 / capacity;
-        System.out.println("elements remain = " + fullPercentage);
 
         if(fullPercentage <= 50)
         {
