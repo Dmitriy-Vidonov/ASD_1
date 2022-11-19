@@ -10,32 +10,24 @@ public class DynArray <T> // <T> - это то, что класс юзает д�
     public DynArray(Class clz) // конструктор нашего класса DynArray
     {
         clazz = clz; // нужен для безопасного приведения типов - когда один тип автоматом преобразуется в другой
-        // например new DynArray<Integer>(Integer.class);
         count = 0;
         makeArray(16);
     }
 
     public void makeArray(int new_capacity)
     {
-        /*
-        *  java.lang.reflect.Array.newInstance(Class<?> componentType, int length)
-        *  method forms a new array with the component type and length as specified in the arguments
-        *  https://www.tutorialspoint.com/create-integer-array-with-array-newinstance-in-java
-        *
-        *  java.lang.reflect.Array - статические методы для динамического создания массивов Java
-        *
-        *  Вот пример создания массива
-        * https://www.delftstack.com/ru/howto/java/java-dynamic-array/
-        *
-        * public static Object newInstance(Class<?> componentType, int length)
-        *  throws IllegalArgumentException, NegativeArraySizeException
-        * */
-        System.out.println("До создания массива");
-        array = (T[]) java.lang.reflect.Array.newInstance(this.clazz, new_capacity); // Создание нового массива
-                                                                                     // с емкостью new_cap
-        capacity = new_capacity;
+        if(count == 0)
+        {
+            array = (T[]) java.lang.reflect.Array.newInstance(this.clazz, new_capacity);
+            capacity = new_capacity;
+            return;
+        }
 
-
+        T[] tempArray;
+        tempArray = (T[]) java.lang.reflect.Array.newInstance(this.clazz, new_capacity);
+        System.arraycopy(array, 0, tempArray, 0, count);
+        array = tempArray;
+        capacity = array.length;
     }
 
     // Добавление элемента в конец массива
@@ -45,11 +37,7 @@ public class DynArray <T> // <T> - это то, что класс юзает д�
         if(this.count == this.capacity)
         {
             // Рост происходит в 2 раза
-            T[] tempArray;
-            tempArray = (T[]) java.lang.reflect.Array.newInstance(this.clazz, capacity * 2);
-            System.arraycopy(array, 0, tempArray, 0, array.length);
-            array = tempArray;
-            capacity = array.length;
+            makeArray(capacity * 2);
 
             array[this.count] = itm;
             count++;
@@ -96,16 +84,11 @@ public class DynArray <T> // <T> - это то, что класс юзает д�
         if(fullPercentage <= 50) // Если после удаления % заполненности массива строго меньше 50%
         { // Уменьшаем массив
             // Если новый размер массива < 16, то присвоить 16 (мин значение)
-            // для теста сделаем меньше - 10 вместо 16
             int newSize = (int)(capacity / 1.5);
             if(newSize < 16)
                 newSize = 16;
 
-            T[] tempArray;
-            tempArray = (T[]) java.lang.reflect.Array.newInstance(this.clazz, newSize);
-            System.arraycopy(array, 0, tempArray, 0, count); // В новый массив - только ячейки с данными
-            array = tempArray;
-            capacity = array.length;
+            makeArray(newSize);
         }
     }
 
@@ -129,11 +112,7 @@ public class DynArray <T> // <T> - это то, что класс юзает д�
         if(count == capacity || index == array.length)
         {
             // Рост происходит в 2 раза
-            T[] tempArray;
-            tempArray = (T[]) java.lang.reflect.Array.newInstance(this.clazz, capacity * 2);
-            System.arraycopy(array, 0, tempArray, 0, array.length);
-            array = tempArray;
-            capacity = array.length;
+            makeArray(capacity * 2);
         }
 
         if(array[index] == null)
@@ -152,3 +131,17 @@ public class DynArray <T> // <T> - это то, что класс юзает д�
         count++;
     }
 }
+
+/*
+ *  java.lang.reflect.Array.newInstance(Class<?> componentType, int length)
+ *  method forms a new array with the component type and length as specified in the arguments
+ *  https://www.tutorialspoint.com/create-integer-array-with-array-newinstance-in-java
+ *
+ *  java.lang.reflect.Array - статические методы для динамического создания массивов Java
+ *
+ *  Вот пример создания массива
+ * https://www.delftstack.com/ru/howto/java/java-dynamic-array/
+ *
+ * public static Object newInstance(Class<?> componentType, int length)
+ *  throws IllegalArgumentException, NegativeArraySizeException
+ * */

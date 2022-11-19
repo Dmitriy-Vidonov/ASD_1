@@ -22,7 +22,7 @@ public class DynArrayTest {
         testArr.append(14);
         testArr.append(15);
         testArr.append(16);
-        testArr.append(17);
+       // testArr.append(17);
 
         testArr.showArr();
         System.out.println("count = " + testArr.count);
@@ -47,6 +47,13 @@ public class DynArrayTest {
             testArr.append(88);
 
         testArr.insert(200, 16);
+
+        testArr.showArr();
+        System.out.println("count = " + testArr.count);
+        System.out.println("capacity = " + testArr.capacity);
+
+        for(int i = 16; i > 1; i--)
+            testArr.remove(i);
 
         testArr.showArr();
         System.out.println("count = " + testArr.count);
