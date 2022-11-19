@@ -1,4 +1,4 @@
-package draft;
+package WorkingExample;
 
 public class DynArraySimpleTest {
     public static void main(String[] args)

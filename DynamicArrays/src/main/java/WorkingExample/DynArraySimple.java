@@ -1,4 +1,4 @@
-package draft;
+package WorkingExample;
 
 public class DynArraySimple {
     int[] intArray; // массив

@@ -1,0 +1,17 @@
+
+t
+java:S1192"WDefine a constant instead of duplicating this literal "Size of the intArray: " 3 times.(ûğª8ÛÑÚÉÈ0
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(îÔÔüÿÿÿÿ8êÃ¯àÈ0
+S	java:S106"9Replace this use of System.out or System.err by a logger.(˜–šäşÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ª¨·¢
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8ßœ×ÉÈ0
+U	java:S106"9Replace this use of System.out or System.err by a logger.(úÙ»À8®óØÉÈ0
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ûğª8®óØÉÈ0
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(¬ÿ†Óşÿÿÿÿ8ĞÒÚÉÈ0
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ª¨·¢8ĞÒÚÉÈ0
+U	java:S106 "9Replace this use of System.out or System.err by a logger.(îÜ¦ö8ÑÒÚÉÈ0
+U	java:S106!"9Replace this use of System.out or System.err by a logger.(ûğª8ÑÒÚÉÈ0
+U	java:S106%"9Replace this use of System.out or System.err by a logger.(Øìú”8ÒÒÚÉÈ0
+U	java:S106("9Replace this use of System.out or System.err by a logger.(ª¨·¢8ÓÒÚÉÈ0
+U	java:S106+"9Replace this use of System.out or System.err by a logger.(îÜ¦ö8ÓÒÚÉÈ0
+U	java:S106,"9Replace this use of System.out or System.err by a logger.(ûğª8ÔÒÚÉÈ0
