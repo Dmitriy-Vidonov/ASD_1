@@ -1,0 +1,19 @@
+
+o
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ú—şö
+_
+java:S1192"IDefine a constant instead of duplicating this literal "count = " 5 times.(Îª‹
+b
+java:S1192"LDefine a constant instead of duplicating this literal "capacity = " 5 times.(ˆ£º‰
+]	java:S125"<This block of commented-out lines of code should be removed.(Úú¡àüÿÿÿÿ8û÷ë€É0
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Îª‹
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ˆ£º‰
+N	java:S106""9Replace this use of System.out or System.err by a logger.(Îª‹
+N	java:S106#"9Replace this use of System.out or System.err by a logger.(ˆ£º‰
+N	java:S106)"9Replace this use of System.out or System.err by a logger.(Îª‹
+N	java:S106*"9Replace this use of System.out or System.err by a logger.(ˆ£º‰
+N	java:S106,"9Replace this use of System.out or System.err by a logger.(êš ü
+U	java:S1064"9Replace this use of System.out or System.err by a logger.(Îª‹8öóÿÈ0
+U	java:S1065"9Replace this use of System.out or System.err by a logger.(ˆ£º‰8÷óÿÈ0
+U	java:S106;"9Replace this use of System.out or System.err by a logger.(Îª‹8ÀÏ„É0
+U	java:S106<"9Replace this use of System.out or System.err by a logger.(ˆ£º‰8ÀÏ„É0

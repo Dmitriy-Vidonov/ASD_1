@@ -53,13 +53,15 @@ public class DynArray<T>
 
     public void insert(T itm, int index)
     {
-        if (index < 0 || index > array.length)
+        if (index < 0 || index > array.length || index > count)
+        {
             throw new IndexOutOfBoundsException("Index out of array bounds!");
+        }
 
-        if(count == capacity || index == array.length)
+        if(count == capacity)
             makeArray(capacity * 2);
 
-        if(array[index] == null)
+        if(index == count && index < array.length)
         {
             array[index] = itm;
             count++;

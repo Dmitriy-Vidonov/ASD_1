@@ -4,7 +4,7 @@ public class DynArrayTest {
     {
         DynArray<Integer> arrTest = new DynArray<Integer>(Integer.class);
 
-       /* arrTest.append(10);
+        arrTest.append(10);
         arrTest.append(20);
         arrTest.append(30);
         arrTest.append(40);
@@ -19,15 +19,15 @@ public class DynArrayTest {
         arrTest.append(130);
         arrTest.append(140);
         arrTest.append(150);
-        arrTest.append(160);*/
+        arrTest.append(160);
 
-        for(int i=0; i<50; i++)
-            arrTest.append(333);
+        //for(int i=0; i<50; i++) arrTest.append(333);
 
-        for(int i=0; i<arrTest.capacity/2+17; i++)
-            arrTest.remove(i);
+        //for(int i=0; i<arrTest.capacity/2+17; i++) arrTest.remove(i);
 
-        arrTest.remove(0);
+        //arrTest.remove(0);
+
+        arrTest.insert(100, arrTest.count);
 
         arrTest.showArr();
         System.out.println("count = " + arrTest.count);
