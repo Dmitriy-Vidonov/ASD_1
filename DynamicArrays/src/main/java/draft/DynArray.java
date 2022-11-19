@@ -30,8 +30,12 @@ public class DynArray <T> // <T> - это то, что класс юзает д�
         * public static Object newInstance(Class<?> componentType, int length)
         *  throws IllegalArgumentException, NegativeArraySizeException
         * */
-        array = (T[]) java.lang.reflect.Array.newInstance(this.clazz, new_capacity); // Создание нового массива с емкостью new_cap
+        System.out.println("До создания массива");
+        array = (T[]) java.lang.reflect.Array.newInstance(this.clazz, new_capacity); // Создание нового массива
+                                                                                     // с емкостью new_cap
         capacity = new_capacity;
+
+
     }
 
     // Добавление элемента в конец массива
@@ -117,24 +121,12 @@ public class DynArray <T> // <T> - это то, что класс юзает д�
 
     public void insert(T itm, int index)
     {
-        if (index == array.length)
-        {
-            array[(array.length - 1)] = itm;
-            return;
-        }
-
         // Проверяем диапазон индекса
         if (index < 0 || index > array.length)
             throw new IndexOutOfBoundsException("Выход за границы массива!");
 
-        if(array[index] == null)
-        {
-            array[index] = itm;
-            count++;
-            return;
-        }
-
-        if(count == capacity)
+        // если массив заполнен или если индекс равен длине списка
+        if(count == capacity || index == array.length)
         {
             // Рост происходит в 2 раза
             T[] tempArray;
@@ -142,6 +134,13 @@ public class DynArray <T> // <T> - это то, что класс юзает д�
             System.arraycopy(array, 0, tempArray, 0, array.length);
             array = tempArray;
             capacity = array.length;
+        }
+
+        if(array[index] == null)
+        {
+            array[index] = itm;
+            count++;
+            return;
         }
 
         for (int i=index; array[i] != null || i < array.length-1; i++)
@@ -152,6 +151,4 @@ public class DynArray <T> // <T> - это то, что класс юзает д�
         }
         count++;
     }
-
-
 }
