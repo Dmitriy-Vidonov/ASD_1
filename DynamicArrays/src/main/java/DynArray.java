@@ -79,11 +79,8 @@ public class DynArray<T>
 
     public void remove(int index)
     {
-        if(index < 0 || index >= array.length)
+        if(index < 0 || index >= array.length || index >= count || array[index] == null)
             throw new IndexOutOfBoundsException("Index out of array bounds!");
-
-        if(array[index] == null)
-            return;
 
         array[index] = null;
         count--;
@@ -98,7 +95,7 @@ public class DynArray<T>
         int fullPercentage;
         fullPercentage = (int)count * 100 / capacity;
 
-        if(fullPercentage <= 50)
+        if(fullPercentage < 50)
         {
             int newSize = (int)(capacity / 1.5);
             if(newSize < 16)
