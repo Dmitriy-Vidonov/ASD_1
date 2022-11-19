@@ -34,6 +34,7 @@ public class DynArray <T> // <T> - это то, что класс юзает д�
         capacity = new_capacity;
     }
 
+    // Добавление элемента в конец массива
     public void append(T itm)
     {
         // если число занятых ячеек равно емкости массива
@@ -114,6 +115,43 @@ public class DynArray <T> // <T> - это то, что класс юзает д�
         return array[index];
     }
 
-    
+    public void insert(T itm, int index)
+    {
+        if (index == array.length)
+        {
+            array[(array.length - 1)] = itm;
+            return;
+        }
+
+        // Проверяем диапазон индекса
+        if (index < 0 || index > array.length)
+            throw new IndexOutOfBoundsException("Выход за границы массива!");
+
+        if(array[index] == null)
+        {
+            array[index] = itm;
+            count++;
+            return;
+        }
+
+        if(count == capacity)
+        {
+            // Рост происходит в 2 раза
+            T[] tempArray;
+            tempArray = (T[]) java.lang.reflect.Array.newInstance(this.clazz, capacity * 2);
+            System.arraycopy(array, 0, tempArray, 0, array.length);
+            array = tempArray;
+            capacity = array.length;
+        }
+
+        for (int i=index; array[i] != null || i < array.length-1; i++)
+        {
+            T temp = array[i];
+            array[i] = itm;
+            itm = temp;
+        }
+        count++;
+    }
+
 
 }

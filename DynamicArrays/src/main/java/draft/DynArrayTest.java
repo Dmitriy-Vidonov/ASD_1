@@ -41,6 +41,15 @@ public class DynArrayTest {
         System.out.println("count = " + testArr.count);
         System.out.println("capacity = " + testArr.capacity);
 
-        System.out.println("элемент по индексу - " + testArr.getItem(15));
+        System.out.println("элемент по индексу - " + testArr.getItem(1));
+
+        for(int i = 0; i<8; i++)
+            testArr.append(88);
+
+        testArr.insert(200, 16);
+
+        testArr.showArr();
+        System.out.println("count = " + testArr.count);
+        System.out.println("capacity = " + testArr.capacity);
     }
 }
