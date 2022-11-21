@@ -49,3 +49,6 @@ public class Stack<T>
         System.out.println();
     }
 }
+
+// Мера сложности для pop() и push()
+// для операции getlast() мера сложности O(1)
