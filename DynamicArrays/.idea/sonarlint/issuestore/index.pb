@@ -17,7 +17,5 @@ U
 %src/test/java/Insert_Remove_Test.java,3/0/30ff6b2d7217daf1b6dccfbb74ed497cc7751fb4
 Q
 !src/main/java/draft/DynArray.java,3/c/3c960aea1e509d77291c7a7ea09f8941f521d945
-O
-src/main/java/DynArrayTest.java,1/3/13034b782fb7e3895fdea670e2edd333a216f517
 K
 src/main/java/DynArray.java,a/d/ad57553e95768ee8e473cdb8392a393e453c29ff

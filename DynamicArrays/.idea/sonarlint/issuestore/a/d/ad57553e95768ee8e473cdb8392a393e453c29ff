@@ -12,5 +12,3 @@ l
 java:S1104"QMake count a static final constant or non-public and provide accessors if needed.(†Í˜Åýÿÿÿÿ
 j
 java:S1104"TMake capacity a static final constant or non-public and provide accessors if needed.(Ë»¢…
-<
-java:S1905`"&Remove this unnecessary cast to "int".(——¶É

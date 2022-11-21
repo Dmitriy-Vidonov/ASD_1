@@ -10,27 +10,31 @@ public class Stack<T>
         stack = new LinkedList<T>();
     }
 
+    // tested
     public int size()
     {
         return stack.size();
     }
 
+    // tested
     public T pop()
     {
-        T Object = stack.getLast();
-
         if(stack.size() == 0)
             return null;
 
+        T element = stack.getLast();
+
         stack.removeLast();
-        return Object;
+        return element;
     }
 
+    // tested
     public void push(T val)
     {
         stack.add(val);
     }
 
+    // tested
     public T peek()
     {
         if(stack.size() > 0)
