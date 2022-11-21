@@ -1,44 +1,43 @@
-package draft;
+package inversionStack;
 import java.util.*;
 
-public class Stack<T>
+public class InverseStack<T>
 {
     public LinkedList<T> stack;
 
-    public Stack()
+    public InverseStack()
     {
         stack = new LinkedList<T>();
     }
 
-    // tested
     public int size()
     {
         return stack.size();
     }
 
-    // tested
+    // ok
     public T pop()
     {
         if(stack.size() == 0)
             return null;
 
-        T element = stack.getLast();
+        T element = stack.getFirst();
 
-        stack.removeLast();
+        stack.removeFirst();
         return element;
     }
 
-    // tested
+    // ok
     public void push(T val)
     {
-        stack.add(val);
+        stack.addFirst(val);
     }
 
-    // tested
+    // ok
     public T peek()
     {
         if(stack.size() > 0)
-            return(stack.getLast());
+            return(stack.getFirst());
         return null;
     }
 
@@ -53,7 +52,3 @@ public class Stack<T>
         System.out.println();
     }
 }
-
-// Мера сложности для pop() и push() = O(1)
-// для операции getlast() мера сложности O(1), removeLast() = O(1)
-// операция add() = O(1)
