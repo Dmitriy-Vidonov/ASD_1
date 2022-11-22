@@ -1,0 +1,13 @@
+
+v
+java:S2293	"YReplace the type specification in this constructor call with the diamond operator ("<>").(¥Ö’‰8€ç³„Ê0
+ƒ
+java:S1319"fThe type of "stack" should be an interface such as "List" rather than the implementation "LinkedList".(ÐìŽá8‹¤³„Ê0
+n
+java:S1104"QMake stack a static final constant or non-public and provide accessors if needed.(ÐìŽá8‹¤³„Ê0
+1
+java:S1700"Rename field "stack"(ÐìŽá8Œ¤³„Ê0
+`
+java:S1155">Use isEmpty() to check whether the collection is empty or not.(î«š³øÿÿÿÿ8å¢µ„Ê0
+[
+java:S1155#">Use isEmpty() to check whether the collection is empty or not.(ÁÑ•¹8ðò¶„Ê0

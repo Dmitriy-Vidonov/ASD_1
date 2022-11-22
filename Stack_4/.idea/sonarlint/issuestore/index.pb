@@ -15,3 +15,7 @@ R
 "src/test/java/draft/Peek_Test.java,9/0/90dff2e20b159308b57abfc97abcfe70c77ef521
 b
 2src/main/java/inversionStack/testInverseStack.java,3/8/3895f943a06c131f1805427e802df39fc801b7e3
+^
+.src/main/java/inversionStack/InverseStack.java,4/c/4c172c8368bab52d3afab2c544f7ab2a0bcb28de
+H
+src/main/java/Stack.java,1/2/121a984179a3a96e8d10e6c60df1275832408025
