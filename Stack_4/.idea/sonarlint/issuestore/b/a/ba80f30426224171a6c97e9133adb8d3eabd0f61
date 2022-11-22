@@ -1,0 +1,17 @@
+
+E
+java:S3740"/Provide the parametrized type for this generic.(Ê±„“
+J
+java:S3740!"/Provide the parametrized type for this generic.(–ÂŽýÿÿÿÿÿ
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(‘êæõ
+k
+java:S1149!"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(–ÂŽýÿÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ä™Üðüÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(à±Þž
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ä™Üðüÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(®îì¿þÿÿÿÿ
+M	java:S106"9Replace this use of System.out or System.err by a logger.(’¢Šf
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ç²Ö¢ùÿÿÿÿ
+U	java:S106&"9Replace this use of System.out or System.err by a logger.(î§Ìâ8ÆÉóÜÉ0
+U	java:S106'"9Replace this use of System.out or System.err by a logger.(î§Ìâ8Û£õÜÉ0
+Z	java:S106*"9Replace this use of System.out or System.err by a logger.(¨Èž¡úÿÿÿÿ8Š—öÜÉ0
