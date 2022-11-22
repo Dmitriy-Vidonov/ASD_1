@@ -13,7 +13,6 @@ public class Queue<T>
     {
         QueueList.add(item);
     }
-
     public T dequeue()
     {
         if(QueueList.size() == 0)
@@ -27,6 +26,7 @@ public class Queue<T>
 
     public int size()
     {
+
         return QueueList.size();
     }
 }
