@@ -13,9 +13,5 @@ R
 "src/test/java/draft/Push_Test.java,b/4/b4c06c1d2a875c62488cfa041ce1b3b5b58a871e
 R
 "src/test/java/draft/Peek_Test.java,9/0/90dff2e20b159308b57abfc97abcfe70c77ef521
-N
-src/main/java/draft/Stack.java,0/3/03b4f3316dcf4e6ba445bdcbb938902f4a3d9466
-^
-.src/main/java/inversionStack/InverseStack.java,4/c/4c172c8368bab52d3afab2c544f7ab2a0bcb28de
 b
 2src/main/java/inversionStack/testInverseStack.java,3/8/3895f943a06c131f1805427e802df39fc801b7e3
