@@ -19,3 +19,5 @@ b
 .src/main/java/inversionStack/InverseStack.java,4/c/4c172c8368bab52d3afab2c544f7ab2a0bcb28de
 H
 src/main/java/Stack.java,1/2/121a984179a3a96e8d10e6c60df1275832408025
+N
+src/main/java/draft/Stack.java,0/3/03b4f3316dcf4e6ba445bdcbb938902f4a3d9466

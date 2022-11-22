@@ -44,4 +44,5 @@ public class Queue<T>
 }
 
 // Оценить меру сложности для enqueue() и dequeue()
-//
+// enqueue() = add item in tail in LinkedList, thus it's big O notation is O(1)
+// dequeue() = remove item from head in LinkedList, thus it's big O notation is O(1)
