@@ -1,6 +1,27 @@
 package draft;
 
 public class deqTest {
+
+    public static boolean isPolindrom(String str)
+    {
+        Deque deqStr = new Deque<Character>();
+        int len = str.length();
+
+        for (int i=0; i<len; i++)
+        {
+            deqStr.addTail(str.charAt(i));
+        }
+
+        for (int j=0; j<len/2; j++)
+        {
+            if(!deqStr.removeFront().equals(deqStr.removeTail()))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static void main(String[] args)
     {
         Deque deque = new Deque<>();
@@ -38,6 +59,10 @@ public class deqTest {
 
         deque.Show();
         System.out.println("size = " + deque.size());
+
+        System.out.println("половина - " + (5 / 2));
+
+        System.out.println(isPolindrom("pop"));
     }
 }
 
