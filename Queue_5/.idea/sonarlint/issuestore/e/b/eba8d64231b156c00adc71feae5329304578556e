@@ -1,0 +1,14 @@
+
+t
+java:S2293
+"YReplace the type specification in this constructor call with the diamond operator ("<>").(ƒ¥³áÿÿÿÿÿ
+€
+java:S1319"jThe type of "QueueList" should be an interface such as "List" rather than the implementation "LinkedList".(Èâ¬ø
+k
+java:S1104"UMake QueueList a static final constant or non-public and provide accessors if needed.(Èâ¬ø
+i	java:S116"TRename this field "QueueList" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èâ¬ø
+Y
+java:S1155">Use isEmpty() to check whether the collection is empty or not.(‘òú­ùÿÿÿÿ
+o	java:S100""NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥äüùÿÿÿÿ8Ä…Ê0
+U	java:S106'"9Replace this use of System.out or System.err by a logger.(ÂË­8’Ä…Ê0
+Z	java:S106*"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8“Ä…Ê0
