@@ -5,7 +5,7 @@ public class deqTest {
     /*Напишите функцию, которая с помощью Deque проверяет,
     является ли некоторая строка палиндромом (читается одинаково
     слева направо и справа налево).*/
-    
+
     public static boolean isPolindrom(String str)
     {
         Deque deqStr = new Deque<Character>();
