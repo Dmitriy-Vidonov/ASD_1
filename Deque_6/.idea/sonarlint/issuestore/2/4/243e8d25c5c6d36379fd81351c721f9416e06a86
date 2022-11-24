@@ -1,0 +1,11 @@
+
+t
+java:S2293
+"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ä’Ãİşÿÿÿÿ
+T
+java:S1155">Use isEmpty() to check whether the collection is empty or not.(Š¦‘º
+[
+java:S1155$">Use isEmpty() to check whether the collection is empty or not.(Š¦‘º8•šÄ¯Ê0
+h	java:S1002"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥äüùÿÿÿÿ
+N	java:S1067"9Replace this use of System.out or System.err by a logger.(ü¿†“
+S	java:S106:"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ
