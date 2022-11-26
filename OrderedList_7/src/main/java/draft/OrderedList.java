@@ -45,7 +45,6 @@ public class OrderedList<T>
         ) && ((int)v1 > (int)v2)
         ) return 1; // +1 если v1 > v2
 
-
         // Для чисел с плавающей точкой
         if(((v1.getClass().getTypeName().endsWith("Float") || v1.getClass().getTypeName().endsWith("Double")) &&
                 (v2.getClass().getTypeName().endsWith("Float") || v2.getClass().getTypeName().endsWith("Double"))
@@ -250,18 +249,67 @@ public class OrderedList<T>
 
     public void delete(T val)
     {
-        // здесь будет ваш код
+        if (this.head == null)
+            return;
+
+        if (this.head.value == val && this.head.next != null) {
+            this.head.next.prev = null;
+            this.head = this.head.next;
+            this.head.prev = null;
+            return;
+        } else if (this.head.value == val && this.head.next == null) {
+            this.head = null;
+            this.tail = null;
+            return;
+        }
+
+        Node node = this.head;
+        while (node.next != null) {
+            if (node.value == val) {
+                node.prev.next = node.next;
+                node.next.prev = node.prev;
+                return;
+            }
+            node = node.next;
+        }
+        if (node.value == val) {
+            tail = node.prev;
+            tail.next = null;
+            node.prev = null;
+            return;
+        }
+        return;
     }
 
     public void clear(boolean asc)
     {
         _ascending = asc;
-        // здесь будет ваш код
+        if (this.head != null) {
+            Node node = this.head;
+
+            while (node != null) {
+                this.head.next = null;
+                head = node;
+                node = node.next;
+            }
+            head = null;
+            tail = null;
+        }
     }
 
     public int count()
     {
-        return 0; // здесь будет ваш код подсчёта количества элементов в списке
+        Node node = this.head;
+        int count = 0;
+        if (this.head == null) {
+            return 0;
+        } else {
+            while (node != null) {
+                count++;
+                node = node.next;
+            }
+        }
+        return count;
     }
 
     ArrayList<Node<T>> getAll() // выдать все элементы упорядоченного
@@ -277,6 +325,5 @@ public class OrderedList<T>
         return r;
     }
 
-    // Тестовый метод для отображения содержимого списка
 
 }

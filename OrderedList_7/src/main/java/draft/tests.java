@@ -44,11 +44,14 @@ public class tests<T> {
         OrderedList orderList = new OrderedList<>(false); // true - возрастание, false - убывание
         orderList.add(1);
         orderList.add(3);
+        orderList.add(3);
         orderList.add(5);
         orderList.add(4);
         orderList.add(2);
 
+        orderList.delete(3);
+        orderList.delete(3);
         ShowNodesValues(orderList, true);
-        System.out.println(orderList.find(0));
+
     }
 }
