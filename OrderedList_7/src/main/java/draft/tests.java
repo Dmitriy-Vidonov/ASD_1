@@ -1,6 +1,6 @@
 package draft;
 
-public class tests {
+public class tests<T> {
 
     public static void ShowNodesValues(OrderedList LL, boolean full)
     {
@@ -42,10 +42,10 @@ public class tests {
     public static void main(String[] args)
     {
         OrderedList orderList = new OrderedList<>(false); // true - возрастание, false - убывание
-        orderList.add(15);
+        orderList.add("one");
 
         //ShowNodesValues(orderList, true);
-        orderList.add(14);
+        orderList.add("two");
 
         ShowNodesValues(orderList, true);
     }

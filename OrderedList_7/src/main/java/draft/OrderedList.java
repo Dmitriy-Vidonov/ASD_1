@@ -73,7 +73,12 @@ public class OrderedList<T>
             s1 = s1.trim();
             s2 = s2.trim();
 
-            return s1.compareTo(s2);
+            // Для строк сделать преобразование метода compareTo() в формат -1, 0, +1
+            int res = s1.compareTo(s2);
+
+            if(res > 0) return 1;
+            if(res == 0) return 0;
+            return -1;
         }
 
         return 0;
@@ -184,6 +189,7 @@ public class OrderedList<T>
         }
     }
 
+    //
     public Node<T> find(T val)
     {
         return null; // здесь будет ваш код
