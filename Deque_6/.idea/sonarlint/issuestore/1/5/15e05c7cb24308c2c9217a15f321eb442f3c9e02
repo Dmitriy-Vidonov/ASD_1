@@ -1,0 +1,31 @@
+
+¢
+java:S3577"„Rename class "tests" to match the regular expression: '^((Test|IT)[a-zA-Z0-9_]+|[A-Z][a-zA-Z0-9_]*(Test|Tests|TestCase|IT|ITCase))$'(™Ø°ÿ8Î­ı×Ê0
+4
+java:S5785"Use assertEquals instead.(òµ“Îúÿÿÿÿ
+/
+java:S5785"Use assertEquals instead.(¿ÛûÛ
+6
+java:S5785#"Use assertEquals instead.(§¥âÉ8×âè×Ê0
+;
+java:S5785$"Use assertEquals instead.(·ù‡„ûÿÿÿÿ8×âè×Ê0
+;
+java:S5785-"Use assertEquals instead.(òµ“Îúÿÿÿÿ8èòÿ×Ê0
+5
+java:S5785."Use assertEquals instead.(‰š·8éòÿ×Ê0
+6
+java:S57857"Use assertEquals instead.(§¥âÉ8·ç‚ØÊ0
+5
+java:S57858"Use assertEquals instead.(Ñ¾Á|8¸ç‚ØÊ0
+;
+java:S5785A"Use assertEquals instead.(¶Ñ‘şÿÿÿÿ8èÂ†ØÊ0
+;
+java:S5785B"Use assertEquals instead.(Ûè‡şûÿÿÿÿ8èÂ†ØÊ0
+4
+java:S5785I"Use assertNull instead.(ŠÓ¦ê8´¢ØÊ0
+;
+java:S5785R"Use assertEquals instead.(¶Ñ‘şÿÿÿÿ8×’ØÊ0
+6
+java:S5785S"Use assertEquals instead.(—¶Í8×’ØÊ0
+4
+java:S5785Z"Use assertNull instead.(¹Â“é8¨«•ØÊ0

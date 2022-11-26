@@ -81,8 +81,107 @@ public class OrderedList<T>
 
     public void add(T value)
     {
-        // автоматическая вставка value
-        // в нужную позицию
+        // Если список изначально был пуст
+        if(this.head == null)
+        {
+            this.head = new Node<T>(value);
+            this.tail = this.head;
+            this.head.next = null;
+            this.head.prev = null;
+            return;
+        }
+
+        //********ВОЗРАСТАНИЕ*********
+
+        // Если список по возрастанию и в head значение больше вставляемого или они равны
+        // В данном случае в head будет новый элемент
+        if(_ascending == true && (compare(value, head.value) == -1 || compare(value, head.value) == 0))
+        {
+            Node _nodeToInsert = new Node<T>(value);
+
+            _nodeToInsert.next = this.head;
+            this.head.prev = _nodeToInsert;
+            this.head = _nodeToInsert;
+            return;
+        }
+
+        // Если список по возрастанию и в tail значение меньше вставляемого или они равны
+        // В данном случае в tail будет новый элемент
+        if(_ascending == true && (compare(value, tail.value) == 1 || compare(value, tail.value) == 0))
+        {
+            Node _nodeToInsert = new Node<T>(value);
+
+            this.tail.next = _nodeToInsert;
+            _nodeToInsert.prev = this.tail;
+            this.tail = _nodeToInsert;
+            return;
+        }
+
+        // Если список по возрастанию и вставляемое число между head и tail по значению
+        if(_ascending == true && compare(value, head.value) == 1 && compare(value, tail.value) == -1)
+        {
+            Node _nodeAfter = this.head; // Узел - "каретка", передвигающийся по всему списку
+            Node _nodeToInsert = new Node<T>(value); // Вставляемый узел
+
+            while (_nodeAfter.next != null)
+            {
+                // Если value > текущего узла и < следующего
+                if(compare(value, (T)_nodeAfter.value) == 1 && compare(value, (T)_nodeAfter.next.value) == -1)
+                {
+                    _nodeAfter.next.prev = _nodeToInsert;
+                    _nodeToInsert.prev = _nodeAfter;
+                    _nodeToInsert.next = _nodeAfter.next;
+                    _nodeAfter.next = _nodeToInsert;
+                }
+                _nodeAfter = _nodeAfter.next;
+            }
+        }
+
+        //********УБЫВАНИЕ*********
+
+        // Если список по убыванию и в head значение меньше вставляемого или они равны
+        // В данном случае в head будет новый элемент
+        if(_ascending == false && (compare(value, head.value) == 1 || compare(value, head.value) == 0))
+        {
+            Node _nodeToInsert = new Node<T>(value);
+
+            _nodeToInsert.next = this.head;
+            this.head.prev = _nodeToInsert;
+            this.head = _nodeToInsert;
+            return;
+        }
+
+        // Если список по убыванию и в tail значение больше вставляемого или они равны
+        // В данном случае в tail будет новый элемент
+        if(_ascending == false && (compare(value, tail.value) == -1 || compare(value, tail.value) == 0))
+        {
+            Node _nodeToInsert = new Node<T>(value);
+
+            this.tail.next = _nodeToInsert;
+            _nodeToInsert.prev = this.tail;
+            this.tail = _nodeToInsert;
+            return;
+        }
+
+        // Если список по убыванию и вставляемое число между head и tail по значению
+        if(_ascending == false && compare(value, head.value) == -1 && compare(value, tail.value) == 1)
+        {
+            Node _nodeAfter = this.head; // Узел - "каретка", передвигающийся по всему списку
+            Node _nodeToInsert = new Node<T>(value); // Вставляемый узел
+
+            while (_nodeAfter.next != null)
+            {
+                // Если value > текущего узла и < следующего
+                if(compare(value, (T)_nodeAfter.value) == -1 && compare(value, (T)_nodeAfter.next.value) == 1)
+                {
+                    _nodeAfter.next.prev = _nodeToInsert;
+                    _nodeToInsert.prev = _nodeAfter;
+                    _nodeToInsert.next = _nodeAfter.next;
+                    _nodeAfter.next = _nodeToInsert;
+                }
+                _nodeAfter = _nodeAfter.next;
+            }
+        }
     }
 
     public Node<T> find(T val)
@@ -118,4 +217,7 @@ public class OrderedList<T>
         }
         return r;
     }
+
+    // Тестовый метод для отображения содержимого списка
+
 }

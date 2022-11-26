@@ -178,40 +178,6 @@ public class LinkedList2
         return count;
     }
 
-   /* public void insertAfter(Node _nodeAfter, Node _nodeToInsert)
-    {
-        // либо список пуст и вставляем первый элемент в null
-        if (_nodeAfter == null && this.head == null)
-        {
-            this.head = _nodeToInsert;
-            this.tail = _nodeToInsert;
-            //return;
-        }
-        // либо список не пуст и вставляем перед ним первым элементом
-        else if (_nodeAfter == null && this.head != null)
-        {
-            _nodeToInsert.next = this.head;
-            this.head.prev = _nodeToInsert;
-            this.head = _nodeToInsert;
-            this.head.prev = null;
-            //return;
-        }
-
-        else if (_nodeAfter == this.tail && this.tail.prev != null)
-        {
-            this.tail.next = _nodeToInsert;
-            _nodeToInsert.prev = this.tail;
-            this.tail = _nodeToInsert;
-        }
-        else
-        {
-            _nodeToInsert.next = _nodeAfter.next;
-            _nodeAfter.next.prev = _nodeToInsert;
-            _nodeAfter.next = _nodeToInsert;
-            _nodeToInsert.prev = _nodeAfter;
-        }
-    }*/
-
     public void insertAfter(Node _nodeAfter, Node _nodeToInsert)
     {
         boolean flag = false;
