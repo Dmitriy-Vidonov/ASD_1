@@ -1,5 +1,7 @@
 package draft;
 
+import java.util.ArrayList;
+
 public class tests<T> {
 
     public static void ShowNodesValues(OrderedList LL, boolean full)
@@ -44,14 +46,15 @@ public class tests<T> {
         OrderedList orderList = new OrderedList<>(false); // true - возрастание, false - убывание
         orderList.add(1);
         orderList.add(3);
-        orderList.add(3);
         orderList.add(5);
         orderList.add(4);
         orderList.add(2);
 
-        orderList.delete(3);
-        orderList.delete(3);
+        //orderList.clear(true);
         ShowNodesValues(orderList, true);
+        System.out.println("count = " + orderList.count());
 
+        ArrayList<Node> arrList = orderList.getAll();
+        for(Node _node : arrList) System.out.print(_node.value + " ");
     }
 }
