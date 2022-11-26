@@ -42,11 +42,13 @@ public class tests<T> {
     public static void main(String[] args)
     {
         OrderedList orderList = new OrderedList<>(false); // true - возрастание, false - убывание
-        orderList.add("one");
-
-        //ShowNodesValues(orderList, true);
-        orderList.add("two");
+        orderList.add(1);
+        orderList.add(3);
+        orderList.add(5);
+        orderList.add(4);
+        orderList.add(2);
 
         ShowNodesValues(orderList, true);
+        System.out.println(orderList.find(0));
     }
 }

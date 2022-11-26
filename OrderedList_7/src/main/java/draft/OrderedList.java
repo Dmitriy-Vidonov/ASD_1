@@ -80,7 +80,6 @@ public class OrderedList<T>
             if(res == 0) return 0;
             return -1;
         }
-
         return 0;
     }
 
@@ -189,10 +188,64 @@ public class OrderedList<T>
         }
     }
 
-    //
     public Node<T> find(T val)
     {
-        return null; // здесь будет ваш код
+        // Если список пустой
+        if(this.head == null)
+            return null;
+
+        // Если val == head.value, то вернуть head без запуска цикла. Не важно возрастание или убывание
+        if(compare(val, this.head.value) == 0)
+            return this.head;
+
+        // Если val == tail.value, но при этом список не из одного элемента, чтобы не пересекаться с предыдущим
+        if(this.head.next != null && compare(val, this.tail.value) == 0)
+            return this.tail;
+
+        // ***** ВОЗРАСТАНИЕ *****
+
+        // Если по возрастанию и head.value > val, то поиск можно прекратить
+        if(_ascending == true && compare(val, this.head.value) == -1)
+            return null;
+
+        // Если по возрастанию и поиск идет между head и tail
+        if(_ascending == true && compare(val, this.head.value) == 1 && compare(val, this.tail.value) == -1)
+        {
+            Node _node = this.head;
+            while (_node.next != null)
+            {
+                if(compare(val, (T)_node.value) == -1)
+                    return null; // Если значение узла меньше val, то в дальнейшем переборе нет смысла
+
+                if(compare(val, (T)_node.value) == 0)
+                    return _node; // Если val = значению узла, то возвращаем узел
+
+                _node = _node.next; // В ином случае двигаемся дальше
+            }
+        }
+
+        // ***** УБЫВАНИЕ *****
+
+        // Если по убыванию и head.value < val, то поиск можно прекратить
+        if(_ascending == false && compare(val, this.head.value) == 1)
+            return null;
+
+        // Если по убыванию и поиск идет между head и tail
+        if(_ascending == false && compare(val, this.head.value) == -1 && compare(val, this.tail.value) == 1)
+        {
+            Node _node = this.head;
+            while (_node.next != null)
+            {
+                if(compare(val, (T)_node.value) == 1)
+                    return null; // Если значение узла больше val, то в дальнейшем переборе нет смысла
+
+                if(compare(val, (T)_node.value) == 0)
+                    return _node; // Если val = значению узла, то возвращаем узел
+
+                _node = _node.next; // В ином случае двигаемся дальше
+            }
+        }
+        return null;
     }
 
     public void delete(T val)
