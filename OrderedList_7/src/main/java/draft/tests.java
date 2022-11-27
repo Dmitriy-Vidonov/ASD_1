@@ -43,18 +43,15 @@ public class tests<T> {
 
     public static void main(String[] args)
     {
-        OrderedList orderList = new OrderedList<>(false); // true - возрастание, false - убывание
+        OrderedList orderList = new OrderedList<>(true); // true - возрастание, false - убывание
+        orderList.add(10);
         orderList.add(1);
-        orderList.add(3);
-        orderList.add(5);
-        orderList.add(4);
         orderList.add(2);
+        orderList.add(3);
+        orderList.add(0);
 
         //orderList.clear(true);
-        ShowNodesValues(orderList, true);
+        ShowNodesValues(orderList, false);
         System.out.println("count = " + orderList.count());
-
-        ArrayList<Node> arrList = orderList.getAll();
-        for(Node _node : arrList) System.out.print(_node.value + " ");
     }
 }

@@ -123,18 +123,30 @@ public class OrderedList<T>
         // Если список по возрастанию и вставляемое число между head и tail по значению
         if(_ascending == true && compare(value, head.value) == 1 && compare(value, tail.value) == -1)
         {
-            Node _nodeAfter = this.head; // Узел - "каретка", передвигающийся по всему списку
+            Node <T>_nodeAfter = this.head; // Узел - "каретка", передвигающийся по всему списку
             Node _nodeToInsert = new Node<T>(value); // Вставляемый узел
 
             while (_nodeAfter.next != null)
             {
-                // Если value > текущего узла и < следующего
-                if(compare(value, (T)_nodeAfter.value) == 1 && compare(value, (T)_nodeAfter.next.value) == -1)
+                // Если value == текущему узлу
+                if(compare(value, _nodeAfter.value) == 0)
                 {
                     _nodeAfter.next.prev = _nodeToInsert;
                     _nodeToInsert.prev = _nodeAfter;
                     _nodeToInsert.next = _nodeAfter.next;
                     _nodeAfter.next = _nodeToInsert;
+                    break;
+                }
+
+                // Если value > текущего узла и < следующего
+                if((compare(value, _nodeAfter.value) == 1
+                        && compare(value, _nodeAfter.next.value) == -1))
+                {
+                    _nodeAfter.next.prev = _nodeToInsert;
+                    _nodeToInsert.prev = _nodeAfter;
+                    _nodeToInsert.next = _nodeAfter.next;
+                    _nodeAfter.next = _nodeToInsert;
+                    break;
                 }
                 _nodeAfter = _nodeAfter.next;
             }
@@ -169,18 +181,29 @@ public class OrderedList<T>
         // Если список по убыванию и вставляемое число между head и tail по значению
         if(_ascending == false && compare(value, head.value) == -1 && compare(value, tail.value) == 1)
         {
-            Node _nodeAfter = this.head; // Узел - "каретка", передвигающийся по всему списку
+            Node <T>_nodeAfter = this.head; // Узел - "каретка", передвигающийся по всему списку
             Node _nodeToInsert = new Node<T>(value); // Вставляемый узел
 
             while (_nodeAfter.next != null)
             {
-                // Если value > текущего узла и < следующего
-                if(compare(value, (T)_nodeAfter.value) == -1 && compare(value, (T)_nodeAfter.next.value) == 1)
+                // Если value == текущему узлу
+                if(compare(value, _nodeAfter.value) == 0)
                 {
                     _nodeAfter.next.prev = _nodeToInsert;
                     _nodeToInsert.prev = _nodeAfter;
                     _nodeToInsert.next = _nodeAfter.next;
                     _nodeAfter.next = _nodeToInsert;
+                    break;
+                }
+
+                // Если value > текущего узла и < следующего
+                if(compare(value, _nodeAfter.value) == -1 && compare(value, _nodeAfter.next.value) == 1)
+                {
+                    _nodeAfter.next.prev = _nodeToInsert;
+                    _nodeToInsert.prev = _nodeAfter;
+                    _nodeToInsert.next = _nodeAfter.next;
+                    _nodeAfter.next = _nodeToInsert;
+                    break;
                 }
                 _nodeAfter = _nodeAfter.next;
             }

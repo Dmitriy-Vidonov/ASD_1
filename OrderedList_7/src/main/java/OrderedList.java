@@ -109,17 +109,28 @@ public class OrderedList<T>
 
         if(_ascending == true && compare(value, head.value) == 1 && compare(value, tail.value) == -1)
         {
-            Node _nodeAfter = this.head;
+            Node<T> _nodeAfter = this.head;
             Node _nodeToInsert = new Node<T>(value);
 
             while (_nodeAfter.next != null)
             {
-                if(compare(value, (T)_nodeAfter.value) == 1 && compare(value, (T)_nodeAfter.next.value) == -1)
+                if(compare(value, _nodeAfter.value) == 0)
                 {
                     _nodeAfter.next.prev = _nodeToInsert;
                     _nodeToInsert.prev = _nodeAfter;
                     _nodeToInsert.next = _nodeAfter.next;
                     _nodeAfter.next = _nodeToInsert;
+                    break;
+                }
+
+                if((compare(value, _nodeAfter.value) == 1
+                        && compare(value, _nodeAfter.next.value) == -1))
+                {
+                    _nodeAfter.next.prev = _nodeToInsert;
+                    _nodeToInsert.prev = _nodeAfter;
+                    _nodeToInsert.next = _nodeAfter.next;
+                    _nodeAfter.next = _nodeToInsert;
+                    break;
                 }
                 _nodeAfter = _nodeAfter.next;
             }
@@ -147,17 +158,27 @@ public class OrderedList<T>
 
         if(_ascending == false && compare(value, head.value) == -1 && compare(value, tail.value) == 1)
         {
-            Node _nodeAfter = this.head;
+            Node <T>_nodeAfter = this.head;
             Node _nodeToInsert = new Node<T>(value);
 
             while (_nodeAfter.next != null)
             {
+                if(compare(value, _nodeAfter.value) == 0)
+                {
+                    _nodeAfter.next.prev = _nodeToInsert;
+                    _nodeToInsert.prev = _nodeAfter;
+                    _nodeToInsert.next = _nodeAfter.next;
+                    _nodeAfter.next = _nodeToInsert;
+                    break;
+                }
+
                 if(compare(value, (T)_nodeAfter.value) == -1 && compare(value, (T)_nodeAfter.next.value) == 1)
                 {
                     _nodeAfter.next.prev = _nodeToInsert;
                     _nodeToInsert.prev = _nodeAfter;
                     _nodeToInsert.next = _nodeAfter.next;
                     _nodeAfter.next = _nodeToInsert;
+                    break;
                 }
                 _nodeAfter = _nodeAfter.next;
             }
