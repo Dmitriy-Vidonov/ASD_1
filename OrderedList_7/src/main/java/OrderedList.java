@@ -31,6 +31,7 @@ public class OrderedList<T>
         final String INTEGER = "Integer";
         final String FLOAT = "Float";
         final String DOUBLE = "Double";
+        final String STRING = "String";
 
         if(((v1.getClass().getTypeName().endsWith(INTEGER)) && (v2.getClass().getTypeName().endsWith(INTEGER))
         ) && ((int)v1 < (int)v2)
@@ -59,7 +60,7 @@ public class OrderedList<T>
         ) && ((double)v1 > (double)v2)
         ) return 1;
 
-        if(v1.getClass().getTypeName().endsWith("String") && v2.getClass().getTypeName().endsWith("String"))
+        if(v1.getClass().getTypeName().endsWith(STRING) && v2.getClass().getTypeName().endsWith(STRING))
         {
             String s1 = "";
             String s2 = "";
