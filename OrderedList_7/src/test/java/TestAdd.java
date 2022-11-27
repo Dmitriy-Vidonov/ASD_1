@@ -1,9 +1,8 @@
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class add_Test {
+class TestAdd {
 
     OrderedList ordListAsc = new OrderedList<>(true);
     OrderedList ordListDesc = new OrderedList<>(false);
@@ -21,8 +20,8 @@ class add_Test {
     void add_Empty() throws Exception
     {
         emptyOrdList.add(10);
-        Assertions.assertTrue(emptyOrdList.count() == 1);
-        Assertions.assertTrue(emptyOrdList.head.value.equals(10));
+        assertEquals(1, emptyOrdList.count());
+        assertEquals(10, emptyOrdList.head.value);
     }
 
     @org.junit.jupiter.api.Test
@@ -30,9 +29,9 @@ class add_Test {
     void add_Asc_Add1() throws Exception
     {
         ordListAsc.add(10);
-        Assertions.assertTrue(ordListAsc.count() == 2);
-        Assertions.assertTrue(ordListAsc.head.value.equals(10));
-        Assertions.assertTrue(ordListAsc.tail.value.equals(10));
+        assertEquals(2, ordListAsc.count());
+        assertEquals(10, (ordListAsc.head.value));
+        assertEquals(10, ordListAsc.tail.value);
     }
 
     @org.junit.jupiter.api.Test
@@ -44,9 +43,9 @@ class add_Test {
         ordListAsc.add(3);
         ordListAsc.add(1);
 
-        Assertions.assertTrue(ordListAsc.count() == 5);
-        Assertions.assertTrue(ordListAsc.head.value.equals(1));
-        Assertions.assertTrue(ordListAsc.tail.value.equals(10));
+        assertEquals(5, ordListAsc.count());
+        assertEquals(1, ordListAsc.head.value);
+        assertEquals(10, ordListAsc.tail.value);
     }
 
     @org.junit.jupiter.api.Test
@@ -58,9 +57,9 @@ class add_Test {
         ordListAsc.add(3);
         ordListAsc.add(10);
 
-        Assertions.assertTrue(ordListAsc.count() == 5);
-        Assertions.assertTrue(ordListAsc.head.value.equals(1));
-        Assertions.assertTrue(ordListAsc.tail.value.equals(10));
+        assertEquals(5, ordListAsc.count());
+        assertEquals(1, ordListAsc.head.value);
+        assertEquals(10, ordListAsc.tail.value);
     }
 
     @org.junit.jupiter.api.Test
@@ -72,8 +71,8 @@ class add_Test {
         ordListAsc.add(3);
         ordListAsc.add(2);
 
-        Assertions.assertTrue(ordListAsc.count() == 5);
-        Assertions.assertTrue(ordListAsc.head.next.value.equals(2));
+        assertEquals(5, ordListAsc.count());
+        assertEquals(2, ordListAsc.head.next.value);
     }
 
     @org.junit.jupiter.api.Test
@@ -82,9 +81,9 @@ class add_Test {
     {
         ordListAsc.add(9);
 
-        Assertions.assertTrue(ordListAsc.count() == 2);
-        Assertions.assertTrue(ordListAsc.head.value.equals(9));
-        Assertions.assertTrue(ordListAsc.tail.value.equals(10));
+        assertEquals(2, ordListAsc.count());
+        assertEquals(9, ordListAsc.head.value);
+        assertEquals(10, ordListAsc.tail.value);
     }
 
     @org.junit.jupiter.api.Test
@@ -93,9 +92,9 @@ class add_Test {
     {
         ordListAsc.add(12);
 
-        Assertions.assertTrue(ordListAsc.count() == 2);
-        Assertions.assertTrue(ordListAsc.head.value.equals(10));
-        Assertions.assertTrue(ordListAsc.tail.value.equals(12));
+        assertEquals(2, ordListAsc.count());
+        assertEquals(10, ordListAsc.head.value);
+        assertEquals(12, ordListAsc.tail.value);
     }
 
     @org.junit.jupiter.api.Test
@@ -105,11 +104,10 @@ class add_Test {
         ordListAsc.add(15);
         ordListAsc.add(12);
 
-        Assertions.assertTrue(ordListAsc.count() == 3);
-        Assertions.assertTrue(ordListAsc.head.value.equals(10));
-        Assertions.assertTrue(ordListAsc.tail.value.equals(15));
+        assertEquals(3, ordListAsc.count());
+        assertEquals(10, ordListAsc.head.value);
+        assertEquals(15, ordListAsc.tail.value);
     }
-
 
     //DESCENDING
 
@@ -117,11 +115,12 @@ class add_Test {
     @DisplayName("9) DESC: Добавление дубля в список из 1 узла")
     void add_Desc_Add1() throws Exception
     {
-        ordListDesc.add(10);
+        int node = 10;
+        ordListDesc.add(node);
 
-        Assertions.assertTrue(ordListDesc.count() == 2);
-        Assertions.assertTrue(ordListDesc.head.value.equals(10));
-        Assertions.assertTrue(ordListDesc.tail.value.equals(10));
+        assertEquals(2, ordListDesc.count());
+        assertEquals(node, ordListDesc.head.value);
+        assertEquals(node, ordListDesc.tail.value);
     }
 
     @org.junit.jupiter.api.Test
@@ -133,9 +132,9 @@ class add_Test {
         ordListDesc.add(3);
         ordListDesc.add(10);
 
-        Assertions.assertTrue(ordListDesc.count() == 5);
-        Assertions.assertTrue(ordListDesc.head.value.equals(10));
-        Assertions.assertTrue(ordListDesc.tail.value.equals(1));
+        assertEquals(5, ordListDesc.count());
+        assertEquals(10, ordListDesc.head.value);
+        assertEquals(1, ordListDesc.tail.value);
     }
 
     @org.junit.jupiter.api.Test
@@ -147,9 +146,9 @@ class add_Test {
         ordListDesc.add(3);
         ordListDesc.add(1);
 
-        Assertions.assertTrue(ordListDesc.count() == 5);
-        Assertions.assertTrue(ordListDesc.head.value.equals(10));
-        Assertions.assertTrue(ordListDesc.tail.value.equals(1));
+        assertEquals(5, ordListDesc.count());
+        assertEquals(10, ordListDesc.head.value);
+        assertEquals(1, ordListDesc.tail.value);
     }
 
     @org.junit.jupiter.api.Test
@@ -161,8 +160,8 @@ class add_Test {
         ordListDesc.add(3);
         ordListDesc.add(3);
 
-        Assertions.assertTrue(ordListDesc.count() == 5);
-        Assertions.assertTrue(ordListDesc.head.next.next.value.equals(3));
+        assertEquals(5, ordListDesc.count());
+        assertEquals(3, ordListDesc.head.next.next.value);
     }
 
     @org.junit.jupiter.api.Test
@@ -171,9 +170,9 @@ class add_Test {
     {
         ordListDesc.add(15);
 
-        Assertions.assertTrue(ordListDesc.count() == 2);
-        Assertions.assertTrue(ordListDesc.head.value.equals(15));
-        Assertions.assertTrue(ordListDesc.tail.value.equals(10));
+        assertEquals(2, ordListDesc.count());
+        assertEquals(15, ordListDesc.head.value);
+        assertEquals(10, ordListDesc.tail.value);
     }
 
     @org.junit.jupiter.api.Test
@@ -182,9 +181,9 @@ class add_Test {
     {
         ordListDesc.add(5);
 
-        Assertions.assertTrue(ordListDesc.count() == 2);
-        Assertions.assertTrue(ordListDesc.head.value.equals(10));
-        Assertions.assertTrue(ordListDesc.tail.value.equals(5));
+        assertEquals(2, ordListDesc.count());
+        assertEquals(10, ordListDesc.head.value);
+        assertEquals(5, ordListDesc.tail.value);
     }
 
     @org.junit.jupiter.api.Test
@@ -194,9 +193,9 @@ class add_Test {
         ordListDesc.add(5);
         ordListDesc.add(7);
 
-        Assertions.assertTrue(ordListDesc.count() == 3);
-        Assertions.assertTrue(ordListDesc.head.value.equals(10));
-        Assertions.assertTrue(ordListDesc.tail.value.equals(5));
+        assertEquals(3, ordListDesc.count());
+        assertEquals(10, ordListDesc.head.value);
+        assertEquals(5, ordListDesc.tail.value);
     }
 
 }

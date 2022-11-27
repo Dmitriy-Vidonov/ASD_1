@@ -114,16 +114,7 @@ public class OrderedList<T>
 
             while (_nodeAfter.next != null)
             {
-                if(compare(value, _nodeAfter.value) == 0)
-                {
-                    _nodeAfter.next.prev = _nodeToInsert;
-                    _nodeToInsert.prev = _nodeAfter;
-                    _nodeToInsert.next = _nodeAfter.next;
-                    _nodeAfter.next = _nodeToInsert;
-                    break;
-                }
-
-                if((compare(value, _nodeAfter.value) == 1
+                if(compare(value, _nodeAfter.value) == 0 || (compare(value, _nodeAfter.value) == 1
                         && compare(value, _nodeAfter.next.value) == -1))
                 {
                     _nodeAfter.next.prev = _nodeToInsert;
@@ -163,7 +154,8 @@ public class OrderedList<T>
 
             while (_nodeAfter.next != null)
             {
-                if(compare(value, _nodeAfter.value) == 0)
+                if(compare(value, _nodeAfter.value) == 0 || (compare(value, (T)_nodeAfter.value) == -1
+                        && compare(value, (T)_nodeAfter.next.value) == 1))
                 {
                     _nodeAfter.next.prev = _nodeToInsert;
                     _nodeToInsert.prev = _nodeAfter;
@@ -172,14 +164,6 @@ public class OrderedList<T>
                     break;
                 }
 
-                if(compare(value, (T)_nodeAfter.value) == -1 && compare(value, (T)_nodeAfter.next.value) == 1)
-                {
-                    _nodeAfter.next.prev = _nodeToInsert;
-                    _nodeToInsert.prev = _nodeAfter;
-                    _nodeToInsert.next = _nodeAfter.next;
-                    _nodeAfter.next = _nodeToInsert;
-                    break;
-                }
                 _nodeAfter = _nodeAfter.next;
             }
         }
