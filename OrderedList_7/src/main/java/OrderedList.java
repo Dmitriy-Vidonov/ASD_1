@@ -28,33 +28,34 @@ public class OrderedList<T>
 
     public int compare(T v1, T v2)
     {
-        if(((v1.getClass().getTypeName().endsWith("Integer")) &&
-                (v2.getClass().getTypeName().endsWith("Integer"))
+        final String INTEGER = "Integer";
+        final String FLOAT = "Float";
+        final String DOUBLE = "Double";
+
+        if(((v1.getClass().getTypeName().endsWith(INTEGER)) && (v2.getClass().getTypeName().endsWith(INTEGER))
         ) && ((int)v1 < (int)v2)
         ) return -1;
 
-        if(((v1.getClass().getTypeName().endsWith("Integer")) &&
-                (v2.getClass().getTypeName().endsWith("Integer"))
+        if(((v1.getClass().getTypeName().endsWith(INTEGER)) && (v2.getClass().getTypeName().endsWith(INTEGER))
         ) && ((int)v1 == (int)v2)
         ) return 0;
 
-        if(((v1.getClass().getTypeName().endsWith("Integer")) &&
-                (v2.getClass().getTypeName().endsWith("Integer"))
+        if(((v1.getClass().getTypeName().endsWith(INTEGER)) && (v2.getClass().getTypeName().endsWith(INTEGER))
         ) && ((int)v1 > (int)v2)
         ) return 1;
 
-        if(((v1.getClass().getTypeName().endsWith("Float") || v1.getClass().getTypeName().endsWith("Double")) &&
-                (v2.getClass().getTypeName().endsWith("Float") || v2.getClass().getTypeName().endsWith("Double"))
+        if(((v1.getClass().getTypeName().endsWith(FLOAT) || v1.getClass().getTypeName().endsWith(DOUBLE)) &&
+                (v2.getClass().getTypeName().endsWith(FLOAT) || v2.getClass().getTypeName().endsWith(DOUBLE))
         ) && ((double)v1 < (double)v2)
         ) return -1;
 
-        if(((v1.getClass().getTypeName().endsWith("Float") || v1.getClass().getTypeName().endsWith("Double")) &&
-                (v2.getClass().getTypeName().endsWith("Float") || v2.getClass().getTypeName().endsWith("Double"))
+        if(((v1.getClass().getTypeName().endsWith(FLOAT) || v1.getClass().getTypeName().endsWith(DOUBLE)) &&
+                (v2.getClass().getTypeName().endsWith(FLOAT) || v2.getClass().getTypeName().endsWith(DOUBLE))
         ) && ((double)v1 == (double)v2)
         ) return 0;
 
-        if(((v1.getClass().getTypeName().endsWith("Float") || v1.getClass().getTypeName().endsWith("Double")) &&
-                (v2.getClass().getTypeName().endsWith("Float") || v2.getClass().getTypeName().endsWith("Double"))
+        if(((v1.getClass().getTypeName().endsWith(FLOAT) || v1.getClass().getTypeName().endsWith(DOUBLE)) &&
+                (v2.getClass().getTypeName().endsWith(FLOAT) || v2.getClass().getTypeName().endsWith(DOUBLE))
         ) && ((double)v1 > (double)v2)
         ) return 1;
 
@@ -89,82 +90,82 @@ public class OrderedList<T>
 
         if(_ascending == true && (compare(value, head.value) == -1 || compare(value, head.value) == 0))
         {
-            Node _nodeToInsert = new Node<T>(value);
+            Node <T> nodeToInsert = new Node<T>(value);
 
-            _nodeToInsert.next = this.head;
-            this.head.prev = _nodeToInsert;
-            this.head = _nodeToInsert;
+            nodeToInsert.next = this.head;
+            this.head.prev = nodeToInsert;
+            this.head = nodeToInsert;
             return;
         }
 
         if(_ascending == true && (compare(value, tail.value) == 1 || compare(value, tail.value) == 0))
         {
-            Node _nodeToInsert = new Node<T>(value);
+            Node <T> nodeToInsert = new Node<>(value);
 
-            this.tail.next = _nodeToInsert;
-            _nodeToInsert.prev = this.tail;
-            this.tail = _nodeToInsert;
+            this.tail.next = nodeToInsert;
+            nodeToInsert.prev = this.tail;
+            this.tail = nodeToInsert;
             return;
         }
 
         if(_ascending == true && compare(value, head.value) == 1 && compare(value, tail.value) == -1)
         {
-            Node<T> _nodeAfter = this.head;
-            Node _nodeToInsert = new Node<T>(value);
+            Node <T> nodeAfter = this.head;
+            Node <T> nodeToInsert = new Node<>(value);
 
-            while (_nodeAfter.next != null)
+            while (nodeAfter.next != null)
             {
-                if(compare(value, _nodeAfter.value) == 0 || (compare(value, _nodeAfter.value) == 1
-                        && compare(value, _nodeAfter.next.value) == -1))
+                if(compare(value, nodeAfter.value) == 0 || (compare(value, nodeAfter.value) == 1
+                        && compare(value, nodeAfter.next.value) == -1))
                 {
-                    _nodeAfter.next.prev = _nodeToInsert;
-                    _nodeToInsert.prev = _nodeAfter;
-                    _nodeToInsert.next = _nodeAfter.next;
-                    _nodeAfter.next = _nodeToInsert;
+                    nodeAfter.next.prev = nodeToInsert;
+                    nodeToInsert.prev = nodeAfter;
+                    nodeToInsert.next = nodeAfter.next;
+                    nodeAfter.next = nodeToInsert;
                     break;
                 }
-                _nodeAfter = _nodeAfter.next;
+                nodeAfter = nodeAfter.next;
             }
         }
 
         if(_ascending == false && (compare(value, head.value) == 1 || compare(value, head.value) == 0))
         {
-            Node _nodeToInsert = new Node<T>(value);
+            Node <T> nodeToInsert = new Node<>(value);
 
-            _nodeToInsert.next = this.head;
-            this.head.prev = _nodeToInsert;
-            this.head = _nodeToInsert;
+            nodeToInsert.next = this.head;
+            this.head.prev = nodeToInsert;
+            this.head = nodeToInsert;
             return;
         }
 
         if(_ascending == false && (compare(value, tail.value) == -1 || compare(value, tail.value) == 0))
         {
-            Node _nodeToInsert = new Node<T>(value);
+            Node <T> nodeToInsert = new Node<>(value);
 
-            this.tail.next = _nodeToInsert;
-            _nodeToInsert.prev = this.tail;
-            this.tail = _nodeToInsert;
+            this.tail.next = nodeToInsert;
+            nodeToInsert.prev = this.tail;
+            this.tail = nodeToInsert;
             return;
         }
 
         if(_ascending == false && compare(value, head.value) == -1 && compare(value, tail.value) == 1)
         {
-            Node <T>_nodeAfter = this.head;
-            Node _nodeToInsert = new Node<T>(value);
+            Node <T> nodeAfter = this.head;
+            Node <T> nodeToInsert = new Node<>(value);
 
-            while (_nodeAfter.next != null)
+            while (nodeAfter.next != null)
             {
-                if(compare(value, _nodeAfter.value) == 0 || (compare(value, (T)_nodeAfter.value) == -1
-                        && compare(value, (T)_nodeAfter.next.value) == 1))
+                if(compare(value, nodeAfter.value) == 0 || (compare(value, nodeAfter.value) == -1
+                        && compare(value, nodeAfter.next.value) == 1))
                 {
-                    _nodeAfter.next.prev = _nodeToInsert;
-                    _nodeToInsert.prev = _nodeAfter;
-                    _nodeToInsert.next = _nodeAfter.next;
-                    _nodeAfter.next = _nodeToInsert;
+                    nodeAfter.next.prev = nodeToInsert;
+                    nodeToInsert.prev = nodeAfter;
+                    nodeToInsert.next = nodeAfter.next;
+                    nodeAfter.next = nodeToInsert;
                     break;
                 }
 
-                _nodeAfter = _nodeAfter.next;
+                nodeAfter = nodeAfter.next;
             }
         }
     }
@@ -185,16 +186,16 @@ public class OrderedList<T>
 
         if(_ascending == true && compare(val, this.head.value) == 1 && compare(val, this.tail.value) == -1)
         {
-            Node _node = this.head;
-            while (_node.next != null)
+            Node <T> node = this.head;
+            while (node.next != null)
             {
-                if(compare(val, (T)_node.value) == -1)
+                if(compare(val, node.value) == -1)
                     return null;
 
-                if(compare(val, (T)_node.value) == 0)
-                    return _node;
+                if(compare(val, node.value) == 0)
+                    return node;
 
-                _node = _node.next;
+                node = node.next;
             }
         }
 
@@ -203,16 +204,16 @@ public class OrderedList<T>
 
         if(_ascending == false && compare(val, this.head.value) == -1 && compare(val, this.tail.value) == 1)
         {
-            Node _node = this.head;
-            while (_node.next != null)
+            Node <T> node = this.head;
+            while (node.next != null)
             {
-                if(compare(val, (T)_node.value) == 1)
+                if(compare(val, node.value) == 1)
                     return null;
 
-                if(compare(val, (T)_node.value) == 0)
-                    return _node;
+                if(compare(val, node.value) == 0)
+                    return node;
 
-                _node = _node.next;
+                node = node.next;
             }
         }
         return null;
@@ -234,7 +235,7 @@ public class OrderedList<T>
             return;
         }
 
-        Node node = this.head;
+        Node <T> node = this.head;
         while (node.next != null) {
             if (node.value == val) {
                 node.prev.next = node.next;
@@ -254,7 +255,7 @@ public class OrderedList<T>
     {
         _ascending = asc;
         if (this.head != null) {
-            Node node = this.head;
+            Node <T> node = this.head;
 
             while (node != null) {
                 this.head.next = null;
@@ -268,7 +269,7 @@ public class OrderedList<T>
 
     public int count()
     {
-        Node node = this.head;
+        Node <T> node = this.head;
         int count = 0;
         if (this.head == null) {
             return 0;

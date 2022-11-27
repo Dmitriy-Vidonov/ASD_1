@@ -3,9 +3,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class delete_Test {
+class TestDelete {
 
     OrderedList ordListAsc = new OrderedList<>(true);
     OrderedList ordListDesc = new OrderedList<>(false);
@@ -24,7 +24,7 @@ class delete_Test {
     {
         emptyOrdList.delete(10);
 
-        Assertions.assertTrue(emptyOrdList.count() == 0);
+        assertEquals(0, emptyOrdList.count());
     }
 
     @Test
@@ -33,7 +33,7 @@ class delete_Test {
     {
         ordListAsc.delete(10);
 
-        Assertions.assertTrue(ordListAsc.count() == 0);
+        assertEquals(0, ordListAsc.count());
     }
 
     @Test
@@ -46,8 +46,8 @@ class delete_Test {
 
         ordListAsc.delete(1);
 
-        Assertions.assertTrue(ordListAsc.count() == 3);
-        Assertions.assertTrue(ordListAsc.head.value.equals(2));
+        assertEquals(3, ordListAsc.count());
+        assertEquals(2, ordListAsc.head.value);
     }
 
     @Test
@@ -60,8 +60,8 @@ class delete_Test {
 
         ordListAsc.delete(10);
 
-        Assertions.assertTrue(ordListAsc.count() == 3);
-        Assertions.assertTrue(ordListAsc.tail.value.equals(3));
+        assertEquals(3, ordListAsc.count());
+        assertEquals(3, ordListAsc.tail.value);
     }
 
     @Test
@@ -74,7 +74,7 @@ class delete_Test {
 
         ordListAsc.delete(10);
 
-        Assertions.assertTrue(ordListAsc.count() == 3);
+        assertEquals(3, ordListAsc.count());
     }
 
     @Test
@@ -88,8 +88,8 @@ class delete_Test {
 
         ordListAsc.delete(3);
 
-        Assertions.assertTrue(ordListAsc.count() == 4);
-        Assertions.assertTrue(ordListAsc.tail.prev.value.equals(3));
+        assertEquals(4, ordListAsc.count());
+        assertEquals(3, ordListAsc.tail.prev.value);
     }
 
     @Test
@@ -102,8 +102,8 @@ class delete_Test {
 
         ordListAsc.delete(3);
 
-        Assertions.assertTrue(ordListAsc.count() == 3);
-        Assertions.assertTrue(ordListAsc.tail.prev.value.equals(2));
+        assertEquals(3, ordListAsc.count());
+        assertEquals(2, ordListAsc.tail.prev.value);
     }
     
     //DESCENDING
@@ -114,7 +114,7 @@ class delete_Test {
     {
         ordListDesc.delete(10);
 
-        Assertions.assertTrue(ordListDesc.count() == 0);
+        assertEquals(0, ordListDesc.count());
     }
 
     @Test
@@ -127,8 +127,8 @@ class delete_Test {
 
         ordListDesc.delete(10);
 
-        Assertions.assertTrue(ordListDesc.count() == 3);
-        Assertions.assertTrue(ordListDesc.head.value.equals(3));
+        assertEquals(3, ordListDesc.count());
+        assertEquals(3, ordListDesc.head.value);
     }
 
     @Test
@@ -141,8 +141,8 @@ class delete_Test {
 
         ordListDesc.delete(1);
 
-        Assertions.assertTrue(ordListDesc.count() == 3);
-        Assertions.assertTrue(ordListDesc.tail.value.equals(2));
+        assertEquals(3, ordListDesc.count());
+        assertEquals(2, ordListDesc.tail.value);
     }
 
     @Test
@@ -155,7 +155,7 @@ class delete_Test {
 
         ordListDesc.delete(10);
 
-        Assertions.assertTrue(ordListDesc.count() == 3);
+        assertEquals(3, ordListDesc.count());
     }
 
     @Test
@@ -169,8 +169,8 @@ class delete_Test {
 
         ordListDesc.delete(3);
 
-        Assertions.assertTrue(ordListDesc.count() == 4);
-        Assertions.assertTrue(ordListDesc.head.next.value.equals(3));
+        assertEquals(4, ordListDesc.count());
+        assertEquals(3, ordListDesc.head.next.value);
     }
 
     @Test
@@ -183,8 +183,7 @@ class delete_Test {
 
         ordListDesc.delete(3);
 
-        Assertions.assertTrue(ordListDesc.count() == 3);
-        Assertions.assertTrue(ordListDesc.head.next.value.equals(2));
+        assertEquals(3, ordListDesc.count());
+        assertEquals(2, ordListDesc.head.next.value);
     }
-
 }
