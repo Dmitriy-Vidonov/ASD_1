@@ -25,3 +25,7 @@ Z
 *src/main/java/tests/dummy/LinkedList3.java,1/3/13f58724fb86c1fd95262fff5482840c9168df16
 Z
 *src/main/java/tests/MethodsForTesting.java,6/5/6557208a570c63a6ae305b9bb661e4c2ccaecc8e
+T
+$src/main/java/tests/LinkedList2.java,9/d/9df03395a7d56532a43a9c0f05eb53d5f3663b44
+N
+src/main/java/LinkedList2.java,9/7/97e863c4b4a2882c4947f718c952721c873e2c7b
