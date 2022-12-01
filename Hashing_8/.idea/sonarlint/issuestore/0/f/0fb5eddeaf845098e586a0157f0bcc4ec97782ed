@@ -1,17 +1,0 @@
-
-r
-java:S1104"PMake size a static final constant or non-public and provide accessors if needed.(Šé°êüÿÿÿÿ8‘¡‰ÎÌ0
-r
-java:S1104"PMake step a static final constant or non-public and provide accessors if needed.(ÕëÂéúÿÿÿÿ8’¡‰ÎÌ0
-s
-java:S1104"QMake slots a static final constant or non-public and provide accessors if needed.(ƒ›Íµøÿÿÿÿ8’¡‰ÎÌ0
-V
-java:S3400"9Remove this method and declare a constant for this value.(”·³›8¸¡‰ÎÌ0
-I
-java:S1172",Remove this unused method parameter "value".(ÿ÷Ã8Â¡‰ÎÌ0
-N
-java:S1172",Remove this unused method parameter "value".(ç„ú¦şÿÿÿÿ8Æ¡‰ÎÌ0
-I
-java:S1172",Remove this unused method parameter "value".(‰çî8È¡‰ÎÌ0
-I
-java:S1172&",Remove this unused method parameter "value".(ì¼ºÎ8Ê¡‰ÎÌ0

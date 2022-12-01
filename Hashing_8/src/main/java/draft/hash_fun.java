@@ -11,7 +11,14 @@ public class hash_fun {
         int hash;
         hash = 0;
 
-        return hash;
+        for(int i = 0; i < value.length(); i++)
+        {
+            hash ^= ((hash << 5) + value.charAt(i) + (hash >> 2));
+        }
+
+        hash &= 0x7FFFFFFF;
+
+        return hash %= len;
     }
 
     public static int hashFun2(String value, int len) // Функция h2(v) для метода двойного хэширования
@@ -36,7 +43,7 @@ public class hash_fun {
 
         for(int i=0; i<strArr.length; i++)
         {
-            System.out.println(hashFun2(strArr[i], strArr.length));
+            System.out.println(hashFun(strArr[i], strArr.length));
         }
     }
 }
