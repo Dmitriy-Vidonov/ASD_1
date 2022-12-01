@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class HashTable
 {
     public int size;
@@ -70,12 +72,15 @@ public class HashTable
         int len = slots.length;
         int index = hashFun(value);
 
+        if(loadCount == 0)
+            return -1;
+
         if(slots[index].equals(value))
             return index;
 
         int counter = 0;
 
-        while ((!slots[index].equals(value)) && (counter < len))
+        while (!(slots[index] == null) || (!(Objects.equals(slots[index], value)) && (counter < len)))
         {
             if((index + step) > (len-1))
             {
@@ -86,10 +91,17 @@ public class HashTable
             counter++;
         }
 
-        if(!slots[index].equals(value))
+        if(!Objects.equals(slots[index], value))
             return -1;
 
         return index;
+    }
+
+    public void ShowTable()
+    {
+        for (int i=0; i<slots.length; i++)
+            System.out.print(slots[i] + " ");
+        System.out.println();
     }
 }
 

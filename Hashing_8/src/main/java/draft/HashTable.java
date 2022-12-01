@@ -100,4 +100,11 @@ public class HashTable
         return index;
         // находит индекс слота со значением, или -1
     }
+
+    public void ShowTable()
+    {
+        for (int i=0; i<slots.length; i++)
+            System.out.print(slots[i] + " ");
+        System.out.println();
+    }
 }
