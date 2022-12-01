@@ -1,0 +1,8 @@
+
+l
+java:S1192
+"JDefine a constant instead of duplicating this literal "ĞĞĞ” - " 3 times.(ŠÙî”şÿÿÿÿ8¾å½¨Ì0
+S	java:S106
+"9Replace this use of System.out or System.err by a logger.(ŠÙî”şÿÿÿÿ
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ˆ¢ƒó8«„½¨Ì0
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(êÓ‚“ûÿÿÿÿ8Üå½¨Ì0

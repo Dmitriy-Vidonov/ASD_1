@@ -1,0 +1,35 @@
+
+D
+java:S3740"/Provide the parametrized type for this generic.(†ö¨
+J
+java:S3740"/Provide the parametrized type for this generic.(¶ˆ­Çÿÿÿÿÿ
+E
+java:S3740."/Provide the parametrized type for this generic.(ñã×€
+e	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†ö¨
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¹üÈ”üÿÿÿÿ
+6
+java:S2326"T is not used in the class.(¹üÈ”üÿÿÿÿ
+b	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†ö¨
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Ø¼–Ü
+.
+java:S2178"Correct this "|" to "||".(á²@
+S	java:S106"9Replace this use of System.out or System.err by a logger.(«¶ø²üÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(îÚÏ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(½óäÇúÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Û€øÍ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ
+<
+java:S1125"'Remove the unnecessary boolean literal.(ˆÊñu
+N	java:S106 "9Replace this use of System.out or System.err by a logger.(îÚÏ
+N	java:S106!"9Replace this use of System.out or System.err by a logger.(×à¨Ñ
+S	java:S106""9Replace this use of System.out or System.err by a logger.(Ç˜Éşüÿÿÿÿ
+N	java:S106#"9Replace this use of System.out or System.err by a logger.(ùŞÎ¢
+S	java:S106$"9Replace this use of System.out or System.err by a logger.(½óäÇúÿÿÿÿ
+N	java:S106%"9Replace this use of System.out or System.err by a logger.(ôµ•Ã
+N	java:S106&"9Replace this use of System.out or System.err by a logger.(Ç—Æ
+N	java:S106'"9Replace this use of System.out or System.err by a logger.(Ã¡÷ú
+S	java:S106("9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ
+Q	java:S1255"<This block of commented-out lines of code should be removed.(µƒçØ
+S	java:S1067"9Replace this use of System.out or System.err by a logger.(¡©˜ƒúÿÿÿÿ
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Ù÷üÆË0

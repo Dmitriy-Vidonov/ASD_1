@@ -1,0 +1,91 @@
+
+J
+java:S3740g"/Provide the parametrized type for this generic.(ëÒ€’ıÿÿÿÿ
+J
+java:S3740s"/Provide the parametrized type for this generic.(ëÒ€’ıÿÿÿÿ
+D
+java:S3740"/Provide the parametrized type for this generic.(úæ“?
+K
+java:S3740¡"/Provide the parametrized type for this generic.(ëÒ€’ıÿÿÿÿ
+K
+java:S3740­"/Provide the parametrized type for this generic.(ëÒ€’ıÿÿÿÿ
+E
+java:S3740¹"/Provide the parametrized type for this generic.(úæ“?
+K
+java:S3740ì"/Provide the parametrized type for this generic.(©±ªšÿÿÿÿÿ
+K
+java:S3740‚"/Provide the parametrized type for this generic.(©±ªšÿÿÿÿÿ
+K
+java:S3740¡"/Provide the parametrized type for this generic.(„İëéøÿÿÿÿ
+K
+java:S3740·"/Provide the parametrized type for this generic.(„İëéøÿÿÿÿ
+K
+java:S3740Å"/Provide the parametrized type for this generic.(„İëéøÿÿÿÿ
+t
+java:S2293Z"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ì¥˜úÿÿÿÿ
+p
+java:S2293Õ"YReplace the type specification in this constructor call with the diamond operator ("<>").(ó–Éµ
+c
+java:S1192!"HDefine a constant instead of duplicating this literal "Integer" 6 times.(´ïÔ¤ÿÿÿÿÿ
+a
+java:S11921"FDefine a constant instead of duplicating this literal "Float" 6 times.(€…‡Ñıÿÿÿÿ
+b
+java:S11921"GDefine a constant instead of duplicating this literal "Double" 6 times.(€…‡Ñıÿÿÿÿ
+v	java:S135"YReduce the total number of break and continue statements in this loop to use at most one.(’ïú¦8´ÆúÇË0
+v	java:S135»"YReduce the total number of break and continue statements in this loop to use at most one.(’ïú¦8€ãªÈË0
+f	java:S117	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á¢š
+k	java:S117g"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÒ€’ıÿÿÿÿ
+k	java:S117s"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÒ€’ıÿÿÿÿ
+k	java:S117~"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Çšèºşÿÿÿÿ
+e	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úæ“?
+l	java:S117¡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÒ€’ıÿÿÿÿ
+l	java:S117­"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÒ€’ıÿÿÿÿ
+l	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Çšèºşÿÿÿÿ
+f	java:S117¹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úæ“?
+l	java:S117ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©±ªšÿÿÿÿÿ
+l	java:S117‚"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©±ªšÿÿÿÿÿ
+l
+java:S1104"QMake value a static final constant or non-public and provide accessors if needed.(Ù­Áæüÿÿÿÿ
+k
+java:S1104"PMake next a static final constant or non-public and provide accessors if needed.(ÀÛÌõúÿÿÿÿ
+k
+java:S1104"PMake prev a static final constant or non-public and provide accessors if needed.(ÀÛÌõúÿÿÿÿ
+f
+java:S1104"PMake head a static final constant or non-public and provide accessors if needed.(Ëı»Æ
+f
+java:S1104"PMake tail a static final constant or non-public and provide accessors if needed.(Ëı»Æ
+=
+java:S1659""Declare "prev" on a separate line.(ÀÛÌõúÿÿÿÿ
+o	java:S116"URename this field "_ascending" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òßığøÿÿÿÿ
+8
+java:S1659""Declare "tail" on a separate line.(Ëı»Æ
+m
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(ÅËü¤şÿÿÿÿ
+h
+java:S3776U"RRefactor this method to reduce its Cognitive Complexity from 35 to the 15 allowed.(±µ–ğ
+B
+java:S1125e"'Remove the unnecessary boolean literal.(à¼®şÿÿÿÿ
+=
+java:S1125q"'Remove the unnecessary boolean literal.(ø£ñ½
+B
+java:S1125|"'Remove the unnecessary boolean literal.(­ş¡ˆúÿÿÿÿ
+J
+java:S1125Ÿ"'Remove the unnecessary boolean literal.(­ “ÿÿÿÿÿ8óÖêÇË0
+J
+java:S1125«"'Remove the unnecessary boolean literal.(âØÖ’ùÿÿÿÿ8ôÖêÇË0
+J
+java:S1125¶"'Remove the unnecessary boolean literal.(ÀâÍşÿÿÿÿ8õÖêÇË0
+u
+java:S3776Õ"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(­ÓúŞúÿÿÿÿ8öÖêÇË0
+E
+java:S1125æ"'Remove the unnecessary boolean literal.(¯Œá¶8øÖêÇË0
+E
+java:S1125ê"'Remove the unnecessary boolean literal.(„Èäâ8øÖêÇË0
+E
+java:S1125ü"'Remove the unnecessary boolean literal.(ƒ£áò8ùÖêÇË0
+J
+java:S1125€"'Remove the unnecessary boolean literal.(ûœÎşÿÿÿÿ8úÖêÇË0
+9
+java:S3626®"Remove this redundant jump.(ûÁİ…8ûÖêÇË0
+9
+java:S3626°"Remove this redundant jump.(ûÁİ…8ûÖêÇË0
