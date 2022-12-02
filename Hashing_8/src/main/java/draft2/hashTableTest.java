@@ -1,3 +1,7 @@
+package draft2;
+
+import draft2.HashTable;
+
 public class hashTableTest {
     public static void main(String[] args)
     {
@@ -8,7 +12,7 @@ public class hashTableTest {
         hTable.put("1");
         hTable.put("2");
         hTable.put("3");
-        hTable.put("3");
+        hTable.put("4");
         hTable.put("5");
         hTable.put("6");
         hTable.put("7");
@@ -21,13 +25,13 @@ public class hashTableTest {
         hTable.put("14");
         hTable.put("15");
         hTable.put("16");
-        //hTable.put("17");
+        hTable.put("17");
 
         hTable.ShowTable();
 
         System.out.println("seek - " + hTable.seekSlot("17"));
 
-        System.out.println("find - " + hTable.find("39"));
+        System.out.println("find - " + hTable.find("12"));
 
     }
 }

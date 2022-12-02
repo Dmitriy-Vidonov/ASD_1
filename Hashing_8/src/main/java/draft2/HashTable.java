@@ -1,3 +1,5 @@
+package draft2;
+
 public class HashTable
 {
     public int size;
@@ -73,22 +75,36 @@ public class HashTable
             return index;
 
         int counter = index;
-        
+
+        // - для начала сделать проходку по всему массиву 1 раз с шагом 1, затем усложность под разные шаги
         int res = -1;
         for(int i=0; i<len; i++)
         {
             if(slots[counter] == value)
             {
                 res = counter;
+                //System.out.println("Нашел! - " + counter);
             }
 
             if((counter + 1) == len)
             {
+                //System.out.println("arr[counter] = " + slots[counter]);
                 counter = 0;
                 continue;
             }
+            //System.out.println("arr[counter] = " + slots[counter]);
             counter++;
         }
         return res;
+
     }
+
+    public void ShowTable()
+    {
+        for (int i=0; i<slots.length; i++)
+            System.out.print(slots[i] + " ");
+        System.out.println();
+    }
+
 }
+
