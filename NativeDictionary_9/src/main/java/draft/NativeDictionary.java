@@ -5,7 +5,6 @@ public class NativeDictionary<T> {
     public int size; // задаем размер словаря
     public String [] slots; // массив для хранения ключей
     public T [] values; // массив для хранения значений
-    protected int loadCount = 0; // переменная для хранения числа заполненных элементов
 
     public NativeDictionary(int sz, Class clazz) // Class clazz нужен для корректного приведения типов
     {
@@ -52,13 +51,34 @@ public class NativeDictionary<T> {
 
     public void put(String key, T value)
     {
-        int index = seekSlot(key);
+        int index = hashFun(key); // получили индекс ключа хэш-функцией
+        int len = slots.length;
 
-        if(index != -1)
+        if(slots[index] == null) // если индекс ведет на null-слот, то пишем в него ключ
         {
             slots[index] = key;
             values[index] = value;
-            loadCount++;
+            return;
+        }
+
+        // если index привел не в пустую ячейку
+        // проверить, равен ли ключ тому, что мы хотим использовать
+        if(slots[index] == key) // если тот же ключ, то делаем перезапись value
+        {
+            values[index] = value;
+            return;
+        }
+        // если же ключ отличен, то стоит искать другой слот
+        for(int i=0; i<len; i++) // если изначально ключ не нашли, идем перебором по другим ячейкам
+        {
+            index += 1;
+
+            if(index > len-1)
+                index-=len;
+
+            if(slots[index] == key)
+                values[index] = value;
+                break;
         }
         // гарантированно записываем
         // значение value по ключу key
@@ -84,42 +104,16 @@ public class NativeDictionary<T> {
             if(slots[index] == key)
                 return values[index];
         }
-
         // возвращает value для key,
         // или null если ключ не найден
         return null;
     }
 
-    public int seekSlot(String key)
+    // тестовый вывод элементов
+    public void ShowTable()
     {
-        int len = slots.length;
-        int index = hashFun(key);
-
-        if(loadCount == 0)
-            return index;
-
-        if(loadCount == len)
-            return -1;
-
-        if(slots[index] == null)
-            return index;
-
-        int res = -1;
-
-        for(int i=0; i<len; i++)
-        {
-            index += 1;
-
-            if(index > len-1)
-                index-=len;
-
-            if(slots[index] == null)
-            {
-                res = index;
-                break;
-            }
-        }
-        return res;
+        for (int i=0; i<slots.length; i++)
+            System.out.print(slots[i] + " : " + values[i] + ", ");
+        System.out.println();
     }
-    
 }
