@@ -1,5 +1,6 @@
-public class HashTable
-{
+package draft3;
+
+public class HashTable {
     public int size;
     public int step;
     public String [] slots;
@@ -27,18 +28,20 @@ public class HashTable
 
     public int seekSlot(String value)
     {
-        int len = slots.length;
-        int index = hashFun(value);
+        int len = slots.length; // передали в переменную длину массива
+        int index = hashFun(value); // вычислить индекс слота хэш-функцией
 
-        if(loadCount == 0)
+        if(loadCount == 0) // если в массиве все ячейки пусты, то просто вернем полученный индекс
             return index;
 
-        if(loadCount == len)
+        if(loadCount == len) // если массив полностью заполнен, то вернем неудачу - свободных слотов нет
             return -1;
 
-        if(slots[index] == null)
+        // в иных случаях, когда свободные слоты есть
+        if(slots[index] == null) // если найденный слот содержит null, то его можно использовать и вернуть его значение
             return index;
 
+        // если на предыдущем шаге мы нашли заполненный слот, то надо идти по массиву и искать свободные слоты
         int res = -1;
 
         for(int i=0; i<len; i++)
@@ -54,6 +57,7 @@ public class HashTable
                 break;
             }
         }
+        // находит индекс пустого слота для значения, или -1
         return res;
     }
 
@@ -88,6 +92,15 @@ public class HashTable
                 break;
             }
         }
+        // находит индекс слота со значением, или -1
         return res;
     }
+
+    public void ShowTable()
+    {
+        for (int i=0; i<slots.length; i++)
+            System.out.print(slots[i] + " ");
+        System.out.println();
+    }
+
 }
