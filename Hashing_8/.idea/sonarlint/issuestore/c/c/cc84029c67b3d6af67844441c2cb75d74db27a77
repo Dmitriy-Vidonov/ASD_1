@@ -1,0 +1,19 @@
+
+D
+java:S1121".Extract the assignment out of this expression.(àŸü±
+f	java:S1170"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ÊÍ¶
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(™î»þ
+:
+java:S2676"Use the original value instead.(œ·Á±þÿÿÿÿ
+:
+java:S2676'"Use the original value instead.(œ·Á±þÿÿÿÿ
+:
+java:S2676)"Use the original value instead.(‰÷Åîýÿÿÿÿ
+>
+java:S14817"(Remove this unused "res" local variable.(ýœºë
+V	java:S125N"<This block of commented-out lines of code should be removed.(ì™•„ýÿÿÿÿ
+N	java:S106p"9Replace this use of System.out or System.err by a logger.(´¡”Ï
+N	java:S106q"9Replace this use of System.out or System.err by a logger.(´‚ˆæ
+Q	java:S125x"<This block of commented-out lines of code should be removed.(Äøƒ¾
+N	java:S106{"9Replace this use of System.out or System.err by a logger.(ÕÀË—
+N	java:S106|"9Replace this use of System.out or System.err by a logger.(Ð§ªÊ
