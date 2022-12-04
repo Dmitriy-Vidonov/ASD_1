@@ -5,13 +5,15 @@ public class NativeDictionary<T> {
     public int size; // задаем размер словаря
     public String [] slots; // массив для хранения ключей
     public T [] values; // массив для хранения значений
+    Class clazz;
 
-    public NativeDictionary(int sz, Class clazz) // Class clazz нужен для корректного приведения типов
+    public NativeDictionary(int sz, Class clz) // Class clazz нужен для корректного приведения типов
     {
+        clazz = clz;
         size = sz; // передаем размер словаря новому обьекту
         slots = new String[size]; // создаем новый массив типа String
         for(int i=0; i<size; i++) slots[i] = null; // заполнили null-ами массив с ключами
-        values = (T[]) Array.newInstance(clazz, this.size); // создаем новый массив с дженерик-типами
+        values = (T[]) Array.newInstance(this.clazz, size); // создаем новый массив с дженерик-типами
     }
 
     public int hashFun(String key) // на основе key, ключа - считаем хэш и формируем индекс для массива
@@ -30,19 +32,18 @@ public class NativeDictionary<T> {
     {
         int len = slots.length;
         int index = hashFun(key);
-
-        // == заменил на .equals
-        if(slots[index].equals(key)) // если в ячейке сразу нашли нужный ключ, то завершаем метод с true
+        // String.valueOf вместо ==
+        if(String.valueOf(slots[index]) == key) // если в ячейке сразу нашли нужный ключ, то завершаем метод с true
             return true;
 
-        for(int i=0; i<len; i++) // если изначально ключ не нашли, идем перебором по другим ячейкам
+        for(int i=0; i<len+1; i++) // если изначально ключ не нашли, идем перебором по другим ячейкам
         {
             index += 1;
 
             if(index > len-1)
                 index-=len;
-            // == заменил на .equals
-            if(slots[index].equals(key))
+            // String.valueOf вместо ==
+            if(String.valueOf(slots[index]) == key)
                 return true;
         }
         // возвращает true если ключ имеется,

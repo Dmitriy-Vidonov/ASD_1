@@ -38,7 +38,7 @@ class TestIsKey {
         assertFalse(dictionTest.isKey("another_key"));
     }
 
-    @RepeatedTest(10000)
+ //   @RepeatedTest(10000)
    // @Test
     @DisplayName("3) 10 000 проверок")
     void isKeyRepeated() throws Exception

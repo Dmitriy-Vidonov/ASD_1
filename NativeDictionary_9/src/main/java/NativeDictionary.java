@@ -5,13 +5,15 @@ class NativeDictionary<T>
     public int size;
     public String [] slots;
     public T [] values;
+    Class clazz;
 
-    public NativeDictionary(int sz, Class clazz)
+    public NativeDictionary(int sz, Class clz)
     {
+        clazz = clz;
         size = sz;
         slots = new String[size];
         for(int i=0; i<size; i++) slots[i] = null;
-        values = (T[]) Array.newInstance(clazz, this.size);
+        values = (T[]) Array.newInstance(this.clazz, size);
     }
 
     public int hashFun(String key)
@@ -31,17 +33,17 @@ class NativeDictionary<T>
         int len = slots.length;
         int index = hashFun(key);
 
-        if(slots[index].equals(key))
+        if(String.valueOf(slots[index]) == key)
             return true;
 
-        for(int i=0; i<len; i++)
+        for(int i=0; i<len+1; i++)
         {
             index += 1;
 
             if(index > len-1)
                 index-=len;
 
-            if(slots[index].equals(key))
+            if(String.valueOf(slots[index]) == key)
                 return true;
         }
         return false;
@@ -73,7 +75,7 @@ class NativeDictionary<T>
             {
                 index-=len;
             }
-          
+
             if(slots[index] == key)
             {
                 values[index] = value;

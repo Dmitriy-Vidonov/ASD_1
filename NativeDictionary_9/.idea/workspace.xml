@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eeaa81f9-ba68-4bc1-96f6-ff13359ff1b4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/draft/TestMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/NativeDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NativeDictionary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/draft/NativeDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/draft/NativeDictionary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/draft/testDict.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/draft/testDict.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/draft/isKeyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/draft/isKeyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NativeDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NativeDictionary.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/draft/NativeDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/draft/NativeDictionary.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/draft/testDict.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/draft/testDict.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/draft/TestIsKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/draft/TestIsKey.class" afterDir="false" />
@@ -67,7 +67,7 @@
       <recent name="draft" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestPut">
+  <component name="RunManager" selected="Application.testDict">
     <configuration name="testDict" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="draft.testDict" />
       <module name="NativeDictionary_9" />
@@ -144,10 +144,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.testDict" />
+        <item itemvalue="JUnit.TestIsKey" />
         <item itemvalue="JUnit.TestPut" />
         <item itemvalue="JUnit.TestGet" />
-        <item itemvalue="JUnit.TestIsKey" />
-        <item itemvalue="Application.testDict" />
         <item itemvalue="JUnit.TestIsKey.isKeyRepeated" />
       </list>
     </recent_temporary>
