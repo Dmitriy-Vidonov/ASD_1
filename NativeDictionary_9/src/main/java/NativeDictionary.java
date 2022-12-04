@@ -31,7 +31,7 @@ class NativeDictionary<T>
         int len = slots.length;
         int index = hashFun(key);
 
-        if(slots[index] == key)
+        if(slots[index].equals(key))
             return true;
 
         for(int i=0; i<len; i++)
@@ -41,7 +41,7 @@ class NativeDictionary<T>
             if(index > len-1)
                 index-=len;
 
-            if(slots[index] == key)
+            if(slots[index].equals(key))
                 return true;
         }
         return false;
@@ -70,11 +70,22 @@ class NativeDictionary<T>
             index += 1;
 
             if(index > len-1)
+            {
                 index-=len;
-
+            }
+          
             if(slots[index] == key)
+            {
                 values[index] = value;
-            break;
+                break;
+            }
+
+            if(slots[index] == null)
+            {
+                slots[index] = key;
+                values[index] = value;
+                return;
+            }
         }
     }
 

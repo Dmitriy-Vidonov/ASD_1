@@ -31,7 +31,8 @@ public class NativeDictionary<T> {
         int len = slots.length;
         int index = hashFun(key);
 
-        if(slots[index] == key) // если в ячейке сразу нашли нужный ключ, то завершаем метод с true
+        // == заменил на .equals
+        if(slots[index].equals(key)) // если в ячейке сразу нашли нужный ключ, то завершаем метод с true
             return true;
 
         for(int i=0; i<len; i++) // если изначально ключ не нашли, идем перебором по другим ячейкам
@@ -40,8 +41,8 @@ public class NativeDictionary<T> {
 
             if(index > len-1)
                 index-=len;
-
-            if(slots[index] == key)
+            // == заменил на .equals
+            if(slots[index].equals(key))
                 return true;
         }
         // возвращает true если ключ имеется,
@@ -63,6 +64,7 @@ public class NativeDictionary<T> {
 
         // если index привел не в пустую ячейку
         // проверить, равен ли ключ тому, что мы хотим использовать
+        // == заменил на .equals
         if(slots[index] == key) // если тот же ключ, то делаем перезапись value
         {
             values[index] = value;
@@ -74,11 +76,22 @@ public class NativeDictionary<T> {
             index += 1;
 
             if(index > len-1)
+            {
                 index-=len;
-
+            }
+            // == заменил на .equals
             if(slots[index] == key)
+            {
                 values[index] = value;
                 break;
+            }
+
+            if(slots[index] == null)
+            {
+                slots[index] = key;
+                values[index] = value;
+                return;
+            }
         }
         // гарантированно записываем
         // значение value по ключу key
@@ -88,7 +101,7 @@ public class NativeDictionary<T> {
     {
         int len = slots.length;
         int index = hashFun(key);
-
+        // == заменил на .equals
         if(slots[index] == key) // если в ячейке сразу нашли нужный ключ, то завершаем метод с true
         {
             return values[index]; // возвращаем значение из values
@@ -100,7 +113,7 @@ public class NativeDictionary<T> {
 
             if(index > len-1)
                 index-=len;
-
+            // == заменил на .equals
             if(slots[index] == key)
                 return values[index];
         }
