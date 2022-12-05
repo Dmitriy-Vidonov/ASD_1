@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eeaa81f9-ba68-4bc1-96f6-ff13359ff1b4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Sets_10/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Sets_10/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Sets_10/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Sets_10/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Sets_10/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Sets_10/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Sets_10/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Sets_10/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NativeDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NativeDictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/draft/NativeDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/draft/NativeDictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/draft/testDict.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/draft/testDict.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/draft/isKeyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/draft/isKeyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/NativeDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NativeDictionary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/draft/NativeDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/draft/NativeDictionary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/draft/testDict.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/draft/testDict.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/draft/TestIsKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/draft/TestIsKey.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

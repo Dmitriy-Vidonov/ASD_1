@@ -1,0 +1,9 @@
+
+Q
+java:S3740"/Provide the parametrized type for this generic.(«âÖ‡ùÿÿÿÿ8²ñÄëÍ0
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«âÖ‡ùÿÿÿÿ
+P
+java:S1905"3Remove this unnecessary cast to "NativeDictionary".(×Ä†ï8½®ÅëÍ0
+S	java:S106"9Replace this use of System.out or System.err by a logger.(÷˜¿òûÿÿÿÿ
+D
+java:S2140")Use "java.util.Random.nextInt()" instead.(÷˜¿òûÿÿÿÿ

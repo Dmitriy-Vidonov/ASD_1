@@ -1,0 +1,31 @@
+
+J
+java:S3740"/Provide the parametrized type for this generic.(ŞŸÊíûÿÿÿÿ
+E
+java:S3740
+"/Provide the parametrized type for this generic.(£¿µö
+f
+java:S1104"PMake size a static final constant or non-public and provide accessors if needed.(Å¨ğ
+g
+java:S1104"QMake slots a static final constant or non-public and provide accessors if needed.(àò…¹
+h
+java:S1104"RMake values a static final constant or non-public and provide accessors if needed.(–ÇÑ
+W
+java:S4973$"<Strings and Boxed types should be compared using "equals()".(µ„ªÎøÿÿÿÿ
+Q
+java:S4973."<Strings and Boxed types should be compared using "equals()".(ó÷‹
+R
+java:S4973E"<Strings and Boxed types should be compared using "equals()".(¡÷‹Ç
+R
+java:S4973T"<Strings and Boxed types should be compared using "equals()".( –Ê¯
+R
+java:S4973j"<Strings and Boxed types should be compared using "equals()".(–æÙŸ
+R
+java:S4973v"<Strings and Boxed types should be compared using "equals()".( –Ê¯
+:
+java:S2676"Use the original value instead.(Ùš¹¸şÿÿÿÿ
+:
+java:S2676"Use the original value instead.(‰÷Åîıÿÿÿÿ
+c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶âğò
+T	java:S106‚"9Replace this use of System.out or System.err by a logger.(…İª‡ùÿÿÿÿ
+T	java:S106ƒ"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ
