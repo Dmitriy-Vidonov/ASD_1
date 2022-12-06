@@ -1,5 +1,3 @@
-package draft;
-
 public class PowerSet
 {
     private int storageSize;
@@ -8,7 +6,6 @@ public class PowerSet
     {
         hashT = new java.util.Hashtable<String, String>(20000);
         storageSize = 0;
-        // ваша реализация хранилища
     }
 
     public int size()
@@ -23,13 +20,10 @@ public class PowerSet
 
         this.hashT.put(value, value);
         storageSize++;
-        // всегда срабатывает
     }
 
     public boolean get(String value)
     {
-        // возвращает true если value имеется в множестве,
-        // иначе false
         return (this.hashT.containsKey(value));
     }
 
@@ -40,16 +34,7 @@ public class PowerSet
             storageSize--;
             return true;
         }
-        // возвращает true если value удалено
-        // иначе false
         return false;
-    }
-
-    public void ShowSet(PowerSet pwrSet)
-    {
-        for (Object key : pwrSet.hashT.keySet() ) {
-            System.out.print( key + " " );
-        }
     }
 
     public PowerSet intersection(PowerSet set2)
@@ -60,7 +45,7 @@ public class PowerSet
             if(set2.hashT.containsKey(key))
                 pwrSet.put(String.valueOf(key));
         }
-        // пересечение текущего множества и set2
+
         return pwrSet;
     }
 
@@ -69,8 +54,7 @@ public class PowerSet
         int mainSize = this.hashT.size();
         int secondSize = set2.hashT.size();
 
-        // определяем большее множество
-        if(mainSize >= secondSize) // если размер основного множества больше, то пробегаем по меньшему и смотрим разницу
+        if(mainSize >= secondSize)
         {
             for (Object key : set2.hashT.keySet())
             {
@@ -80,17 +64,13 @@ public class PowerSet
             return this;
         }
 
-       // if(mainSize < secondSize)
-       // {
-            for (Object key : this.hashT.keySet())
-            {
-                if(!set2.hashT.containsKey(key))
-                    set2.hashT.put(String.valueOf(key), String.valueOf(key));
-            }
-            return set2;
-      //  }
-        // объединение текущего множества и set2
-        //return null;
+        for (Object key : this.hashT.keySet())
+        {
+            if(!set2.hashT.containsKey(key))
+                set2.hashT.put(String.valueOf(key), String.valueOf(key));
+        }
+
+        return set2;
     }
 
     public PowerSet difference(PowerSet set2)
@@ -102,7 +82,7 @@ public class PowerSet
             if(!set2.hashT.containsKey(key))
                 pwrSet.hashT.put(String.valueOf(key), String.valueOf(key));
         }
-        // разница текущего множества и set2
+
         return pwrSet;
     }
 
@@ -114,11 +94,7 @@ public class PowerSet
             if(this.hashT.containsKey(key))
                 counter++;
         }
-        // возвращает true, если set2 есть
-        // подмножество текущего множества,
-        // иначе false
-        //return (counter == set2.hashT.size());
+    
         return (set2.hashT.size() == counter);
     }
 }
-
