@@ -1,19 +1,26 @@
 package draft;
-public class PowerSet
-{
+
+public class PowerSet extends java.util.Hashtable implements PowerSet1 {
+    protected int storageSize;
     public PowerSet() // Конструктор класса, в котором создается обьект-хранилище
     {
-        // ваша реализация хранилища
+        java.util.Hashtable<String, String> hashT = new java.util.Hashtable<String, String>(20000);
     }
 
     public int size() // Возвращаем размер нашего хранилища
     {
         // количество элементов в множестве
-        return 0;
+        return storageSize;
     }
 
+    @Override
     public void put(String value) // Добавление элемента в хранилище с учетом проверки на дубли
     {
+        if(this.containsKey(value))
+            return;
+
+        this.put(value, "value");
+        storageSize++;
         // всегда срабатывает
     }
 
@@ -21,7 +28,7 @@ public class PowerSet
     {
         // возвращает true если value имеется в множестве,
         // иначе false
-        return false;
+        return (this.containsKey(value));
     }
 
     public boolean remove(String value)
@@ -56,5 +63,4 @@ public class PowerSet
         // иначе false
         return false;
     }
-
 }

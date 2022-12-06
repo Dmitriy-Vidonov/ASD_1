@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eeaa81f9-ba68-4bc1-96f6-ff13359ff1b4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Sets_10/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Sets_10/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Sets_10/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Sets_10/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Sets_10/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Sets_10/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Sets_10/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Sets_10/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Sets_10/.idea/sonarlint/issuestore/3/d/3df896cd4e7bb92939da2dcb9acd7aa360027bcf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Sets_10/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sets_10/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../Sets_10/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sets_10/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sets_10/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
