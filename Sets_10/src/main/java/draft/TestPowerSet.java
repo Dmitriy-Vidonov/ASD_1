@@ -3,22 +3,34 @@ package draft;
 public class TestPowerSet {
     public static void main(String[] args)
     {
-        PowerSet powerSet = new PowerSet();
+        PowerSet pwrSet1 = new PowerSet();
+        PowerSet pwrSet2 = new PowerSet();
 
-        powerSet.put("one");
-        powerSet.put("one");
-        powerSet.put("two");
+        pwrSet1.put("one");
+        pwrSet1.put("two");
+        pwrSet1.put("three");
+        pwrSet1.put("four");
+        pwrSet1.put("five");
+        pwrSet1.put("six");
 
+        pwrSet2.put("one");
+        pwrSet2.put("four");
+        pwrSet2.put("five");
 
-        for (Object key : powerSet.keySet() ) {
-            System.out.println( key );
-        }
+        pwrSet1.ShowSet(pwrSet1);
+        System.out.println();
+        pwrSet2.ShowSet(pwrSet2);
+        System.out.println();
 
-        System.out.println("size = " + powerSet.size());
-        System.out.println("get value = " + powerSet.get("three"));
-        System.out.println("get value = " + powerSet.get("one"));
-        System.out.println("remove = " + powerSet.remove("one"));
+        System.out.println("issubset = " + pwrSet1.isSubset(pwrSet2));
 
+        pwrSet1.ShowSet(pwrSet1.intersection(pwrSet2));
+        System.out.println();
 
+        pwrSet1.ShowSet(pwrSet1.union(pwrSet2));
+        System.out.println();
+
+        pwrSet1.ShowSet(pwrSet1.difference(pwrSet2));
+        System.out.println();
     }
 }
