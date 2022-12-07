@@ -1,16 +1,14 @@
 public class PowerSet
 {
-    private int storageSize;
-    private java.util.Hashtable<String, String> hashT;
+    private java.util.HashMap<String, String> hashT;
     public PowerSet()
     {
-        hashT = new java.util.Hashtable<String, String>(20000);
-        storageSize = 0;
+        hashT = new java.util.HashMap<>(20000);
     }
 
     public int size()
     {
-        return storageSize;
+        return this.hashT.size();
     }
 
     public void put(String value)
@@ -19,7 +17,6 @@ public class PowerSet
             return;
 
         this.hashT.put(value, value);
-        storageSize++;
     }
 
     public boolean get(String value)
@@ -29,12 +26,7 @@ public class PowerSet
 
     public boolean remove(String value)
     {
-        if(this.hashT.remove(value, value) == true)
-        {
-            storageSize--;
-            return true;
-        }
-        return false;
+        return (this.hashT.remove(value, value));
     }
 
     public PowerSet intersection(PowerSet set2)
@@ -94,7 +86,7 @@ public class PowerSet
             if(this.hashT.containsKey(key))
                 counter++;
         }
-    
+
         return (set2.hashT.size() == counter);
     }
 }

@@ -2,18 +2,18 @@ package draft;
 
 public class PowerSet
 {
-    private int storageSize;
+    //private int storageSize;
     private java.util.Hashtable<String, String> hashT;
     public PowerSet()
     {
         hashT = new java.util.Hashtable<String, String>(20000);
-        storageSize = 0;
+        //storageSize = 0;
         // ваша реализация хранилища
     }
 
     public int size()
     {
-        return storageSize;
+        return this.hashT.size();
     }
 
     public void put(String value)
@@ -22,7 +22,7 @@ public class PowerSet
             return;
 
         this.hashT.put(value, value);
-        storageSize++;
+       // storageSize++;
         // всегда срабатывает
     }
 
@@ -37,7 +37,7 @@ public class PowerSet
     {
         if(this.hashT.remove(value, value) == true)
         {
-            storageSize--;
+            //storageSize--;
             return true;
         }
         // возвращает true если value удалено

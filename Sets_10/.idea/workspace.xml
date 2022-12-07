@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eca9f4d-88c2-41aa-b6c5-9ec4274c371a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/PowerSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/IntersectionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/PutRemoveTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/UnionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PowerSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PowerSet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/draft/PowerSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/draft/PowerSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/draft/TestPowerSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/draft/TestPowerSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/draft/PowerSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/draft/PowerSet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/draft/TestPowerSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/draft/TestPowerSet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +26,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -35,23 +44,35 @@
     </option>
   </component>
   <component name="ProjectId" id="2IVglOqhUDoChNCrTPhTTHlZ1nP" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": ""
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="draft" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.TestPowerSet2">
+  <component name="RunManager" selected="JUnit.DifferenceTest.differenceNonEmpty">
     <configuration name="TestPowerSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="draft.TestPowerSet" />
       <module name="Sets_10" />
@@ -65,23 +86,62 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPowerSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="draft.TestPowerSet" />
+    <configuration name="DifferenceTest.differenceEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sets_10" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="draft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DifferenceTest" />
+      <option name="METHOD_NAME" value="differenceEmpty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DifferenceTest.differenceNonEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sets_10" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DifferenceTest" />
+      <option name="METHOD_NAME" value="differenceNonEmpty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PutRemoveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sets_10" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PutRemoveTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UnionTest.union" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sets_10" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UnionTest" />
+      <option name="METHOD_NAME" value="union" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UnionTest.unionOneEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sets_10" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UnionTest" />
+      <option name="METHOD_NAME" value="unionOneEmpty" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestPowerSet2" />
-        <item itemvalue="Application.TestPowerSet" />
+        <item itemvalue="JUnit.DifferenceTest.differenceNonEmpty" />
+        <item itemvalue="JUnit.DifferenceTest.differenceEmpty" />
+        <item itemvalue="JUnit.UnionTest.unionOneEmpty" />
+        <item itemvalue="JUnit.UnionTest.union" />
+        <item itemvalue="JUnit.PutRemoveTest" />
       </list>
     </recent_temporary>
   </component>
@@ -95,5 +155,8 @@
       <updated>1670272317942</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
