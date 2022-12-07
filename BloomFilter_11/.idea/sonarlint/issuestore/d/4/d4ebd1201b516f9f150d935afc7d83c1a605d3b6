@@ -1,0 +1,17 @@
+
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şõç“8—ÓÎğÎ0
+x
+java:S1104"VMake filter_len a static final constant or non-public and provide accessors if needed.(”ƒ ­ùÿÿÿÿ8™ÓÎğÎ0
+v	java:S116"URename this field "filter_len" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”ƒ ­ùÿÿÿÿ8¯ÓÎğÎ0
+Z
+java:S1854"8Remove this useless assignment to local variable "code".(ÑöÓçúÿÿÿÿ8½ÓÎğÎ0
+H
+java:S1905"&Remove this unnecessary cast to "int".(ÑöÓçúÿÿÿÿ8ëÓÎğÎ0
+K
+java:S1481")Remove this unused "code" local variable.(ÑöÓçúÿÿÿÿ8ïÓÎğÎ0
+V
+java:S3400"9Remove this method and declare a constant for this value.(”·³›8ğÓÎğÎ0
+H
+java:S1172"+Remove this unused method parameter "str1".(³İ¹¥8óÓÎğÎ0
+H
+java:S1172$"+Remove this unused method parameter "str1".(®¥®Ç8õÓÎğÎ0

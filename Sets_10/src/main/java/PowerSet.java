@@ -46,6 +46,16 @@ public class PowerSet
         int mainSize = this.hashT.size();
         int secondSize = set2.hashT.size();
 
+        if((secondSize == 0 && mainSize != 0) || (secondSize == 0 && mainSize == 0))
+        {
+            return this;
+        }
+
+        if(mainSize == 0 && secondSize != 0)
+        {
+            return set2;
+        }
+
         if(mainSize >= secondSize)
         {
             for (Object key : set2.hashT.keySet())

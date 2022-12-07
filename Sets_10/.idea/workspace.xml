@@ -5,9 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eca9f4d-88c2-41aa-b6c5-9ec4274c371a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/SubsetTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BloomFilter_11/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BloomFilter_11/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BloomFilter_11/.idea/sonarlint/issuestore/d/4/d4ebd1201b516f9f150d935afc7d83c1a605d3b6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BloomFilter_11/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BloomFilter_11/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BloomFilter_11/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BloomFilter_11/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BloomFilter_11/src/main/java/draft/BloomFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/1/918551d1d40e8a36aa1b7cb6fa92ab6f8cd0f758" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/d/ad83db43f28894e4af4e13eda5d94ced59fa09ad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/a/ca25aa66e69ccb3ec3f8d96f51f82d94599286f6" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PowerSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PowerSet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,22 +76,12 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SubsetTest.isSubset3">
+  <component name="RunManager" selected="JUnit.UnionTest.unionOneEmpty">
     <configuration name="DifferenceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sets_10" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DifferenceTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DifferenceTest.differenceNonEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sets_10" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DifferenceTest" />
-      <option name="METHOD_NAME" value="differenceNonEmpty" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -115,13 +116,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UnionTest.unionOneEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sets_10" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UnionTest" />
+      <option name="METHOD_NAME" value="unionOneEmpty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UnionTest.unionOneEmpty" />
         <item itemvalue="JUnit.SubsetTest.isSubset3" />
         <item itemvalue="JUnit.SubsetTest.isSubset2" />
         <item itemvalue="JUnit.SubsetTest.isSubset" />
         <item itemvalue="JUnit.DifferenceTest" />
-        <item itemvalue="JUnit.DifferenceTest.differenceNonEmpty" />
       </list>
     </recent_temporary>
   </component>
