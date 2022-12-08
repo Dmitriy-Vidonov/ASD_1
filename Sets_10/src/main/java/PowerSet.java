@@ -1,6 +1,6 @@
 public class PowerSet
 {
-    private java.util.HashMap<String, String> hashT;
+    private final java.util.HashMap<String, String> hashT;
     public PowerSet()
     {
         hashT = new java.util.HashMap<>(20000);
@@ -13,7 +13,7 @@ public class PowerSet
 
     public void put(String value)
     {
-        if(hashT.containsKey(String.valueOf(value)))
+        if(hashT.containsKey(value))
             return;
 
         hashT.put(value, value);
@@ -33,9 +33,9 @@ public class PowerSet
     {
         PowerSet pwrSet = new PowerSet();
 
-        for (Object key : hashT.keySet() ) {
+        for (String key : hashT.keySet() ) {
             if(set2.hashT.containsKey(key))
-                pwrSet.put(String.valueOf(key));
+                pwrSet.put(key);
         }
 
         return pwrSet;
@@ -46,11 +46,6 @@ public class PowerSet
         int mainSize = hashT.size();
         int secondSize = set2.hashT.size();
 
-      /*  if((secondSize == 0 && mainSize != 0) || (secondSize == 0 && mainSize == 0))
-        {
-            return this;
-        } */
-
         if(mainSize == 0 && secondSize != 0)
         {
             return set2;
@@ -58,18 +53,18 @@ public class PowerSet
 
         if(mainSize >= secondSize)
         {
-            for (Object key : set2.hashT.keySet())
+            for (String key : set2.hashT.keySet())
             {
                 if(!hashT.containsKey(key))
-                    hashT.put(String.valueOf(key), String.valueOf(key));
+                    hashT.put(key, key);
             }
             return this;
         }
 
-        for (Object key : hashT.keySet())
+        for (String key : hashT.keySet())
         {
             if(!set2.hashT.containsKey(key))
-                set2.hashT.put(String.valueOf(key), String.valueOf(key));
+                set2.hashT.put(key, key);
         }
 
         return set2;
@@ -79,10 +74,10 @@ public class PowerSet
     {
         PowerSet pwrSet = new PowerSet();
 
-        for (Object key : hashT.keySet())
+        for (String key : hashT.keySet())
         {
             if(!set2.hashT.containsKey(key))
-                pwrSet.hashT.put(String.valueOf(key), String.valueOf(key));
+                pwrSet.hashT.put(key, key);
         }
 
         return pwrSet;
@@ -91,7 +86,7 @@ public class PowerSet
     public boolean isSubset(PowerSet set2)
     {
         int counter = 0;
-        for (Object key : set2.hashT.keySet())
+        for (String key : set2.hashT.keySet())
         {
             if(hashT.containsKey(key))
                 counter++;
@@ -99,12 +94,4 @@ public class PowerSet
 
         return (set2.hashT.size() == counter);
     }
-
-    public void ShowSet(PowerSet pwrSet)
-    {
-        for (Object key : pwrSet.hashT.keySet() ) {
-            System.out.print( key + " " );
-        }
-    }
-
 }

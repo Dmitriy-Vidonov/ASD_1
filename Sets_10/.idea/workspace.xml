@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eca9f4d-88c2-41aa-b6c5-9ec4274c371a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/testSet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/4/14fea810a67ae4250ccd2a4cdd550859a29f8620" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/d/3df896cd4e7bb92939da2dcb9acd7aa360027bcf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/706003a081b5f7848c1ae87d0dc1f58b5bd817c3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/e/7e61d29b7b15cbaaf27397bbd26fd5ee5bd7bd0e" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/1/918551d1d40e8a36aa1b7cb6fa92ab6f8cd0f758" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/7/97af6016095d86fafc9d188732bcfcab3e2b5b5f" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/9/a90803bfa5aa67fc83073c0e708be95bec1d9573" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/d/ad83db43f28894e4af4e13eda5d94ced59fa09ad" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/a/ca25aa66e69ccb3ec3f8d96f51f82d94599286f6" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PowerSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PowerSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/testSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/testSet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/PowerSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PowerSet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,10 +74,12 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.testSet">
-    <configuration name="testSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="testSet" />
+  <component name="RunManager" selected="JUnit.UnionTest">
+    <configuration name="DifferenceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sets_10" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DifferenceTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -119,11 +122,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.testSet" />
         <item itemvalue="JUnit.UnionTest" />
         <item itemvalue="JUnit.SubsetTest" />
         <item itemvalue="JUnit.PutRemoveTest" />
         <item itemvalue="JUnit.IntersectionTest" />
+        <item itemvalue="JUnit.DifferenceTest" />
       </list>
     </recent_temporary>
   </component>
