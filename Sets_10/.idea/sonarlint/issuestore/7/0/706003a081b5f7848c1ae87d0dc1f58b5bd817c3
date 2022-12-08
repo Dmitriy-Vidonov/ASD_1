@@ -1,0 +1,4 @@
+
+X	java:S1251"<This block of commented-out lines of code should be removed.(˜ËÀ¾8÷ÙÏ0
+o	java:S100g"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìÃªâûÿÿÿÿ8Ÿ‡½Ï0
+Z	java:S106j"9Replace this use of System.out or System.err by a logger.( ê¢§úÿÿÿÿ8¡‡½Ï0
