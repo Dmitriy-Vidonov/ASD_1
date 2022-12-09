@@ -13,5 +13,3 @@ Q
 !src/main/java/draft/testDict.java,e/0/e05fe0df2132dbc6fbe323209e172d673becdb06
 Y
 )src/main/java/draft/NativeDictionary.java,d/e/de418fe756a4988c63f9857332858054e0dc900e
-S
-#src/main/java/NativeDictionary.java,5/8/586e46314a381bdf457b9a05aead8c2e86f83f10

@@ -1,9 +1,9 @@
 public class PowerSet
 {
-    private final java.util.HashMap<String, String> hashT;
+    private final java.util.Hashtable<String, String> hashT;
     public PowerSet()
     {
-        hashT = new java.util.HashMap<>(20000);
+        hashT = new java.util.Hashtable<>(20000);
     }
 
     public int size()
@@ -94,4 +94,12 @@ public class PowerSet
 
         return (set2.hashT.size() == counter);
     }
+
+    public void ShowSet(PowerSet pwrSet)
+    {
+        for (String key : pwrSet.hashT.keySet() ) {
+            System.out.print( key + " " );
+        }
+    }
+
 }
