@@ -7,7 +7,7 @@ public class PowerSet
 
     public PowerSet()
     {
-        capacity = 10;
+        capacity = 20000;
         step = 3;
         slots = new String[capacity];
         indexes = new java.util.ArrayList<Integer>();
