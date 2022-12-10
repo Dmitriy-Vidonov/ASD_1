@@ -6,8 +6,8 @@ public class PowerSet
 
     public PowerSet()
     {
-        int capacity = 10;
-        step = 1;
+        int capacity = 20000;
+        step = 8;
         slots = new String[capacity];
         indexes = new java.util.ArrayList<>();
         java.util.Arrays.fill(slots, null);
@@ -143,9 +143,9 @@ public class PowerSet
     public int hashFun(String value)
     {
         int hash;
-        hash = value.hashCode();
+        hash = Math.abs(value.hashCode());
         String hashStr = Integer.toString(hash);
-        hash = hashStr.hashCode();
+        hash = Math.abs(hashStr.hashCode());
 
         hash %= slots.length;
 
