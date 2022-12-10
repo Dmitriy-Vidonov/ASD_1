@@ -57,7 +57,7 @@ class UnionTest {
         pwrSetBig1.union(pwrSetBig2);
         long currTime2 = java.lang.System.currentTimeMillis();
 
-        Assertions.assertTrue(currTime2 - currTime1 < 2 000,
+        Assertions.assertTrue(currTime2 - currTime1 < 2000,
                 "Method(union) is out of time!");
     }
 

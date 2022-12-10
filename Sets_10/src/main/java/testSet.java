@@ -18,9 +18,9 @@ public class testSet {
         pwrSet2.put("100");
         pwrSet2.put("20");
 
-        pwrSet1.ShowTable();
+        /*pwrSet1.ShowTable();
         pwrSet2.ShowTable();
-        emptySet.ShowTable();
+        emptySet.ShowTable();*/
 
         //get из пустого множества
         System.out.println("get из пустого множества: " + emptySet.get("10"));
@@ -38,11 +38,11 @@ public class testSet {
 
         //remove из непустого множества при наличии искомого элемента
         System.out.println("remove из непустого множества с искомым: " + pwrSet1.remove("10"));
-        pwrSet1.ShowTable();
+       // pwrSet1.ShowTable();
 
         //remove из непустого множества при отсутствии искомого элемента
         System.out.println("remove из непустого множества без искомого: " + pwrSet1.remove("101"));
-        pwrSet1.ShowTable();
+        //pwrSet1.ShowTable();
 
     }
 }

@@ -67,13 +67,11 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UnionTest.timeOutUnion">
-    <configuration name="IntersectionTest.timeOut" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.All in Sets_10">
+    <configuration name="All in Sets_10" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sets_10" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IntersectionTest" />
-      <option name="METHOD_NAME" value="timeOut" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,11 +118,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in Sets_10" />
         <item itemvalue="JUnit.UnionTest.timeOutUnion" />
         <item itemvalue="JUnit.SubsetTest.timeOutIsSubset" />
         <item itemvalue="JUnit.PutRemoveTest.timeOutPut" />
         <item itemvalue="JUnit.PutRemoveTest.timeOutRemove" />
-        <item itemvalue="JUnit.IntersectionTest.timeOut" />
       </list>
     </recent_temporary>
   </component>
