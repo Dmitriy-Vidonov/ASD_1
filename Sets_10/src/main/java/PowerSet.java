@@ -7,7 +7,7 @@ public class PowerSet
     public PowerSet()
     {
         int capacity = 20000;
-        step = 8;
+        step = 16;
         slots = new String[capacity];
         indexes = new java.util.ArrayList<>();
         java.util.Arrays.fill(slots, null);
@@ -215,15 +215,4 @@ public class PowerSet
     {
         for (Integer index : this.indexes) set2.put(this.slots[index]);
     }
-
-    public void ShowTable()
-    {
-        for (String slot : slots) System.out.print(slot + " ");
-        System.out.println();
-        System.out.println("indexes:");
-
-        for (Integer index : indexes) System.out.print(index + " ");
-        System.out.println();
-    }
-
 }

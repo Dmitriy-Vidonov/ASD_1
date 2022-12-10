@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eca9f4d-88c2-41aa-b6c5-9ec4274c371a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/MethsForTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PowerSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PowerSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DifferenceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DifferenceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/IntersectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IntersectionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PutRemoveTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PutRemoveTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SubsetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SubsetTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UnionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UnionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PowerSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PowerSet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/DifferenceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DifferenceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/IntersectionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/IntersectionTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PutRemoveTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/PutRemoveTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SubsetTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SubsetTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/UnionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/UnionTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
