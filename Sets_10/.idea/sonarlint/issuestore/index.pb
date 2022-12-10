@@ -4,6 +4,4 @@
 U
 %src/main/java/draft/TestPowerSet.java,9/7/97af6016095d86fafc9d188732bcfcab3e2b5b5f
 Q
-!src/main/java/draft/PowerSet.java,3/d/3df896cd4e7bb92939da2dcb9acd7aa360027bcf
-K
-src/main/java/OrigSets.java,1/6/16f5a6f648d2b26412a0735df530d7073705a0fd
+!src/main/java/draft2/testSet.java,6/0/602b08f9bdd2759dff6297d794f95d1ce6ee6cb4

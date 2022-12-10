@@ -1,17 +1,16 @@
 public class PowerSet
 {
-    public int capacity;
-    public int step;
+    private final int step;
     protected String [] slots;
     protected java.util.List<Integer> indexes;
 
     public PowerSet()
     {
-        capacity = 20000;
-        step = 3;
+        int capacity = 20000;
+        step = 8;
         slots = new String[capacity];
-        indexes = new java.util.ArrayList<Integer>();
-        for(String slot : slots) slot = null;
+        indexes = new java.util.ArrayList<>();
+        java.util.Arrays.fill(slots, null);
     }
 
     public int size()
@@ -23,7 +22,7 @@ public class PowerSet
     {
         int index = seekSlot(value);
 
-        if(index != -1 && this.get(value) == false)
+        if(index != -1 && !this.get(value))
         {
             slots[index] = value;
             indexes.add(index);
@@ -32,12 +31,10 @@ public class PowerSet
 
     public boolean get(String value)
     {
-        boolean res = false;
-
         int len = slots.length;
         int index = hashFun(value);
 
-        if(slots[index] == value)
+        if(java.util.Objects.equals(slots[index], value))
             return true;
 
         for(int i=0; i<len; i++)
@@ -47,12 +44,12 @@ public class PowerSet
             if(index > len-1)
                 index-=len;
 
-            if(slots[index] == value)
+            if(java.util.Objects.equals(slots[index], value))
             {
                 return true;
             }
         }
-        return res;
+        return false;
     }
 
     public boolean remove(String value)
@@ -74,9 +71,9 @@ public class PowerSet
     {
         PowerSet pwrSet = new PowerSet();
 
-        for(int i=0; i<indexes.size(); i++) {
-            if(set2.get(this.slots[indexes.get(i)]))
-                pwrSet.put(this.slots[indexes.get(i)]);
+        for (Integer index : indexes) {
+            if (set2.get(this.slots[index]))
+                pwrSet.put(this.slots[index]);
         }
 
         return pwrSet;
@@ -94,7 +91,7 @@ public class PowerSet
             return pwrSet;
         }
 
-        if(mainSize == 0 && secondSize != 0)
+        if(mainSize == 0)
         {
             return set2;
         }
@@ -111,9 +108,9 @@ public class PowerSet
             return pwrSet;
         }
 
-        for(int i=0; i<this.indexes.size(); i++) {
-            if(!set2.get(this.slots[this.indexes.get(i)]))
-                pwrSet.put(this.slots[this.indexes.get(i)]);
+        for (Integer index : this.indexes) {
+            if (!set2.get(this.slots[index]))
+                pwrSet.put(this.slots[index]);
         }
 
         return pwrSet;
@@ -123,9 +120,9 @@ public class PowerSet
     {
         PowerSet pwrSet = new PowerSet();
 
-        for(int i=0; i<this.indexes.size(); i++) {
-            if(!set2.get(this.slots[this.indexes.get(i)]))
-                pwrSet.put(this.slots[this.indexes.get(i)]);
+        for (Integer index : this.indexes) {
+            if (!set2.get(this.slots[index]))
+                pwrSet.put(this.slots[index]);
         }
 
         return pwrSet;
@@ -146,9 +143,9 @@ public class PowerSet
     public int hashFun(String value)
     {
         int hash;
-        hash = Math.abs(value.hashCode());
+        hash = value.hashCode();
         String hashStr = Integer.toString(hash);
-        hash = Math.abs(hashStr.hashCode());
+        hash = hashStr.hashCode();
 
         hash %= slots.length;
 
@@ -195,7 +192,7 @@ public class PowerSet
         int len = slots.length;
         int index = hashFun(value);
 
-        if(slots[index] == value)
+        if(java.util.Objects.equals(slots[index], value))
             return index;
 
         for(int i=0; i<len; i++)
@@ -205,7 +202,7 @@ public class PowerSet
             if(index > len-1)
                 index-=len;
 
-            if(slots[index] == value)
+            if(java.util.Objects.equals(slots[index], value))
             {
                 res = index;
                 break;
@@ -216,7 +213,6 @@ public class PowerSet
 
     public void clone(PowerSet set2)
     {
-        for(int i=0; i<this.indexes.size(); i++)
-            set2.put(this.slots[this.indexes.get(i)]);
+        for (Integer index : this.indexes) set2.put(this.slots[index]);
     }
 }
