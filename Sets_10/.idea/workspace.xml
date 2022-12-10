@@ -5,19 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eca9f4d-88c2-41aa-b6c5-9ec4274c371a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/OrigSets.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/draft2/PowerSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/draft2/testSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hashing_8/.idea/sonarlint/issuestore/6/9/697e2edeb756c9a5fe1f634c08a6171cb1254cf3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hashing_8/.idea/sonarlint/issuestore/f/5/f5dca04f34d1ac019e11e6ab7dda27764a57b610" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Hashing_8/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../Hashing_8/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/d/3df896cd4e7bb92939da2dcb9acd7aa360027bcf" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../NativeDictionary_9/.idea/sonarlint/issuestore/5/8/586e46314a381bdf457b9a05aead8c2e86f83f10" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NativeDictionary_9/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../NativeDictionary_9/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NativeDictionary_9/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NativeDictionary_9/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PowerSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PowerSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/testSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/testSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/draft2/PowerSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/draft2/PowerSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/draft2/testSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/draft2/testSet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/PowerSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PowerSet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/testSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/testSet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/draft2/PowerSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/draft2/PowerSet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,17 +50,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -145,5 +141,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArithmeticException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

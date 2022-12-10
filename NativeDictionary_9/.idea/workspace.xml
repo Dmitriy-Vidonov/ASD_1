@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eeaa81f9-ba68-4bc1-96f6-ff13359ff1b4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Sets_10/src/main/java/draft2/PowerSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Sets_10/src/main/java/draft2/TestPowerSet2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Sets_10/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sets_10/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sets_10/src/main/java/draft/PowerSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Sets_10/src/main/java/draft/PowerSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sets_10/src/main/java/draft/TestPowerSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Sets_10/src/main/java/draft/TestPowerSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sets_10/target/classes/draft/PowerSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Sets_10/target/classes/draft/PowerSet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sets_10/target/classes/draft/TestPowerSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Sets_10/target/classes/draft/TestPowerSet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
