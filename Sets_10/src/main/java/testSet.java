@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class testSet {
     public static void main(String[] args){
         PowerSet pwrSet1 = new PowerSet();
@@ -15,16 +18,6 @@ public class testSet {
         pwrSet2.put("100");
         pwrSet2.put("20");
 
-        pwrSet1.ShowSet(pwrSet1); System.out.println();
-        pwrSet2.ShowSet(pwrSet2); System.out.println();
-        emptySet.ShowSet(emptySet); System.out.println();
-        pwrSet1.ShowSet(pwrSet1.union(emptySet)); System.out.println();
-
-       // emptySet.ShowSet(emptySet);
-        System.out.println("size of empty: " + (emptySet.union(emptySet2)).size());
-        System.out.println("size of non-empty: " + (emptySet.union(pwrSet1)).size());
-        System.out.println("size of non-empty2: " + (pwrSet1.union(emptySet2)).size());
-
-        System.out.println();
+        System.out.println("empty size: " + emptySet.size());
     }
 }

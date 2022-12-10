@@ -1,41 +1,82 @@
 public class PowerSet
 {
-    private final java.util.Hashtable<String, String> hashT;
+    public int capacity;
+    public int step;
+    protected String [] slots;
+    protected java.util.List<Integer> indexes;
+
     public PowerSet()
     {
-        hashT = new java.util.Hashtable<>(20000);
+        capacity = 10;
+        step = 3;
+        slots = new String[capacity];
+        indexes = new java.util.ArrayList<Integer>();
+        for(String slot : slots) slot = null;
     }
 
     public int size()
     {
-        return hashT.size();
+        return indexes.size();
     }
 
     public void put(String value)
     {
-        if(hashT.containsKey(value))
-            return;
+        int index = seekSlot(value);
 
-        hashT.put(value, value);
+        if(index != -1 && this.get(value) == false)
+        {
+            slots[index] = value;
+            indexes.add(index);
+        }
     }
 
     public boolean get(String value)
     {
-        return (hashT.containsKey(value));
+        boolean res = false;
+
+        int len = slots.length;
+        int index = hashFun(value);
+
+        if(slots[index] == value)
+            return true;
+
+        for(int i=0; i<len; i++)
+        {
+            index += step;
+
+            if(index > len-1)
+                index-=len;
+
+            if(slots[index] == value)
+            {
+                return true;
+            }
+        }
+        return res;
     }
 
     public boolean remove(String value)
     {
-        return (hashT.remove(value, value));
+        int findIndex = find(value);
+
+        if(findIndex != -1)
+        {
+            slots[findIndex] = null;
+            indexes.remove(Integer.valueOf(findIndex));
+
+            return true;
+        }
+
+        return false;
     }
 
     public PowerSet intersection(PowerSet set2)
     {
         PowerSet pwrSet = new PowerSet();
 
-        for (String key : hashT.keySet() ) {
-            if(set2.hashT.containsKey(key))
-                pwrSet.put(key);
+        for(int i=0; i<indexes.size(); i++) {
+            if(set2.get(this.slots[indexes.get(i)]))
+                pwrSet.put(this.slots[indexes.get(i)]);
         }
 
         return pwrSet;
@@ -43,8 +84,15 @@ public class PowerSet
 
     public PowerSet union(PowerSet set2)
     {
-        int mainSize = hashT.size();
-        int secondSize = set2.hashT.size();
+        PowerSet pwrSet = new PowerSet();
+
+        int mainSize = this.size();
+        int secondSize = set2.size();
+
+        if(mainSize == 0 && secondSize == 0)
+        {
+            return pwrSet;
+        }
 
         if(mainSize == 0 && secondSize != 0)
         {
@@ -53,31 +101,31 @@ public class PowerSet
 
         if(mainSize >= secondSize)
         {
-            for (String key : set2.hashT.keySet())
-            {
-                if(!hashT.containsKey(key))
-                    hashT.put(key, key);
+            this.clone(pwrSet);
+
+            for(int i=0; i<set2.indexes.size(); i++) {
+                if(!this.get(set2.slots[set2.indexes.get(i)]))
+                    pwrSet.put(set2.slots[set2.indexes.get(i)]);
             }
-            return this;
+
+            return pwrSet;
         }
 
-        for (String key : hashT.keySet())
-        {
-            if(!set2.hashT.containsKey(key))
-                set2.hashT.put(key, key);
+        for(int i=0; i<this.indexes.size(); i++) {
+            if(!set2.get(this.slots[this.indexes.get(i)]))
+                pwrSet.put(this.slots[this.indexes.get(i)]);
         }
 
-        return set2;
+        return pwrSet;
     }
 
     public PowerSet difference(PowerSet set2)
     {
         PowerSet pwrSet = new PowerSet();
 
-        for (String key : hashT.keySet())
-        {
-            if(!set2.hashT.containsKey(key))
-                pwrSet.hashT.put(key, key);
+        for(int i=0; i<this.indexes.size(); i++) {
+            if(!set2.get(this.slots[this.indexes.get(i)]))
+                pwrSet.put(this.slots[this.indexes.get(i)]);
         }
 
         return pwrSet;
@@ -86,20 +134,89 @@ public class PowerSet
     public boolean isSubset(PowerSet set2)
     {
         int counter = 0;
-        for (String key : set2.hashT.keySet())
-        {
-            if(hashT.containsKey(key))
+
+        for(int i=0; i<set2.indexes.size(); i++) {
+            if(this.get(set2.slots[set2.indexes.get(i)]))
                 counter++;
         }
 
-        return (set2.hashT.size() == counter);
+        return (set2.size() == counter);
     }
 
-    public void ShowSet(PowerSet pwrSet)
+    public int hashFun(String value)
     {
-        for (String key : pwrSet.hashT.keySet() ) {
-            System.out.print( key + " " );
-        }
+        int hash;
+        hash = Math.abs(value.hashCode());
+        String hashStr = Integer.toString(hash);
+        hash = Math.abs(hashStr.hashCode());
+
+        hash %= slots.length;
+
+        return hash;
     }
 
+    public int seekSlot(String value)
+    {
+        int loadCount = indexes.size();
+
+        int len = slots.length;
+        int index = hashFun(value);
+
+        if(loadCount == 0)
+            return index;
+
+        if(loadCount == len)
+            return -1;
+
+        if(slots[index] == null)
+            return index;
+
+        int res = -1;
+
+        for(int i=0; i<len; i++)
+        {
+            index += step;
+
+            if(index > len-1)
+                index-=len;
+
+            if(slots[index] == null)
+            {
+                res = index;
+                break;
+            }
+        }
+        return res;
+    }
+
+    public int find(String value)
+    {
+        int res = -1;
+        int len = slots.length;
+        int index = hashFun(value);
+
+        if(slots[index] == value)
+            return index;
+
+        for(int i=0; i<len; i++)
+        {
+            index += step;
+
+            if(index > len-1)
+                index-=len;
+
+            if(slots[index] == value)
+            {
+                res = index;
+                break;
+            }
+        }
+        return res;
+    }
+
+    public void clone(PowerSet set2)
+    {
+        for(int i=0; i<this.indexes.size(); i++)
+            set2.put(this.slots[this.indexes.get(i)]);
+    }
 }
