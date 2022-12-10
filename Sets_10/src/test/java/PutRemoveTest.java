@@ -7,7 +7,7 @@ class PutRemoveTest {
     PowerSet pwrSet = new PowerSet();
 
     @org.junit.jupiter.api.BeforeEach
-    void setUp() throws Exception
+    void setUp()
     {
         pwrSet.put("1");
         pwrSet.put("2");
@@ -16,7 +16,7 @@ class PutRemoveTest {
 
     @org.junit.jupiter.api.Test
     @DisplayName("1) Возможность добавления отсутствующего элемента")
-    void putNotExisting() throws Exception
+    void putNotExisting()
     {
         pwrSet.put("4");
         assertTrue(pwrSet.get("4"));
@@ -25,7 +25,7 @@ class PutRemoveTest {
 
     @org.junit.jupiter.api.Test
     @DisplayName("2) Невозможность добавления присутствующего элемента")
-    void putExisting() throws Exception
+    void putExisting()
     {
         pwrSet.put("1");
         assertEquals(3, pwrSet.size());
@@ -33,17 +33,19 @@ class PutRemoveTest {
 
     @org.junit.jupiter.api.Test
     @DisplayName("3) Удаление присутствующего элемента")
-    void putRemove() throws Exception
+    void putRemove()
     {
         pwrSet.remove("1");
+        assertFalse(pwrSet.get("1"));
         assertEquals(2, pwrSet.size());
     }
 
     @org.junit.jupiter.api.Test
     @DisplayName("4) Удаление отсутствующего элемента")
-    void putRemove2() throws Exception
+    void putRemove2()
     {
         pwrSet.remove("10");
+        assertFalse(pwrSet.remove("10"));
         assertEquals(3, pwrSet.size());
     }
 }

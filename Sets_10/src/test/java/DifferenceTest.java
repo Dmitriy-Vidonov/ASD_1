@@ -12,7 +12,7 @@ class DifferenceTest {
     PowerSet emptySet = new PowerSet();
     
     @BeforeEach
-    void setUp() throws Exception
+    void setUp()
     {
         pwrSet1.put("10");
         pwrSet1.put("20");
@@ -32,7 +32,7 @@ class DifferenceTest {
 
     @Test
     @DisplayName("1) В результате пустое множество")
-    void differenceEmpty() throws Exception
+    void differenceEmpty()
     {
         emptySet = pwrSet1.difference(pwrSet2);
         assertEquals(0, emptySet.size());
@@ -40,7 +40,7 @@ class DifferenceTest {
 
     @Test
     @DisplayName("2) В результате непустое множество")
-    void differenceNonEmpty() throws Exception
+    void differenceNonEmpty()
     {
         emptySet = pwrSet1.difference(pwrSet3);
         assertEquals(2, emptySet.size());

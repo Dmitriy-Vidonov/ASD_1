@@ -6,7 +6,6 @@ public class testSet {
         PowerSet pwrSet1 = new PowerSet();
         PowerSet pwrSet2 = new PowerSet();
         PowerSet emptySet = new PowerSet();
-        PowerSet emptySet2 = new PowerSet();
 
         pwrSet1.put("10");
         pwrSet1.put("20");
@@ -19,17 +18,31 @@ public class testSet {
         pwrSet2.put("100");
         pwrSet2.put("20");
 
-        System.out.println("empty size: " + emptySet.size());
+        pwrSet1.ShowTable();
+        pwrSet2.ShowTable();
+        emptySet.ShowTable();
 
-        System.out.println("pwrSet1: ");
-        //pwrSet1.ShowTable();
-        System.out.println("size pwrSet1: " + pwrSet1.size());
+        //get из пустого множества
+        System.out.println("get из пустого множества: " + emptySet.get("10"));
 
-        System.out.println("remove 10: " + pwrSet1.remove("10"));
-        System.out.println("remove 101: " + pwrSet1.remove("101"));
+        //get из непустого множества при наличии искомого элемента
+        System.out.println("get из непустого множества с искомым: " + pwrSet1.get("10"));
 
-        System.out.println("pwrSet1: ");
-        //pwrSet1.ShowTable();
-        System.out.println("size pwrSet1: " + pwrSet1.size());
+        //get из непустого множества при отсутствии искомого элемента
+        System.out.println("get из непустого множества с искомым: " + pwrSet1.get("101"));
+
+        System.out.println();
+
+        //remove из пустого множества
+        System.out.println("remove из пустого множества: " + emptySet.remove("10"));
+
+        //remove из непустого множества при наличии искомого элемента
+        System.out.println("remove из непустого множества с искомым: " + pwrSet1.remove("10"));
+        pwrSet1.ShowTable();
+
+        //remove из непустого множества при отсутствии искомого элемента
+        System.out.println("remove из непустого множества без искомого: " + pwrSet1.remove("101"));
+        pwrSet1.ShowTable();
+
     }
 }

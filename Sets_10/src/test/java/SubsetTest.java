@@ -11,7 +11,7 @@ class SubsetTest {
     PowerSet pwrSet3 = new PowerSet();
 
     @BeforeEach
-    void setUp() throws Exception
+    void setUp()
     {
         pwrSet1.put("10");
         pwrSet1.put("20");
@@ -28,21 +28,21 @@ class SubsetTest {
 
     @Test
     @DisplayName("1) Все элементы параметра входят в текущее множество")
-    void isSubset1() throws Exception
+    void isSubset1()
     {
         assertTrue(pwrSet1.isSubset(pwrSet2));
     }
 
     @Test
     @DisplayName("2) Все элементы текущего множества входят в параметр")
-    void isSubset2() throws Exception
+    void isSubset2()
     {
         assertFalse(pwrSet2.isSubset(pwrSet1));
     }
 
     @Test
     @DisplayName("3) Не все элементы параметра входят в текущее множество")
-    void isSubset3() throws Exception
+    void isSubset3()
     {
         assertFalse(pwrSet1.isSubset(pwrSet3));
     }

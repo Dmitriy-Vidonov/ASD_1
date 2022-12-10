@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eca9f4d-88c2-41aa-b6c5-9ec4274c371a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.attach_pid6540" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/6/16f5a6f648d2b26412a0735df530d7073705a0fd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/d/3df896cd4e7bb92939da2dcb9acd7aa360027bcf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.attach_pid9303" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PowerSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PowerSet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/testSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/testSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PowerSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PowerSet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DifferenceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DifferenceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/IntersectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IntersectionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PutRemoveTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PutRemoveTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SubsetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SubsetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UnionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UnionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/testSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/testSet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +42,9 @@
         <option name="workspaceImportEnabled" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2IVglOqhUDoChNCrTPhTTHlZ1nP" />
   <component name="ProjectLevelVcsManager">
@@ -72,7 +76,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.testSet">
+  <component name="RunManager" selected="JUnit.All in Sets_10">
     <configuration name="testSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="testSet" />
       <module name="Sets_10" />
@@ -88,20 +92,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PutRemoveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PutRemoveTest.putRemove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sets_10" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PutRemoveTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="putRemove" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SubsetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PutRemoveTest.putRemove2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sets_10" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SubsetTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="PutRemoveTest" />
+      <option name="METHOD_NAME" value="putRemove2" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -117,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.testSet" />
         <item itemvalue="JUnit.All in Sets_10" />
+        <item itemvalue="JUnit.PutRemoveTest.putRemove2" />
+        <item itemvalue="JUnit.PutRemoveTest.putRemove" />
+        <item itemvalue="Application.testSet" />
         <item itemvalue="JUnit.UnionTest" />
-        <item itemvalue="JUnit.SubsetTest" />
-        <item itemvalue="JUnit.PutRemoveTest" />
       </list>
     </recent_temporary>
   </component>

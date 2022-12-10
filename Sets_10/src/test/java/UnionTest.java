@@ -12,7 +12,7 @@ class UnionTest {
     PowerSet emptySet2 = new PowerSet();
 
     @BeforeEach
-    void setUp() throws Exception
+    void setUp()
     {
         pwrSet1.put("10");
         pwrSet1.put("20");
@@ -27,7 +27,7 @@ class UnionTest {
 
     @Test
     @DisplayName("1) Оба параметра не пустые")
-    void unionBothNonEmpty() throws Exception
+    void unionBothNonEmpty()
     {
         emptySet = pwrSet1.union(pwrSet2);
         assertEquals(6, emptySet.size());
@@ -35,7 +35,7 @@ class UnionTest {
 
     @Test
     @DisplayName("2) Один из параметров - пустое множество")
-    void unionOneEmpty() throws Exception
+    void unionOneEmpty()
     {
         emptySet = pwrSet1.union(emptySet2);
         assertEquals(pwrSet1.size(), emptySet.size());

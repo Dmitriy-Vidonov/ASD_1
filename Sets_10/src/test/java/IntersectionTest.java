@@ -12,7 +12,7 @@ class IntersectionTest {
     PowerSet emptySet = new PowerSet();
 
     @BeforeEach
-    void setUp() throws Exception
+    void setUp()
     {
         pwrSet1.put("10");
         pwrSet1.put("20");
@@ -32,7 +32,7 @@ class IntersectionTest {
 
     @Test
     @DisplayName("1) Пустое множество в результате")
-    void intersectionEmpty() throws Exception
+    void intersectionEmpty()
     {
         emptySet = pwrSet1.intersection(pwrSet3);
         assertSame(0, emptySet.size());
@@ -40,7 +40,7 @@ class IntersectionTest {
 
     @Test
     @DisplayName("2) Непустое множество в результате")
-    void intersectionNonEmpty() throws Exception
+    void intersectionNonEmpty()
     {
         emptySet = pwrSet1.intersection(pwrSet2);
         assertSame(2, emptySet.size());
