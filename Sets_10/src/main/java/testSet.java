@@ -42,7 +42,16 @@ public class testSet {
         System.out.println("union size:" + bigSet1.union(bigSet2).size());
         long currTime4 = java.lang.System.currentTimeMillis();
 
+        PowerSet soBig = bigSet1.union(bigSet2);
+
         System.out.println("create set: " + ((float)(currTime2 - currTime1) / 1000) + " сек");
         System.out.println("create union: " + ((float)(currTime4 - currTime3) / 1000) + " сек");
+
+        for(int i=0; i<20000; i++)
+        {
+            System.out.println(soBig.slots[i]);
+        }
+
+        System.out.println();
     }
 }
