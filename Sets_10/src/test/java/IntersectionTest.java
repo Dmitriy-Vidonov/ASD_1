@@ -34,8 +34,8 @@ class IntersectionTest {
         pwrSet3.put("140");
         pwrSet3.put("200");
 
-        pwrSetBig1 = MethsForTest.setGenerator(10000);
-        pwrSetBig2 = MethsForTest.setGenerator(10000);
+        pwrSetBig1 = MethsForTest.setGenerator(0, 9999);
+        pwrSetBig2 = MethsForTest.setGenerator(10000, 20000);
     }
 
     @Test
@@ -62,7 +62,7 @@ class IntersectionTest {
         pwrSetBig1.intersection(pwrSetBig2);
         long currTime2 = java.lang.System.currentTimeMillis();
 
-        Assertions.assertTrue(currTime2 - currTime1 < 2000,
+        Assertions.assertFalse(currTime2 - currTime1 > 2000,
                 "Method(intersection) is out of time!");
     }
 }

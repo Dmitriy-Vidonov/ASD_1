@@ -1,48 +1,48 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class testSet {
     public static void main(String[] args){
         PowerSet pwrSet1 = new PowerSet();
         PowerSet pwrSet2 = new PowerSet();
+
+        PowerSet bigSet1 = new PowerSet();
+        PowerSet bigSet2 = new PowerSet();
+
         PowerSet emptySet = new PowerSet();
 
         pwrSet1.put("10");
         pwrSet1.put("20");
+        pwrSet1.put("30");
         pwrSet1.put("40");
-        pwrSet1.put("100");
-        pwrSet1.put("10");
 
         pwrSet2.put("50");
+        pwrSet2.put("60");
+        pwrSet2.put("70");
         pwrSet2.put("80");
-        pwrSet2.put("100");
-        pwrSet2.put("20");
 
-        /*pwrSet1.ShowTable();
-        pwrSet2.ShowTable();
-        emptySet.ShowTable();*/
+        long currTime1 = java.lang.System.currentTimeMillis();
+       // long seconds1 = TimeUnit.MILLISECONDS.toSeconds(java.lang.System.currentTimeMillis());
+        for(int i=0; i<10000; i++)
+            bigSet1.put(String.valueOf(i));
+       // long seconds2 = TimeUnit.MILLISECONDS.toSeconds(java.lang.System.currentTimeMillis());
+        long currTime2 = java.lang.System.currentTimeMillis();
 
-        //get из пустого множества
-        System.out.println("get из пустого множества: " + emptySet.get("10"));
+        for(int i=10000; i<20000; i++)
+            bigSet2.put(String.valueOf(i));
 
-        //get из непустого множества при наличии искомого элемента
-        System.out.println("get из непустого множества с искомым: " + pwrSet1.get("10"));
+       // System.out.println("big set1: "); bigSet1.ShowTable();
+      //  System.out.println("big set2: "); bigSet2.ShowTable();
 
-        //get из непустого множества при отсутствии искомого элемента
-        System.out.println("get из непустого множества с искомым: " + pwrSet1.get("101"));
+        System.out.println("bigSet1 size = " + bigSet1.size());
+        System.out.println("bigset2 size = " + bigSet2.size());
 
-        System.out.println();
+        long currTime3 = java.lang.System.currentTimeMillis();
+        System.out.println("union size:" + bigSet1.union(bigSet2).size());
+        long currTime4 = java.lang.System.currentTimeMillis();
 
-        //remove из пустого множества
-        System.out.println("remove из пустого множества: " + emptySet.remove("10"));
-
-        //remove из непустого множества при наличии искомого элемента
-        System.out.println("remove из непустого множества с искомым: " + pwrSet1.remove("10"));
-       // pwrSet1.ShowTable();
-
-        //remove из непустого множества при отсутствии искомого элемента
-        System.out.println("remove из непустого множества без искомого: " + pwrSet1.remove("101"));
-        //pwrSet1.ShowTable();
-
+        System.out.println("create set: " + ((float)(currTime2 - currTime1) / 1000) + " сек");
+        System.out.println("create union: " + ((float)(currTime4 - currTime3) / 1000) + " сек");
     }
 }

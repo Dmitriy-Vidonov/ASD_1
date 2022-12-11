@@ -29,8 +29,8 @@ class UnionTest {
         pwrSet2.put("100");
         pwrSet2.put("20");
 
-        pwrSetBig1 = MethsForTest.setGenerator(10000);
-        pwrSetBig2 = MethsForTest.setGenerator(10000);
+        pwrSetBig1 = MethsForTest.setGenerator(0, 9999);
+        pwrSetBig2 = MethsForTest.setGenerator(10000, 20000);
     }
 
     @Test
@@ -57,7 +57,7 @@ class UnionTest {
         pwrSetBig1.union(pwrSetBig2);
         long currTime2 = java.lang.System.currentTimeMillis();
 
-        Assertions.assertTrue(currTime2 - currTime1 < 2000,
+        Assertions.assertFalse(currTime2 - currTime1 > 2000,
                 "Method(union) is out of time!");
     }
 

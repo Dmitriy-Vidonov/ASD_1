@@ -18,8 +18,8 @@ class PutRemoveTest {
         pwrSet.put("1");
         pwrSet.put("2");
         pwrSet.put("3");
-        pwrSetBig1 = MethsForTest.setGenerator(10000);
-        pwrSetBig2 = MethsForTest.setGenerator(10000);
+        pwrSetBig1 = MethsForTest.setGenerator(0, 9999);
+        pwrSetBig2 = MethsForTest.setGenerator(10000, 20000);
     }
 
     @org.junit.jupiter.api.Test
@@ -65,7 +65,7 @@ class PutRemoveTest {
         pwrSetBig1.put("800");
         long currTime2 = java.lang.System.currentTimeMillis();
 
-        Assertions.assertTrue(currTime2 - currTime1 < 2000,
+        Assertions.assertFalse(currTime2 - currTime1 > 2000,
                 "Method(put) is out of time!");
     }
 
@@ -77,8 +77,8 @@ class PutRemoveTest {
         pwrSetBig2.remove("3");
         long currTime2 = java.lang.System.currentTimeMillis();
 
-        Assertions.assertTrue(currTime2 - currTime1 < 2000,
-                "Method(put) is out of time!");
+        Assertions.assertFalse(currTime2 - currTime1 > 2000,
+                "Method(remove) is out of time!");
     }
 
 }

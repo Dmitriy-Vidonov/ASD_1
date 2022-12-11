@@ -250,13 +250,11 @@ public class PowerSet
 
     public void ShowTable()
     {
-        for (int i=0; i<slots.length; i++)
-            System.out.print(slots[i] + " ");
+        for (String slot : this.slots) System.out.print(slot + " ");
         System.out.println();
         System.out.println("indexes:");
 
-        for (int i=0; i<indexes.size(); i++)
-            System.out.print(indexes.get(i) + " ");
+        for (Integer index : this.indexes) System.out.print(index + " ");
         System.out.println();
     }
 

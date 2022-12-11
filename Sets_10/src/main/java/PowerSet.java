@@ -3,14 +3,23 @@ public class PowerSet
     private final int step;
     protected String [] slots;
     protected java.util.List<Integer> indexes;
+    protected int capacity;
 
     public PowerSet()
     {
-        int capacity = 20000;
-        step = 16;
+        step = 1;
+        capacity = 20000;
         slots = new String[capacity];
         indexes = new java.util.ArrayList<>();
         java.util.Arrays.fill(slots, null);
+    }
+
+    public PowerSet(PowerSet original)
+    {
+        step = 1;
+        capacity = 20000;
+        slots = java.util.Arrays.copyOf(original.slots, capacity);
+        indexes = new java.util.ArrayList<>(original.indexes);
     }
 
     public int size()
@@ -45,9 +54,7 @@ public class PowerSet
                 index-=len;
 
             if(java.util.Objects.equals(slots[index], value))
-            {
                 return true;
-            }
         }
         return false;
     }
@@ -91,21 +98,21 @@ public class PowerSet
             return pwrSet;
         }
 
-        if(mainSize == 0)
+        if(mainSize == 0 && secondSize > 0)
         {
             return set2;
         }
 
         if(mainSize >= secondSize)
         {
-            this.clone(pwrSet);
+            PowerSet cloneSet = new PowerSet(this);
 
             for(int i=0; i<set2.indexes.size(); i++) {
                 if(!this.get(set2.slots[set2.indexes.get(i)]))
-                    pwrSet.put(set2.slots[set2.indexes.get(i)]);
+                    cloneSet.put(set2.slots[set2.indexes.get(i)]);
             }
 
-            return pwrSet;
+            return cloneSet;
         }
 
         for (Integer index : this.indexes) {
@@ -142,11 +149,7 @@ public class PowerSet
 
     public int hashFun(String value)
     {
-        int hash;
-        hash = Math.abs(value.hashCode());
-        String hashStr = Integer.toString(hash);
-        hash = Math.abs(hashStr.hashCode());
-
+        int hash = Math.abs(value.hashCode());
         hash %= slots.length;
 
         return hash;
@@ -209,10 +212,5 @@ public class PowerSet
             }
         }
         return res;
-    }
-
-    public void clone(PowerSet set2)
-    {
-        for (Integer index : this.indexes) set2.put(this.slots[index]);
     }
 }

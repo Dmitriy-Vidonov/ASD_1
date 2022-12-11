@@ -4,7 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eca9f4d-88c2-41aa-b6c5-9ec4274c371a" name="Changes" comment="" />
+    <list default="true" id="9eca9f4d-88c2-41aa-b6c5-9ec4274c371a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Hashing_8/.idea/sonarlint/issuestore/6/9/697e2edeb756c9a5fe1f634c08a6171cb1254cf3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hashing_8/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../Hashing_8/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/4/14fea810a67ae4250ccd2a4cdd550859a29f8620" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/5422ece3e20f1e11e5424d557e78906268bde432" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/706003a081b5f7848c1ae87d0dc1f58b5bd817c3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/e/7e61d29b7b15cbaaf27397bbd26fd5ee5bd7bd0e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/1/918551d1d40e8a36aa1b7cb6fa92ab6f8cd0f758" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/9/a90803bfa5aa67fc83073c0e708be95bec1d9573" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/b/ab5cc95304074492cf43a2d800bba40b8c2502de" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/d/ad83db43f28894e4af4e13eda5d94ced59fa09ad" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/a/ca25aa66e69ccb3ec3f8d96f51f82d94599286f6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MethsForTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MethsForTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PowerSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PowerSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/draft2/PowerSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/draft2/PowerSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/testSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/testSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DifferenceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DifferenceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/IntersectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IntersectionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PutRemoveTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PutRemoveTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SubsetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SubsetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UnionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UnionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/PowerSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PowerSet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/testSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/testSet.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +90,14 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in Sets_10">
+  <component name="RunManager" selected="Application.testSet">
+    <configuration name="testSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="testSet" />
+      <module name="Sets_10" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in Sets_10" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sets_10" />
       <option name="PACKAGE_NAME" value="" />
@@ -74,21 +106,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PutRemoveTest.timeOutPut" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DifferenceTest.timeOut" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sets_10" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PutRemoveTest" />
-      <option name="METHOD_NAME" value="timeOutPut" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PutRemoveTest.timeOutRemove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sets_10" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PutRemoveTest" />
-      <option name="METHOD_NAME" value="timeOutRemove" />
+      <option name="MAIN_CLASS_NAME" value="DifferenceTest" />
+      <option name="METHOD_NAME" value="timeOut" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -116,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.testSet" />
         <item itemvalue="JUnit.All in Sets_10" />
+        <item itemvalue="JUnit.DifferenceTest.timeOut" />
         <item itemvalue="JUnit.UnionTest.timeOutUnion" />
         <item itemvalue="JUnit.SubsetTest.timeOutIsSubset" />
-        <item itemvalue="JUnit.PutRemoveTest.timeOutPut" />
-        <item itemvalue="JUnit.PutRemoveTest.timeOutRemove" />
       </list>
     </recent_temporary>
   </component>
