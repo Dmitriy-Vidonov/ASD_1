@@ -149,7 +149,11 @@ public class PowerSet
 
     public int hashFun(String value)
     {
-        int hash = Math.abs(value.hashCode());
+        int hash = 0;
+
+        if(value.hashCode() != 0)
+            hash = value.hashCode();
+
         hash %= slots.length;
 
         return hash;
