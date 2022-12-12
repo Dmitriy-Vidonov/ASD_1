@@ -24,9 +24,9 @@ public class testSet {
         pwrSet2.put("40");
 
 
-        pwrSet1.ShowTable();
+       // pwrSet1.ShowTable();
         System.out.println(pwrSet1.remove("190870"));
-        pwrSet1.ShowTable();
+      //  pwrSet1.ShowTable();
 
 
      /*   long currTime1 = java.lang.System.currentTimeMillis();

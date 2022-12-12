@@ -234,15 +234,4 @@ public class PowerSet
         }
         return res;
     }
-
-    public void ShowTable()
-    {
-        for (String slot : this.slots) System.out.print(slot + " ");
-        System.out.println();
-        System.out.println("indexes:");
-
-        for (Integer index : this.indexes) System.out.print(index + " ");
-        System.out.println();
-    }
-
 }

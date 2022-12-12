@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eca9f4d-88c2-41aa-b6c5-9ec4274c371a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/MethsForTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PowerSet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/b/ab5cc95304074492cf43a2d800bba40b8c2502de" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PowerSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PowerSet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/testSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/testSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PutRemoveTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PutRemoveGetTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PowerSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PowerSet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/testSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/testSet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PutRemoveTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
