@@ -8,7 +8,7 @@ public class PowerSet
     public PowerSet()
     {
         step = 1;
-        capacity = 20000;
+        capacity = 15;
         slots = new String[capacity];
         indexes = new java.util.ArrayList<>();
         java.util.Arrays.fill(slots, null);
@@ -17,7 +17,7 @@ public class PowerSet
     public PowerSet(PowerSet original)
     {
         step = 1;
-        capacity = 20000;
+        capacity = 15;
         slots = java.util.Arrays.copyOf(original.slots, capacity);
         indexes = new java.util.ArrayList<>(original.indexes);
     }
@@ -46,7 +46,7 @@ public class PowerSet
         if(java.util.Objects.equals(slots[index], value))
             return true;
 
-        for(int i=0; i<len; i++)
+        for(int i=0; i<=len; i++)
         {
             index += step;
 
@@ -78,11 +78,25 @@ public class PowerSet
     {
         PowerSet pwrSet = new PowerSet();
 
-        for (Integer index : indexes) {
+        int mainSize = this.size();
+        int secondSize = set2.size();
+
+        if(mainSize == 0 || secondSize == 0)
+            return pwrSet;
+
+        if(mainSize >= secondSize)
+        {
+            for (Integer index : set2.indexes) {
+                if (this.get(set2.slots[index]))
+                    pwrSet.put(set2.slots[index]);
+            }
+            return pwrSet;
+        }
+
+        for (Integer index : this.indexes) {
             if (set2.get(this.slots[index]))
                 pwrSet.put(this.slots[index]);
         }
-
         return pwrSet;
     }
 
@@ -115,12 +129,14 @@ public class PowerSet
             return cloneSet;
         }
 
+        PowerSet cloneSet = new PowerSet(set2);
+
         for (Integer index : this.indexes) {
             if (!set2.get(this.slots[index]))
-                pwrSet.put(this.slots[index]);
+                cloneSet.put(this.slots[index]);
         }
 
-        return pwrSet;
+        return cloneSet;
     }
 
     public PowerSet difference(PowerSet set2)
@@ -149,14 +165,15 @@ public class PowerSet
 
     public int hashFun(String value)
     {
-        int hash = 0;
+        int res;
+        int hash = value.hashCode();
 
-        if(value.hashCode() != 0)
-            hash = value.hashCode();
+        if(hash < 0)
+            res = -(hash % slots.length);
+        else
+            res = (hash % slots.length);
 
-        hash %= slots.length;
-
-        return hash;
+        return res;
     }
 
     public int seekSlot(String value)
@@ -217,4 +234,15 @@ public class PowerSet
         }
         return res;
     }
+
+    public void ShowTable()
+    {
+        for (String slot : this.slots) System.out.print(slot + " ");
+        System.out.println();
+        System.out.println("indexes:");
+
+        for (Integer index : this.indexes) System.out.print(index + " ");
+        System.out.println();
+    }
+
 }

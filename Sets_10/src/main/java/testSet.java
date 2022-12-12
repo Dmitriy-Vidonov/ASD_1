@@ -11,18 +11,25 @@ public class testSet {
         PowerSet bigSet2 = new PowerSet();
 
         PowerSet emptySet = new PowerSet();
+        PowerSet emptySet2 = new PowerSet();
 
         pwrSet1.put("10");
         pwrSet1.put("20");
         pwrSet1.put("30");
         pwrSet1.put("40");
 
-        pwrSet2.put("50");
-        pwrSet2.put("60");
-        pwrSet2.put("70");
-        pwrSet2.put("80");
+        pwrSet2.put("10");
+        pwrSet2.put("20");
+        pwrSet2.put("330");
+        pwrSet2.put("40");
 
-        long currTime1 = java.lang.System.currentTimeMillis();
+
+        pwrSet1.ShowTable();
+        System.out.println(pwrSet1.remove("190870"));
+        pwrSet1.ShowTable();
+
+
+     /*   long currTime1 = java.lang.System.currentTimeMillis();
        // long seconds1 = TimeUnit.MILLISECONDS.toSeconds(java.lang.System.currentTimeMillis());
         for(int i=0; i<10000; i++)
             bigSet1.put(String.valueOf(i));
@@ -47,11 +54,10 @@ public class testSet {
         System.out.println("create set: " + ((float)(currTime2 - currTime1) / 1000) + " сек");
         System.out.println("create union: " + ((float)(currTime4 - currTime3) / 1000) + " сек");
 
-        for(int i=0; i<20000; i++)
-        {
-            System.out.println(soBig.slots[i]);
-        }
-
         System.out.println();
+
+        PowerSet ps = new PowerSet();
+        System.out.println("get from empty: " + ps.get("329847"));
+        */
     }
 }

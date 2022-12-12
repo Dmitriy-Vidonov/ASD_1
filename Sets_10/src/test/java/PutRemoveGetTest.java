@@ -6,7 +6,7 @@ import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class PutRemoveTest {
+class PutRemoveGetTest {
 
     PowerSet pwrSet = new PowerSet();
     PowerSet pwrSetBig1 = new PowerSet();
@@ -49,7 +49,7 @@ class PutRemoveTest {
     }
 
     @org.junit.jupiter.api.Test
-    @DisplayName("4) Removing absent element")
+    @DisplayName("4) Removing absent element from non-empty set")
     void putRemove2() throws IOException
     {
         pwrSet.remove("10");
@@ -57,8 +57,17 @@ class PutRemoveTest {
         assertEquals(3, pwrSet.size());
     }
 
+    @org.junit.jupiter.api.Test
+    @DisplayName("5) Removing absent element from empty set")
+    void putRemove3() throws IOException
+    {
+        PowerSet ps = new PowerSet();
+        assertFalse(ps.remove("10"));
+        assertEquals(0, ps.size());
+    }
+
     @Test
-    @DisplayName("5) Put timeout test")
+    @DisplayName("6) Put timeout test")
     void timeOutPut() throws Exception
     {
         long currTime1 = java.lang.System.currentTimeMillis();
@@ -70,7 +79,7 @@ class PutRemoveTest {
     }
 
     @Test
-    @DisplayName("6) Remove timeout test")
+    @DisplayName("7) Remove timeout test")
     void timeOutRemove() throws Exception
     {
         long currTime1 = java.lang.System.currentTimeMillis();
@@ -79,6 +88,14 @@ class PutRemoveTest {
 
         Assertions.assertFalse(currTime2 - currTime1 > 2000,
                 "Method(remove) is out of time!");
+    }
+
+    @Test
+    @DisplayName("8) Get from empty set")
+    void getFromEmpty() throws Exception
+    {
+        PowerSet ps = new PowerSet();
+        assertFalse(ps.get("1234567890"));
     }
 
 }

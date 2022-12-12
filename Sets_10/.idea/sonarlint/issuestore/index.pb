@@ -7,5 +7,9 @@ Q
 !src/main/java/draft2/testSet.java,6/0/602b08f9bdd2759dff6297d794f95d1ce6ee6cb4
 Q
 !src/main/java/draft/PowerSet.java,3/d/3df896cd4e7bb92939da2dcb9acd7aa360027bcf
-R
-"src/main/java/draft2/PowerSet.java,a/b/ab5cc95304074492cf43a2d800bba40b8c2502de
+M
+src/test/java/SubsetTest.java,9/1/918551d1d40e8a36aa1b7cb6fa92ab6f8cd0f758
+S
+#src/test/java/IntersectionTest.java,1/4/14fea810a67ae4250ccd2a4cdd550859a29f8620
+Q
+!src/test/java/DifferenceTest.java,a/d/ad83db43f28894e4af4e13eda5d94ced59fa09ad
