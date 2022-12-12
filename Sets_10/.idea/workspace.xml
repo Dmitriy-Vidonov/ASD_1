@@ -77,7 +77,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.testSet">
+  <component name="RunManager" selected="JUnit.PutRemoveGetTest.getFromEmpty">
     <configuration name="testSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="testSet" />
       <module name="Sets_10" />
@@ -125,9 +125,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PutRemoveGetTest.getFromEmpty" />
         <item itemvalue="Application.testSet" />
         <item itemvalue="JUnit.All in Sets_10" />
-        <item itemvalue="JUnit.PutRemoveGetTest.getFromEmpty" />
         <item itemvalue="JUnit.PutRemoveGetTest.putRemove3" />
         <item itemvalue="JUnit.UnionTest.unionBothNonEmpty" />
       </list>

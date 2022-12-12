@@ -8,7 +8,7 @@ public class PowerSet
     public PowerSet()
     {
         step = 1;
-        capacity = 15;
+        capacity = 20000;
         slots = new String[capacity];
         indexes = new java.util.ArrayList<>();
         java.util.Arrays.fill(slots, null);
@@ -17,7 +17,7 @@ public class PowerSet
     public PowerSet(PowerSet original)
     {
         step = 1;
-        capacity = 15;
+        capacity = 20000;
         slots = java.util.Arrays.copyOf(original.slots, capacity);
         indexes = new java.util.ArrayList<>(original.indexes);
     }
