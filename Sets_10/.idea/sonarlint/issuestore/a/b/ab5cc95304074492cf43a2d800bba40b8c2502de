@@ -1,0 +1,41 @@
+
+o
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(†¸á»
+j
+java:S1104"TMake capacity a static final constant or non-public and provide accessors if needed.(Ë»¢…
+k
+java:S1104	"PMake step a static final constant or non-public and provide accessors if needed.(öçéÿÿÿÿÿ
+l
+java:S1104
+"QMake slots a static final constant or non-public and provide accessors if needed.(‹ÀØıÿÿÿÿ
+R
+java:S49732"<Strings and Boxed types should be compared using "equals()".(ÂÛùİ
+R
+java:S4973<"<Strings and Boxed types should be compared using "equals()".(ÂÛùİ
+S
+java:S4973â"<Strings and Boxed types should be compared using "equals()".(ÂÛùİ
+S
+java:S4973ì"<Strings and Boxed types should be compared using "equals()".(ÂÛùİ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÆŸè‘ûÿÿÿÿ
+W
+java:S1226"AIntroduce a new variable instead of reusing the parameter "slot".(¯È†Â
+R
+java:S2589k"7Remove this expression which always evaluates to "true"(çÊ­›ùÿÿÿÿ
+?
+java:S1481")Remove this unused "slot" local variable.(¯È†Â
+<
+java:S1125 "'Remove the unnecessary boolean literal.(·Óü_
+Q	java:S125%"<This block of commented-out lines of code should be removed.(Êşÿò
+;
+java:S2676¥"Use the original value instead.(œ·Á±şÿÿÿÿ
+;
+java:S2676§"Use the original value instead.(‰÷Åîıÿÿÿÿ
+W	java:S125Ñ"<This block of commented-out lines of code should be removed.(ÒÌâ–øÿÿÿÿ
+k	java:S100û"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶âğò8çÊ”‘Ğ0
+O	java:S106ı"9Replace this use of System.out or System.err by a logger.(İêç
+[	java:S106ş"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8èÊ”‘Ğ0
+V	java:S106ÿ"9Replace this use of System.out or System.err by a logger.(¦ø Ø8èÊ”‘Ğ0
+V	java:S106"9Replace this use of System.out or System.err by a logger.(Æ×àŠ8èÊ”‘Ğ0
+[	java:S106‚"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8éÊ”‘Ğ0
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8êÉÊÏ0

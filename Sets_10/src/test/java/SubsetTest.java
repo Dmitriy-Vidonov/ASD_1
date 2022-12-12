@@ -30,8 +30,8 @@ class SubsetTest {
         pwrSet3.put("40");
         pwrSet3.put("50");
 
-        pwrSetBig1 = MethsForTest.setGenerator(0, 9999);
-        pwrSetBig2 = MethsForTest.setGenerator(10000, 20000);
+        pwrSetBig1 = MethsForTest.setGenerator(0);
+        pwrSetBig2 = MethsForTest.setGenerator(10000);
     }
 
     @Test

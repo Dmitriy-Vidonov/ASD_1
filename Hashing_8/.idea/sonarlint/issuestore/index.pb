@@ -7,3 +7,11 @@ S
 #src/main/java/draft3/tableTest.java,1/c/1c356e78f84a08fb9f1a5f88e4191f062d5d0eb5
 S
 #src/main/java/draft2/HashTable.java,1/2/125796e312733a4cf27dbe5c8c88dd17723797ff
+Q
+!src/main/java/draft/hash_fun.java,c/c/cc84029c67b3d6af67844441c2cb75d74db27a77
+R
+"src/main/java/draft/HashTable.java,0/f/0fb5eddeaf845098e586a0157f0bcc4ec97782ed
+S
+#src/main/java/draft3/HashTable.java,f/5/f5dca04f34d1ac019e11e6ab7dda27764a57b610
+L
+src/main/java/HashTable.java,6/9/697e2edeb756c9a5fe1f634c08a6171cb1254cf3

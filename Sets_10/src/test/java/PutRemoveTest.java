@@ -18,8 +18,8 @@ class PutRemoveTest {
         pwrSet.put("1");
         pwrSet.put("2");
         pwrSet.put("3");
-        pwrSetBig1 = MethsForTest.setGenerator(0, 9999);
-        pwrSetBig2 = MethsForTest.setGenerator(10000, 20000);
+        pwrSetBig1 = MethsForTest.setGenerator(0);
+        pwrSetBig2 = MethsForTest.setGenerator(10000);
     }
 
     @org.junit.jupiter.api.Test

@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eca9f4d-88c2-41aa-b6c5-9ec4274c371a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/testSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/testSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hashing_8/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../Hashing_8/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MethsForTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MethsForTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DifferenceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DifferenceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UnionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UnionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MethsForTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MethsForTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/UnionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/UnionTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +74,14 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.testSet">
+  <component name="RunManager" selected="JUnit.UnionTest.unionBothNonEmpty">
+    <configuration name="MethsForTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MethsForTest" />
+      <module name="Sets_10" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="testSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="testSet" />
       <module name="Sets_10" />
@@ -93,21 +107,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SubsetTest.timeOutIsSubset" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sets_10" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SubsetTest" />
-      <option name="METHOD_NAME" value="timeOutIsSubset" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UnionTest.timeOutUnion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UnionTest.unionBothNonEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sets_10" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="UnionTest" />
-      <option name="METHOD_NAME" value="timeOutUnion" />
+      <option name="METHOD_NAME" value="unionBothNonEmpty" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -115,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.testSet" />
+        <item itemvalue="JUnit.UnionTest.unionBothNonEmpty" />
         <item itemvalue="JUnit.All in Sets_10" />
         <item itemvalue="JUnit.DifferenceTest.timeOut" />
-        <item itemvalue="JUnit.UnionTest.timeOutUnion" />
-        <item itemvalue="JUnit.SubsetTest.timeOutIsSubset" />
+        <item itemvalue="Application.MethsForTest" />
+        <item itemvalue="Application.testSet" />
       </list>
     </recent_temporary>
   </component>

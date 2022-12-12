@@ -29,8 +29,8 @@ class UnionTest {
         pwrSet2.put("100");
         pwrSet2.put("20");
 
-        pwrSetBig1 = MethsForTest.setGenerator(0, 9999);
-        pwrSetBig2 = MethsForTest.setGenerator(10000, 20000);
+        pwrSetBig1 = MethsForTest.setGenerator(0);
+        pwrSetBig2 = MethsForTest.setGenerator(10000);
     }
 
     @Test
@@ -39,6 +39,18 @@ class UnionTest {
     {
         emptySet = pwrSet1.union(pwrSet2);
         assertEquals(6, emptySet.size());
+
+        assertTrue(emptySet.get("10"));
+        assertTrue(emptySet.get("20"));
+        assertTrue(emptySet.get("50"));
+        assertTrue(emptySet.get("40"));
+        assertTrue(emptySet.get("80"));
+        assertTrue(emptySet.get("100"));
+
+        emptySet2 = pwrSetBig1.union(pwrSetBig2);
+        assertEquals(20000, emptySet2.size());
+        System.out.println("big1 size = " + pwrSetBig1.size());
+        System.out.println("big2 size = " + pwrSetBig2.size());
     }
 
     @Test
