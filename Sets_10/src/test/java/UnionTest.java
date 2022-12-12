@@ -49,8 +49,6 @@ class UnionTest {
 
         emptySet2 = pwrSetBig1.union(pwrSetBig2);
         assertEquals(20000, emptySet2.size());
-        System.out.println("big1 size = " + pwrSetBig1.size());
-        System.out.println("big2 size = " + pwrSetBig2.size());
     }
 
     @Test
