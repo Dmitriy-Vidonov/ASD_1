@@ -1,7 +1,6 @@
 package draft;
 
-public class BloomFilter
-{
+public class BloomFilter {
     public int filter_len;
 
     public BloomFilter(int f_len)
