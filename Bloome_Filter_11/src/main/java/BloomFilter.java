@@ -25,6 +25,7 @@ public class BloomFilter
         }
         return res % len;
     }
+    
     public int hash2(String str1)
     {
         int res = 0;
