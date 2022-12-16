@@ -1,7 +1,11 @@
+package oneelementbloom;
+
 public class BloomFilter
 {
     public int filter_len;
-    public int bitStorage;
+    private int bitStorage;
+    private int mainIndex1;
+    private int mainIndex2;
     private boolean isEmpty;
 
     public BloomFilter(int f_len)
@@ -13,9 +17,9 @@ public class BloomFilter
 
     public int hash1(String str1)
     {
-        long res = 0;
+        int res = 0;
         int rand = 17;
-        long len = str1.length();
+        int len = str1.length();
 
         for(int i=0; i<len; i++)
         {
@@ -23,14 +27,14 @@ public class BloomFilter
             int code = str1.charAt(i);
             res += (res * rand) + code;
         }
-        return ((res > 0) ? (int)(res % len) : -(int)(res % len));
+        return res % len;
     }
 
     public int hash2(String str1)
     {
-        long res = 0;
+        int res = 0;
         int rand = 223;
-        long len = str1.length();
+        int len = str1.length();
 
         for(int i=0; i<len; i++)
         {
@@ -38,19 +42,23 @@ public class BloomFilter
             int code = str1.charAt(i);
             res += (res * rand) + code;
         }
-        return ((res > 0) ? (int)(res % len) : -(int)(res % len));
+        return res % len;
     }
 
     public void add(String str1)
     {
+        bitStorage = 0;
+        mainIndex1 = 0;
+        mainIndex2 = 0;
+
         if(str1.length() == 0)
             return;
 
-        int index1 = hash1(str1);
-        int index2 = hash2(str1);
+        mainIndex1 = this.hash1(str1);
+        mainIndex2 = this.hash2(str1);
 
-        this.bitStorage = this.setBit(bitStorage, index1);
-        this.bitStorage = this.setBit(bitStorage, index2);
+        bitStorage = this.setBit(bitStorage, mainIndex1);
+        bitStorage = this.setBit(bitStorage, mainIndex2);
 
         isEmpty = false;
     }
@@ -63,7 +71,7 @@ public class BloomFilter
         int index1 = hash1(str1);
         int index2 = hash2(str1);
 
-        return (getBit(this.bitStorage, index1) == 1 && getBit(this.bitStorage, index2) == 1);
+        return (index1 == mainIndex1 && index2 == mainIndex2);
     }
 
     public int setBit(int bitStorage, int bitIndex)
@@ -71,11 +79,5 @@ public class BloomFilter
         int res = bitStorage;
         res |= (1<<bitIndex);
         return res;
-    }
-
-    public int getBit(int bitStorage, int bitIndex)
-    {
-        int res = bitStorage & (1<<bitIndex);
-        return (res > 0) ? 1 : 0;
     }
 }
