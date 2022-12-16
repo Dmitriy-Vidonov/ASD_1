@@ -4,11 +4,13 @@ public class BloomFilter
     private int bitStorage;
     private int mainIndex1;
     private int mainIndex2;
+    private boolean isEmpty;
 
     public BloomFilter(int f_len)
     {
         filter_len = f_len;
         bitStorage = 0;
+        isEmpty = true;
     }
 
     public int hash1(String str1)
@@ -25,7 +27,7 @@ public class BloomFilter
         }
         return res % len;
     }
-    
+
     public int hash2(String str1)
     {
         int res = 0;
@@ -55,10 +57,15 @@ public class BloomFilter
 
         bitStorage = this.setBit(bitStorage, mainIndex1);
         bitStorage = this.setBit(bitStorage, mainIndex2);
+
+        isEmpty = false;
     }
 
     public boolean isValue(String str1)
     {
+        if(str1.length() == 0 || isEmpty)
+            return false;
+
         int index1 = hash1(str1);
         int index2 = hash2(str1);
 
